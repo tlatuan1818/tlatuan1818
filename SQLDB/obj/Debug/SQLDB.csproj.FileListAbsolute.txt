@@ -1,0 +1,24 @@
+C:\Users\traml\Documents\nguyeensport\SQLDB\bin\Debug\SQLDB.dll
+C:\Users\traml\Documents\nguyeensport\SQLDB\bin\Debug\SQLDB.pdb
+C:\Users\traml\Documents\nguyeensport\SQLDB\obj\Debug\SQLDB.csproj.AssemblyReference.cache
+C:\Users\traml\Documents\nguyeensport\SQLDB\obj\Debug\SQLDB.csproj.CoreCompileInputs.cache
+C:\Users\traml\Documents\nguyeensport\SQLDB\obj\Debug\SQLDB.dll
+C:\Users\traml\Documents\nguyeensport\SQLDB\obj\Debug\SQLDB.pdb
+C:\Users\traml\OneDrive\Documents\nguyeensport\SQLDB\bin\Debug\SQLDB.dll
+C:\Users\traml\OneDrive\Documents\nguyeensport\SQLDB\bin\Debug\SQLDB.pdb
+C:\Users\traml\OneDrive\Documents\nguyeensport\SQLDB\obj\Debug\SQLDB.csproj.AssemblyReference.cache
+C:\Users\traml\OneDrive\Documents\nguyeensport\SQLDB\obj\Debug\SQLDB.csproj.CoreCompileInputs.cache
+C:\Users\traml\OneDrive\Documents\nguyeensport\SQLDB\obj\Debug\SQLDB.dll
+C:\Users\traml\OneDrive\Documents\nguyeensport\SQLDB\obj\Debug\SQLDB.pdb
+C:\Users\tlatu\Documents\nguyeensport\SQLDB\bin\Debug\SQLDB.dll
+C:\Users\tlatu\Documents\nguyeensport\SQLDB\bin\Debug\SQLDB.pdb
+C:\Users\tlatu\Documents\nguyeensport\SQLDB\obj\Debug\SQLDB.csprojAssemblyReference.cache
+C:\Users\tlatu\Documents\nguyeensport\SQLDB\obj\Debug\SQLDB.csproj.CoreCompileInputs.cache
+C:\Users\tlatu\Documents\nguyeensport\SQLDB\obj\Debug\SQLDB.dll
+C:\Users\tlatu\Documents\nguyeensport\SQLDB\obj\Debug\SQLDB.pdb
+C:\Users\tlatu\Documents\nguyeensport - backup\SQLDB\bin\Debug\SQLDB.dll
+C:\Users\tlatu\Documents\nguyeensport - backup\SQLDB\bin\Debug\SQLDB.pdb
+C:\Users\tlatu\Documents\nguyeensport - backup\SQLDB\obj\Debug\SQLDB.csprojAssemblyReference.cache
+C:\Users\tlatu\Documents\nguyeensport - backup\SQLDB\obj\Debug\SQLDB.csproj.CoreCompileInputs.cache
+C:\Users\tlatu\Documents\nguyeensport - backup\SQLDB\obj\Debug\SQLDB.dll
+C:\Users\tlatu\Documents\nguyeensport - backup\SQLDB\obj\Debug\SQLDB.pdb

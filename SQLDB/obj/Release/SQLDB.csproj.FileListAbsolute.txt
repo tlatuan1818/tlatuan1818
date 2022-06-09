@@ -1,0 +1,6 @@
+C:\Users\traml\OneDrive\Documents\nguyeensport\SQLDB\bin\Release\SQLDB.dll
+C:\Users\traml\OneDrive\Documents\nguyeensport\SQLDB\bin\Release\SQLDB.pdb
+C:\Users\traml\OneDrive\Documents\nguyeensport\SQLDB\obj\Release\SQLDB.csproj.AssemblyReference.cache
+C:\Users\traml\OneDrive\Documents\nguyeensport\SQLDB\obj\Release\SQLDB.csproj.CoreCompileInputs.cache
+C:\Users\traml\OneDrive\Documents\nguyeensport\SQLDB\obj\Release\SQLDB.dll
+C:\Users\traml\OneDrive\Documents\nguyeensport\SQLDB\obj\Release\SQLDB.pdb

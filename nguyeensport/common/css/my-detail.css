@@ -1,0 +1,67 @@
+.validator .input-group {
+    position: relative;
+}
+
+.form-item .input-name {
+    -ms-flex-order: 1;
+    order: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+}
+
+.form-item .input-name.required::after {
+    content: "*";
+    margin-left: 4px;
+}
+
+.account-details-form .custom-text-field {
+    width: 100%;
+    margin-bottom: 20px;
+    order: 3;
+    flex-grow: 2;
+    height: 40px;
+    border: 1px solid #202020;
+    border-radius: 3px;
+    padding: 0 15px;
+    font-size: 12px;
+    box-shadow: none;
+}
+
+.account-details-form__raw {
+    display: flex;
+    justify-content: space-between;
+}
+
+.account-details-form .button {
+    width: 164px;
+    margin-bottom: 15px;
+}
+
+.account-details-form .button .button__title {
+    height: inherit;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 3.33333;
+}
+
+.change-password-form {
+    margin-bottom: 50px;
+
+}
+
+
+@media only screen and (max-width:768px) {
+    .account-details-form__raw {
+        flex-direction: column;
+    }
+}
+
+@media only screen and (max-width:480px) {
+    .account-details-form .button {
+        width: 100%;
+    }
+
+    .account-details-form .button .button__title {
+        width: 100%;
+    }
+}

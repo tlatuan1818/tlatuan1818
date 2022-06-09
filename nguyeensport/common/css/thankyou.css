@@ -1,0 +1,226 @@
+﻿
+.thankyou {
+    text-align: center;
+}
+
+.thankyou h2 {
+    font-family: 'Open Sans',sans-serif;
+    font-size: 44px;
+    margin: 25px 0;
+}
+
+.title-text {
+    text-align: center;
+    font-size: 20px;
+    font-family: 'Open Sans',sans-serif;
+}
+
+.title-text span {
+    font-family: 'Stalinist One',sans-serif;
+    font-size: 25px;
+}
+
+.back-to-home {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.back-to-home a {
+    text-decoration: none;
+    color: #ff0000;
+    position: relative;
+}
+
+.back-to-home a:hover,
+.back-to-home a:hover .arrow-left.icon {
+    color: #000;
+}
+
+.arrow-left.icon {
+    color: #ff0000;
+    position: absolute;
+    margin-left: 3px;
+    width: 16px;
+    height: 1px;
+    top: 50%;
+    left: -25px;
+    background-color: currentColor;
+    transform: translateY(-50%);
+}
+
+.arrow-left.icon:before {
+        content: '';
+        position: absolute;
+        left: 1px;
+        top: -5px;
+        width: 10px;
+        height: 10px;
+        border-top: solid 1px currentColor;
+        border-right: solid 1px currentColor;
+        -webkit-transform: rotate(-135deg);
+        transform: rotate(-135deg);
+}
+
+.bill-container {
+    max-width: 1024px;
+    width: calc(100% - 20px);
+    border: 1px solid #000;
+    margin: 10px auto;
+}
+
+.bill-container h3 {
+    font-family: 'Open Sans',sans-serif;
+    text-align: center;
+    margin: 15px;
+    line-height: 1;
+    position: relative;
+    font-size:14px;
+    font-weight:700;
+}
+
+.bill-container h3::after {
+    content: '';
+    position: absolute;
+    height: 1px;
+    width: 100%;
+    display: block;
+    background: #ccc;
+    bottom: -10px;
+}
+
+.bill-row {
+    margin: 0 10px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.colunm-right, .colunm-left {
+    text-align: left;
+}
+
+.bill-label {
+    padding: 5px 0;
+    font-size: 12px;
+    font-family: 'Open Sans',sans-serif;
+    line-height:1.2;
+    white-space:nowrap;
+    font-weight:700;
+}
+.bill-label span{
+    font-weight:500;
+}
+
+.red {
+    color: #C10B3F;
+    font-weight: bold;
+}
+.bill-table {
+    width: 100%;
+    
+}
+.bill-table .bill-tr{
+    display: flex;
+    justify-content: space-between;
+}
+.bill-table .bill-th,
+.bill-table .bill-td{
+    width: calc(100% / 8);
+    padding: 10px 0;
+    text-align:center;
+    color:#fff;
+    font-size:12px;
+    font-weight:600;
+    line-height:1;
+}
+.bill-table .bill-td{
+    color:#000;
+    font-weight:400;
+    border-bottom:1px solid #ccc;
+    line-height:1.3;
+}
+.text-hidden {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.text-hidden:hover{
+    overflow:visible;
+    white-space: normal;
+    width:445px;
+}
+.old {
+    background: #C10B3F;
+}
+.even {
+    background: #AE0A38;
+}
+@media only screen and (max-width: 940px){
+    .bill-scroll {
+        overflow-x: scroll;
+        scrollbar-width: thin;
+        scrollbar-color: #ccc #000;
+    }
+    .bill-scroll::-webkit-scrollbar{
+        width: 20px;
+        height:5px;
+        background:#ccc;
+    }
+    .bill-scroll::-webkit-scrollbar-thumb{
+        background:#000;
+    }
+    .bill-table {
+        min-width: 982px;
+        margin-bottom:10px;
+    }
+}
+@media only screen and (max-width:768px){
+
+    .colunm-left {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .colunm-right {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+@media only screen and (max-width:548px) {
+    .bill-row {
+        display: block;
+        margin: 0 5px;
+        padding: 5px;
+    }
+
+    .colunm-right {
+        text-align: left;
+    }
+}
+
+@media only screen and (max-width:480px) {
+    .logo-img {
+        margin: 30px 20px 0;
+    }
+
+    .logo-img img {
+        width: 90%;
+    }
+
+    .thankyou h2 {
+        font-size: 8.4vw;
+        margin:10px 0;
+    }
+    
+    .bill-container h1 {
+        margin:10px;
+    }
+    
+    .title-text {
+        font-size:14px;
+    }
+    .title-text span {
+        font-size:20px;
+    }
+}

@@ -1,0 +1,301 @@
+.teamwear-box {
+    max-width: 1800px;
+    width: calc(100% - 40px);
+    margin: 0 auto 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.teamwear-box a {
+    width: 24%;
+    position: relative;
+}
+
+.teamwear-box .teamwear-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    width: 100%;
+    font-size: 27px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.teamwear-header {
+    max-width: 1800px;
+    width: calc(100% - 40px);
+    margin: 50px auto;
+}
+
+.teamwear-header .teamwear-header_title {
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 1;
+    margin-bottom: 25px;
+}
+
+.teamwear-header .teamwear-header_title .teamwear-header_text {
+    letter-spacing: .5px;
+}
+
+.teamwear-header .teamwear-header_des {
+    letter-spacing: .5px;
+    font-size: 12px;
+}
+
+.teamwear-colour {
+    max-width: 1800px;
+    width: calc(100% - 40px);
+    margin: 0 auto;
+    text-align: center;
+}
+
+.teamwear-colour .colour-title {
+    font-size: 36px;
+    font-weight: 600;
+    text-align: center;
+    position: relative;
+    line-height: 1.5;
+    letter-spacing: -1px;
+    display: inline-block;
+}
+
+.teamwear-colour .colour-title::after {
+    position: absolute;
+    content: '';
+    height: 1px;
+    background: #000;
+    display: block;
+    width: 30%;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -140px;
+}
+
+.teamwear-colour .colour-title::before {
+    position: absolute;
+    content: '';
+    height: 1px;
+    background: #000;
+    display: block;
+    width: 30%;
+    top: 50%;
+    transform: translateY(-50%);
+    right: -140px;
+}
+
+.colour-box {
+    margin-top: 30px;
+    overflow:hidden;
+    position:relative;
+}
+
+.colour-box a {
+    position: relative;
+    display: block;
+}
+
+.colour-box .colour-name {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 25px;
+    color: #fff;
+
+}
+.teamwear-brands{
+    max-width:1800px;
+    width:100%;
+    margin:50px auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+   
+}
+.teamwear-brands .teamwear-brands-box{
+    width:49%;
+    position:relative;
+}
+
+.teamwear-brands .teamwear-brands-content{
+    position:absolute;
+    left:50%;
+    bottom:10%;
+    transform:translate(-50%,-10%);
+    text-align:center;
+}
+.teamwear-brands .teamwear-brands_title{
+    color: #FFFFFF;
+    line-height: 1.2;
+    font-size: 34px;
+    font-weight:700;
+}
+.teamwear-brands .teamwear-brands_des{
+    color: #FFFFFF;
+    line-height: 1.4;
+    font-size: 15px;
+    margin-top: 10px;
+    letter-spacing: .2px;
+}
+.teamwear-brands .teamwear-brands_link{
+    margin-top:15px;
+}
+.teamwear-kids {
+    max-width: 1460px;
+    width: 100%;
+    margin: 50px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.teamwear-kids a {
+    width: 30%;
+    position: relative;
+}
+
+.teamwear-kids .teamwear-kids-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    width: 100%;
+    font-size: 27px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.teamwear-nxs {
+    max-width: 1800px;
+    width: calc(100% - 40px);
+    margin:0 auto;
+    overflow:hidden;
+}
+.teamwear-nxs .teamwear-nxs_title{
+    font-size: 36px;
+    line-height: 1.2;
+    font-weight:600;
+}
+.teamwear-nxs .teamwear-swiper-container{
+    position:relative;
+}
+
+@media only screen and (max-width:1000px) {
+    .teamwear-box .teamwear-title {
+        font-size: 22px;
+    }
+
+    .teamwear-kids .teamwear-kids-title {
+        font-size: 22px;
+    }
+    .colour-box .colour-name {
+        font-size:15px;
+    }
+
+}
+
+@media only screen and (max-width:768px) {
+    .teamwear-box {
+        flex-flow: row wrap;
+        margin: 0 auto 20px;
+    }
+
+    .teamwear-box a {
+        width: 49%;
+        margin-bottom: 10px;
+    }
+
+    .teamwear-colour .colour-title {
+        font-size: 27px;
+    }
+
+    .teamwear-colour .colour-title::before {
+        right: -100px;
+    }
+
+    .teamwear-colour .colour-title::after {
+        left: -100px;
+    }
+
+    .colour-box {
+        margin-top: 15px;
+    }
+
+    .teamwear-brands {
+        flex-direction:column;
+    }
+    .teamwear-brands .teamwear-brands-box{
+        width:100%;
+    }
+    .teamwear-brands .teamwear-brands_title {
+        font-size:4.5vw;
+    }
+    .teamwear-kids {
+        justify-content: flex-end;
+        flex-wrap: wrap;
+        align-items: flex-start;
+    }
+
+    .teamwear-kids a:nth-child(1) {
+        order: 1;
+        margin-right: auto;
+        width: 58%;
+    }
+
+    .teamwear-kids a:nth-child(2) {
+        order: 2;
+        width: 42%;
+    }
+
+    .teamwear-kids a:nth-child(3) {
+        order: 2;
+        width: 28%;
+        margin-top: -20%;
+    }
+
+}
+
+@media only screen and (max-width:480px) {
+    .teamwear-box .teamwear-title {
+        font-size: 18px;
+    }
+
+    .teamwear-colour .colour-title {
+        font-size: 22px;
+        display:block;
+    }
+    .teamwear-colour .colour-title::after ,
+	.teamwear-colour .colour-title::before {
+		width:10%;
+	}
+    .teamwear-colour .colour-title::before {
+        right: 0px;
+    }
+
+    .teamwear-colour .colour-title::after {
+        left: 0px;
+    }
+
+    .teamwear-kids .teamwear-kids-title {
+        font-size: 14px;
+    }
+
+    .teamwear-header .teamwear-header_title {
+        font-size: 27px;
+    }
+    .teamwear-brands .teamwear-brands_title {
+        font-size:18px;
+    }
+    .teamwear-brands .teamwear-brands_des {
+        font-size: 12px;
+    }
+    .teamwear-brands .teamwear-brands_link {
+        height: 25px;
+        line-height: 25px;
+    }
+}

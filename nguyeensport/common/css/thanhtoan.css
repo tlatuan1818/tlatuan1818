@@ -1,0 +1,135 @@
+﻿.info-table{
+    display:flex;
+    justify-content:space-between;
+    flex-flow: row wrap;
+}
+.info-row{
+    margin: 25px 0 0;
+    width:100%;
+}
+
+.info-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom:10px;
+}
+.info-input {
+    width:100%;
+}
+
+.info-input .info-flex {
+    display: flex;
+    margin-top: 10px;
+    justify-content: space-between;
+}
+
+.info-item {
+     width: 100%;
+}
+
+.info__input {
+    width: 100%;
+    height: 40px;
+    padding-left: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.info-w {
+    width: 49%;
+}
+
+.info-requi {
+    font-size:12px;
+    color:#ff0000;
+    padding:0 5px;
+}
+
+.info-title .info-btn {
+    background: #c71212;
+    border: 1px solid #c71212;
+    color: #ffffff;
+    text-align: center;
+    font-size: 14px;
+    padding: 10px;
+    margin-left: 10px;
+}
+
+.info-btn:hover {
+    background: #ffffff;
+    color: #000000;
+}
+
+.info__button {
+    display: block;
+    height: 40px;
+    color: #fff;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 40px;
+    background: #ff0000;
+    width: 250px;
+    margin-top: 15px;
+    text-align: center;
+}
+
+.info-input input[type='checkbox'] {
+    display: block;
+    border: 1px solid #ccc;
+    width: 10px;
+    height: 10px;
+}
+.info-input .info-select {
+    position: relative;
+    display:inline-block;
+    width:100%;
+}
+.info-input .info-select:after {
+    content: '';
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    width: 10px;
+    height: 10px;
+    border-top: solid 1px currentColor;
+    border-right: solid 1px currentColor;
+    -webkit-transform:  rotate(135deg);
+    transform: rotate(135deg);
+}
+.info-input select {
+    width:100%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    appearance: none;
+}
+.product-assurance{
+    margin:10px 0;
+}
+.basket-product-list__item-container{
+    margin-top:10px;
+}
+.has-icon{
+    color:#c71616;
+}
+
+@media only screen and (max-width:768px) {
+    .info-title .info-btn {
+        margin-left: 15px;
+    }
+
+    .info-input .info-flex .info-item {
+        margin-top: 10px;
+    }
+}
+@media only screen and (max-width:480px){
+    .info-input .info-select {
+        width:100%;
+    }
+    .info-input select {
+        width:100%;
+    }
+    .info-w-mobile{
+        width:100%;
+    }
+}

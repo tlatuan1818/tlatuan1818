@@ -1,0 +1,129 @@
+C:\Users\traml\Documents\nguyeensport\nguyeensport.dal\obj\Debug\nguyeensport.dal.csproj.AssemblyReference.cache
+C:\Users\traml\Documents\nguyeensport\nguyeensport.dal\obj\Debug\nguyeensport.dal.csproj.CoreCompileInputs.cache
+C:\Users\traml\Documents\nguyeensport\nguyeensport.dal\bin\Debug\nguyeensport.dal.dll
+C:\Users\traml\Documents\nguyeensport\nguyeensport.dal\bin\Debug\nguyeensport.dal.pdb
+C:\Users\traml\Documents\nguyeensport\nguyeensport.dal\bin\Debug\log4net.dll
+C:\Users\traml\Documents\nguyeensport\nguyeensport.dal\bin\Debug\SQLDB.dll
+C:\Users\traml\Documents\nguyeensport\nguyeensport.dal\bin\Debug\SQLDB.pdb
+C:\Users\traml\Documents\nguyeensport\nguyeensport.dal\obj\Debug\nguyeensport.dal.csproj.CopyComplete
+C:\Users\traml\Documents\nguyeensport\nguyeensport.dal\obj\Debug\nguyeensport.dal.dll
+C:\Users\traml\Documents\nguyeensport\nguyeensport.dal\obj\Debug\nguyeensport.dal.pdb
+C:\Users\traml\OneDrive\Documents\nguyeensport\nguyeensport.dal\bin\Debug\nguyeensport.dal.dll
+C:\Users\traml\OneDrive\Documents\nguyeensport\nguyeensport.dal\bin\Debug\nguyeensport.dal.pdb
+C:\Users\traml\OneDrive\Documents\nguyeensport\nguyeensport.dal\bin\Debug\log4net.dll
+C:\Users\traml\OneDrive\Documents\nguyeensport\nguyeensport.dal\bin\Debug\SQLDB.dll
+C:\Users\traml\OneDrive\Documents\nguyeensport\nguyeensport.dal\bin\Debug\SQLDB.pdb
+C:\Users\traml\OneDrive\Documents\nguyeensport\nguyeensport.dal\obj\Debug\nguyeensport.dal.csproj.CoreCompileInputs.cache
+C:\Users\traml\OneDrive\Documents\nguyeensport\nguyeensport.dal\obj\Debug\nguyeensport.dal.csproj.CopyComplete
+C:\Users\traml\OneDrive\Documents\nguyeensport\nguyeensport.dal\obj\Debug\nguyeensport.dal.dll
+C:\Users\traml\OneDrive\Documents\nguyeensport\nguyeensport.dal\obj\Debug\nguyeensport.dal.pdb
+C:\Users\traml\OneDrive\Documents\nguyeensport\nguyeensport.dal\obj\Debug\nguyeensport.dal.csproj.AssemblyReference.cache
+C:\Users\tlatu\Documents\nguyeensport\nguyeensport.dal\bin\Debug\nguyeensport.dal.dll
+C:\Users\tlatu\Documents\nguyeensport\nguyeensport.dal\bin\Debug\nguyeensport.dal.pdb
+C:\Users\tlatu\Documents\nguyeensport\nguyeensport.dal\bin\Debug\log4net.dll
+C:\Users\tlatu\Documents\nguyeensport\nguyeensport.dal\bin\Debug\SQLDB.dll
+C:\Users\tlatu\Documents\nguyeensport\nguyeensport.dal\bin\Debug\SQLDB.pdb
+C:\Users\tlatu\Documents\nguyeensport\nguyeensport.dal\obj\Debug\nguyeensport.dal.csprojAssemblyReference.cache
+C:\Users\tlatu\Documents\nguyeensport\nguyeensport.dal\obj\Debug\nguyeensport.dal.csproj.CoreCompileInputs.cache
+C:\Users\tlatu\Documents\nguyeensport\nguyeensport.dal\obj\Debug\nguyeensport.dal.csproj.CopyComplete
+C:\Users\tlatu\Documents\nguyeensport\nguyeensport.dal\obj\Debug\nguyeensport.dal.dll
+C:\Users\tlatu\Documents\nguyeensport\nguyeensport.dal\obj\Debug\nguyeensport.dal.pdb
+C:\Users\tlatu\Documents\nguyeensport\nguyeensport.dal\bin\Debug\nguyeensport.dal.dll.config
+C:\Users\tlatu\Documents\nguyeensport\nguyeensport.dal\bin\Debug\CloudinaryDotNet.dll
+C:\Users\tlatu\Documents\nguyeensport\nguyeensport.dal\bin\Debug\Microsoft.AspNetCore.Html.Abstractions.dll
+C:\Users\tlatu\Documents\nguyeensport\nguyeensport.dal\bin\Debug\Microsoft.AspNetCore.Http.Abstractions.dll
+C:\Users\tlatu\Documents\nguyeensport\nguyeensport.dal\bin\Debug\Microsoft.AspNetCore.Http.Features.dll
+C:\Users\tlatu\Documents\nguyeensport\nguyeensport.dal\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\tlatu\Documents\nguyeensport\nguyeensport.dal\bin\Debug\Microsoft.Extensions.Options.dll
+C:\Users\tlatu\Documents\nguyeensport\nguyeensport.dal\bin\Debug\Microsoft.Extensions.Primitives.dll
+C:\Users\tlatu\Documents\nguyeensport\nguyeensport.dal\bin\Debug\Microsoft.Extensions.WebEncoders.dll
+C:\Users\tlatu\Documents\nguyeensport\nguyeensport.dal\bin\Debug\Newtonsoft.Json.dll
+C:\Users\tlatu\Documents\nguyeensport\nguyeensport.dal\bin\Debug\System.Linq.dll
+C:\Users\tlatu\Documents\nguyeensport\nguyeensport.dal\bin\Debug\System.Linq.Expressions.dll
+C:\Users\tlatu\Documents\nguyeensport\nguyeensport.dal\bin\Debug\System.Reflection.dll
+C:\Users\tlatu\Documents\nguyeensport\nguyeensport.dal\bin\Debug\System.Runtime.dll
+C:\Users\tlatu\Documents\nguyeensport\nguyeensport.dal\bin\Debug\System.Runtime.Extensions.dll
+C:\Users\tlatu\Documents\nguyeensport\nguyeensport.dal\bin\Debug\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\tlatu\Documents\nguyeensport\nguyeensport.dal\bin\Debug\System.Text.Encodings.Web.dll
+C:\Users\tlatu\Documents\nguyeensport\nguyeensport.dal\bin\Debug\CloudinaryDotNet.xml
+C:\Users\tlatu\Documents\nguyeensport\nguyeensport.dal\bin\Debug\Microsoft.AspNetCore.Html.Abstractions.xml
+C:\Users\tlatu\Documents\nguyeensport\nguyeensport.dal\bin\Debug\Microsoft.AspNetCore.Http.Abstractions.xml
+C:\Users\tlatu\Documents\nguyeensport\nguyeensport.dal\bin\Debug\Microsoft.AspNetCore.Http.Features.xml
+C:\Users\tlatu\Documents\nguyeensport\nguyeensport.dal\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.xml
+C:\Users\tlatu\Documents\nguyeensport\nguyeensport.dal\bin\Debug\Microsoft.Extensions.Options.xml
+C:\Users\tlatu\Documents\nguyeensport\nguyeensport.dal\bin\Debug\Microsoft.Extensions.Primitives.xml
+C:\Users\tlatu\Documents\nguyeensport\nguyeensport.dal\bin\Debug\Microsoft.Extensions.WebEncoders.xml
+C:\Users\tlatu\Documents\nguyeensport\nguyeensport.dal\bin\Debug\Newtonsoft.Json.xml
+C:\Users\tlatu\Documents\nguyeensport\nguyeensport.dal\bin\Debug\System.Text.Encodings.Web.xml
+C:\Users\tlatu\Documents\nguyeensport - backup\nguyeensport.dal\bin\Debug\nguyeensport.dal.dll.config
+C:\Users\tlatu\Documents\nguyeensport - backup\nguyeensport.dal\bin\Debug\nguyeensport.dal.dll
+C:\Users\tlatu\Documents\nguyeensport - backup\nguyeensport.dal\bin\Debug\nguyeensport.dal.pdb
+C:\Users\tlatu\Documents\nguyeensport - backup\nguyeensport.dal\bin\Debug\CloudinaryDotNet.dll
+C:\Users\tlatu\Documents\nguyeensport - backup\nguyeensport.dal\bin\Debug\log4net.dll
+C:\Users\tlatu\Documents\nguyeensport - backup\nguyeensport.dal\bin\Debug\Microsoft.AspNetCore.Html.Abstractions.dll
+C:\Users\tlatu\Documents\nguyeensport - backup\nguyeensport.dal\bin\Debug\Microsoft.AspNetCore.Http.Abstractions.dll
+C:\Users\tlatu\Documents\nguyeensport - backup\nguyeensport.dal\bin\Debug\Microsoft.AspNetCore.Http.Features.dll
+C:\Users\tlatu\Documents\nguyeensport - backup\nguyeensport.dal\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\tlatu\Documents\nguyeensport - backup\nguyeensport.dal\bin\Debug\Microsoft.Extensions.Options.dll
+C:\Users\tlatu\Documents\nguyeensport - backup\nguyeensport.dal\bin\Debug\Microsoft.Extensions.Primitives.dll
+C:\Users\tlatu\Documents\nguyeensport - backup\nguyeensport.dal\bin\Debug\Microsoft.Extensions.WebEncoders.dll
+C:\Users\tlatu\Documents\nguyeensport - backup\nguyeensport.dal\bin\Debug\Newtonsoft.Json.dll
+C:\Users\tlatu\Documents\nguyeensport - backup\nguyeensport.dal\bin\Debug\SQLDB.dll
+C:\Users\tlatu\Documents\nguyeensport - backup\nguyeensport.dal\bin\Debug\System.Linq.dll
+C:\Users\tlatu\Documents\nguyeensport - backup\nguyeensport.dal\bin\Debug\System.Linq.Expressions.dll
+C:\Users\tlatu\Documents\nguyeensport - backup\nguyeensport.dal\bin\Debug\System.Reflection.dll
+C:\Users\tlatu\Documents\nguyeensport - backup\nguyeensport.dal\bin\Debug\System.Runtime.dll
+C:\Users\tlatu\Documents\nguyeensport - backup\nguyeensport.dal\bin\Debug\System.Runtime.Extensions.dll
+C:\Users\tlatu\Documents\nguyeensport - backup\nguyeensport.dal\bin\Debug\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\tlatu\Documents\nguyeensport - backup\nguyeensport.dal\bin\Debug\System.Text.Encodings.Web.dll
+C:\Users\tlatu\Documents\nguyeensport - backup\nguyeensport.dal\bin\Debug\CloudinaryDotNet.xml
+C:\Users\tlatu\Documents\nguyeensport - backup\nguyeensport.dal\bin\Debug\Microsoft.AspNetCore.Html.Abstractions.xml
+C:\Users\tlatu\Documents\nguyeensport - backup\nguyeensport.dal\bin\Debug\Microsoft.AspNetCore.Http.Abstractions.xml
+C:\Users\tlatu\Documents\nguyeensport - backup\nguyeensport.dal\bin\Debug\Microsoft.AspNetCore.Http.Features.xml
+C:\Users\tlatu\Documents\nguyeensport - backup\nguyeensport.dal\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.xml
+C:\Users\tlatu\Documents\nguyeensport - backup\nguyeensport.dal\bin\Debug\Microsoft.Extensions.Options.xml
+C:\Users\tlatu\Documents\nguyeensport - backup\nguyeensport.dal\bin\Debug\Microsoft.Extensions.Primitives.xml
+C:\Users\tlatu\Documents\nguyeensport - backup\nguyeensport.dal\bin\Debug\Microsoft.Extensions.WebEncoders.xml
+C:\Users\tlatu\Documents\nguyeensport - backup\nguyeensport.dal\bin\Debug\Newtonsoft.Json.xml
+C:\Users\tlatu\Documents\nguyeensport - backup\nguyeensport.dal\bin\Debug\SQLDB.pdb
+C:\Users\tlatu\Documents\nguyeensport - backup\nguyeensport.dal\bin\Debug\System.Text.Encodings.Web.xml
+C:\Users\tlatu\Documents\nguyeensport - backup\nguyeensport.dal\obj\Debug\nguyeensport.dal.csprojAssemblyReference.cache
+C:\Users\tlatu\Documents\nguyeensport - backup\nguyeensport.dal\obj\Debug\nguyeensport.dal.csproj.CoreCompileInputs.cache
+C:\Users\tlatu\Documents\nguyeensport - backup\nguyeensport.dal\obj\Debug\nguyeensport.dal.csproj.CopyComplete
+C:\Users\tlatu\Documents\nguyeensport - backup\nguyeensport.dal\obj\Debug\nguyeensport.dal.dll
+C:\Users\tlatu\Documents\nguyeensport - backup\nguyeensport.dal\obj\Debug\nguyeensport.dal.pdb
+C:\Users\NGUYEEN\Desktop\nguyeensport\nguyeensport.dal\bin\Debug\nguyeensport.dal.dll.config
+C:\Users\NGUYEEN\Desktop\nguyeensport\nguyeensport.dal\bin\Debug\nguyeensport.dal.dll
+C:\Users\NGUYEEN\Desktop\nguyeensport\nguyeensport.dal\bin\Debug\nguyeensport.dal.pdb
+C:\Users\NGUYEEN\Desktop\nguyeensport\nguyeensport.dal\bin\Debug\CloudinaryDotNet.dll
+C:\Users\NGUYEEN\Desktop\nguyeensport\nguyeensport.dal\bin\Debug\Microsoft.AspNetCore.Html.Abstractions.dll
+C:\Users\NGUYEEN\Desktop\nguyeensport\nguyeensport.dal\bin\Debug\Microsoft.AspNetCore.Http.Abstractions.dll
+C:\Users\NGUYEEN\Desktop\nguyeensport\nguyeensport.dal\bin\Debug\Microsoft.AspNetCore.Http.Features.dll
+C:\Users\NGUYEEN\Desktop\nguyeensport\nguyeensport.dal\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\NGUYEEN\Desktop\nguyeensport\nguyeensport.dal\bin\Debug\Microsoft.Extensions.Options.dll
+C:\Users\NGUYEEN\Desktop\nguyeensport\nguyeensport.dal\bin\Debug\Microsoft.Extensions.Primitives.dll
+C:\Users\NGUYEEN\Desktop\nguyeensport\nguyeensport.dal\bin\Debug\Microsoft.Extensions.WebEncoders.dll
+C:\Users\NGUYEEN\Desktop\nguyeensport\nguyeensport.dal\bin\Debug\Newtonsoft.Json.dll
+C:\Users\NGUYEEN\Desktop\nguyeensport\nguyeensport.dal\bin\Debug\System.Linq.dll
+C:\Users\NGUYEEN\Desktop\nguyeensport\nguyeensport.dal\bin\Debug\System.Linq.Expressions.dll
+C:\Users\NGUYEEN\Desktop\nguyeensport\nguyeensport.dal\bin\Debug\System.Reflection.dll
+C:\Users\NGUYEEN\Desktop\nguyeensport\nguyeensport.dal\bin\Debug\System.Runtime.dll
+C:\Users\NGUYEEN\Desktop\nguyeensport\nguyeensport.dal\bin\Debug\System.Runtime.Extensions.dll
+C:\Users\NGUYEEN\Desktop\nguyeensport\nguyeensport.dal\bin\Debug\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\NGUYEEN\Desktop\nguyeensport\nguyeensport.dal\bin\Debug\System.Text.Encodings.Web.dll
+C:\Users\NGUYEEN\Desktop\nguyeensport\nguyeensport.dal\bin\Debug\CloudinaryDotNet.xml
+C:\Users\NGUYEEN\Desktop\nguyeensport\nguyeensport.dal\bin\Debug\Microsoft.AspNetCore.Html.Abstractions.xml
+C:\Users\NGUYEEN\Desktop\nguyeensport\nguyeensport.dal\bin\Debug\Microsoft.AspNetCore.Http.Abstractions.xml
+C:\Users\NGUYEEN\Desktop\nguyeensport\nguyeensport.dal\bin\Debug\Microsoft.AspNetCore.Http.Features.xml
+C:\Users\NGUYEEN\Desktop\nguyeensport\nguyeensport.dal\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.xml
+C:\Users\NGUYEEN\Desktop\nguyeensport\nguyeensport.dal\bin\Debug\Microsoft.Extensions.Options.xml
+C:\Users\NGUYEEN\Desktop\nguyeensport\nguyeensport.dal\bin\Debug\Microsoft.Extensions.Primitives.xml
+C:\Users\NGUYEEN\Desktop\nguyeensport\nguyeensport.dal\bin\Debug\Microsoft.Extensions.WebEncoders.xml
+C:\Users\NGUYEEN\Desktop\nguyeensport\nguyeensport.dal\bin\Debug\Newtonsoft.Json.xml
+C:\Users\NGUYEEN\Desktop\nguyeensport\nguyeensport.dal\bin\Debug\SQLDB.pdb
+C:\Users\NGUYEEN\Desktop\nguyeensport\nguyeensport.dal\bin\Debug\System.Text.Encodings.Web.xml
+C:\Users\NGUYEEN\Desktop\nguyeensport\nguyeensport.dal\obj\Debug\nguyeensport.dal.csproj.AssemblyReference.cache
+C:\Users\NGUYEEN\Desktop\nguyeensport\nguyeensport.dal\obj\Debug\nguyeensport.dal.csproj.CoreCompileInputs.cache
+C:\Users\NGUYEEN\Desktop\nguyeensport\nguyeensport.dal\obj\Debug\nguyeensport.dal.csproj.CopyComplete
+C:\Users\NGUYEEN\Desktop\nguyeensport\nguyeensport.dal\obj\Debug\nguyeensport.dal.dll
+C:\Users\NGUYEEN\Desktop\nguyeensport\nguyeensport.dal\obj\Debug\nguyeensport.dal.pdb

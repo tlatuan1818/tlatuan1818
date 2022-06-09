@@ -1,0 +1,158 @@
+.login-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.login-container .login-bg,
+.login-container .login-bg-mobile {
+    width: 50%;
+}
+
+.login-bg img {
+    width: 100%;
+    height: 100vh;
+}
+
+.login-bg-mobile .login-content {
+    width: 100%;
+}
+
+.login-content {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login-content a {
+    display: block;
+    width: 280px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.login-content .login-title {
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 3.33;
+}
+
+.login-details-form {
+    max-width: 768px;
+    width: calc(100% - 40px);
+
+}
+
+.validator .input-group {
+    position: relative;
+}
+
+.form-item .input-validation-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.form-item .input-name {
+    -ms-flex-order: 1;
+   
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+}
+
+.login-details-form .custom-text-field {
+    width: 100%;
+    margin-bottom: 20px;
+    order: 3;
+    flex-grow: 2;
+    height: 40px;
+    border: 1px solid #202020;
+    border-radius: 3px;
+    padding: 0 15px;
+    font-size: 12px;
+    box-shadow: none;
+}
+
+.login-details-form__submit {
+    width: 164px;
+    margin-bottom: 15px;
+    border-color: #c70101;
+    background: #c70101;
+    color: #fff;
+    display: block;
+    cursor: pointer;
+    text-align: center;
+    transition: all .4s ease-in-out;
+
+}
+
+.login-details-form__submit .button__title {
+    height: inherit;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 3.33333;
+}
+
+
+
+.login-content .login-link p,
+.login-content .login-link a {
+    display: inline-block;
+    width: auto;
+}
+
+.login-link a {
+    font-weight: 600;
+    text-decoration: underline;
+    margin-top: 0px;
+    margin-bottom: 0px;
+
+}
+
+.login-link a:hover {
+    text-decoration: none;
+}
+
+@media only screen and (max-width:1000px) {
+    .login-content .login-title {
+        line-height: 1.66;
+    }
+}
+
+@media only screen and (max-width:768px) {
+    .login-content a {
+        width: 175px;
+    }
+
+    .login-content .login-title {
+        line-height: 1.555;
+        font-size: 27px;
+    }
+}
+
+@media only screen and (max-width:569px) {
+    .login-container {
+        flex-direction: column;
+        position: relative;
+    }
+
+    .login-container .login-bg-mobile {
+
+        background: #fff;
+        width: 300px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .login-container .login-bg,
+    .login-container .login-content {
+        width: 100%;
+    }
+
+    .login-content .login-link:last-child {
+        margin-bottom: 20px;
+    }
+
+}

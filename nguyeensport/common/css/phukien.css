@@ -1,0 +1,242 @@
+.phukien-catalog {
+    max-width: 1800px;
+    width: calc(100% - 40px);
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.phukien-catalog a {
+    position: relative;
+    width: 46%;
+}
+
+.phukien-catalog .phukien-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 36px;
+    color: #fff;
+    text-shadow: 2px 2px 2px #000;
+    width: 100%;
+    text-align: center;
+}
+
+.phukien-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 50px auto;
+    max-width: 1460px;
+    width: 100%;
+}
+
+.phukien-box a {
+    width: 32%;
+    position: relative;
+}
+
+.phukien-box .phukien-box-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 36px;
+    color: #fff;
+    text-shadow: 2px 2px 2px #000;
+    width: 100%;
+    text-align: center;
+    line-height: 1;
+}
+
+.phukien-choice {
+    max-width: 1460px;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.phukien-choice .phukien-choice-title {
+    font-size: 36px;
+    font-weight: 600;
+    text-align: center;
+    line-height: 1.2;
+    letter-spacing: -0.5px;
+    position: relative;
+    display: inline-block;
+}
+
+.phukien-choice .phukien-choice-title::before ,
+.phukien-choice .phukien-choice-title::after {
+    content: '';
+    width: 30%;
+    height: 1px;
+    position: absolute;
+    top: 50%;
+    right: -200px;
+    transform: translateY(-50%);
+    display: block;
+    background: #000;
+}
+
+.phukien-choice .phukien-brands {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-top: 40px;
+}
+
+.phukien-brands a {
+    width: 24%;
+    position: relative;
+}
+
+.phukien-brands a img:last-child {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.phukien-header {
+    max-width: 1460px;
+    width: calc(100% - 40px);
+    margin: 50px auto;
+}
+
+.phukien-header .phukien-header_title {
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 1;
+    margin-bottom: 25px;
+}
+
+.phukien-header .phukien-header_title .phukien-header_text {
+    letter-spacing: .5px;
+}
+
+.phukien-header .phukien-header_des {
+    letter-spacing: .5px;
+    font-size: 12px;
+}
+
+
+@media only screen and (max-width:1000px) {
+    .phukien-catalog a {
+        width: 48%;
+    }
+
+    .phukien-catalog .phukien-title {
+        font-size: 27px;
+    }
+
+    .phukien-box .phukien-box-title {
+        font-size: 27px;
+    }
+
+    .phukien-choice .phukien-brands {
+        margin-top: 25px;
+    }
+
+    .phukien-choice .phukien-choice-title {
+        font-size: 27px;
+    }
+
+    .phukien-choice .phukien-choice-title::before {
+        left: -130px;
+    }
+
+    .phukien-choice .phukien-choice-title::after {
+        right: -130px;
+    }
+}
+
+@media only screen and (max-width:768px) {
+    .phukien-box {
+        justify-content: flex-end;
+        flex-wrap: wrap;
+        align-items: flex-start;
+    }
+
+    .phukien-box a:nth-child(1) {
+        order: 2;
+        width: 36%;
+    }
+
+    .phukien-box a:nth-child(2) {
+        order: 1;
+        width: 55%;
+        margin-right: auto;
+    }
+
+    .phukien-box a:nth-child(3) {
+        order: 2;
+        width: 36%;
+        margin-top: -25.6%;
+    }
+
+    .phukien-choice .phukien-brands {
+        flex-flow: row wrap;
+    }
+
+    .phukien-brands a {
+        width: 49%;
+        margin-bottom: 10px;
+    }
+}
+
+@media only screen and (max-width:480px) {
+    .phukien-catalog {
+        flex-direction: column;
+    }
+
+    .phukien-catalog a {
+        width: 100%;
+    }
+
+    .phukien-box .phukien-box-title {
+        font-size: 18px;
+    }
+
+    .phukien-box a:nth-child(1) {
+        order: 2;
+        width: 40%;
+    }
+
+    .phukien-box a:nth-child(2) {
+        order: 1;
+        width: 58%;
+        margin-right: auto;
+    }
+
+    .phukien-box a:nth-child(3) {
+        order: 2;
+        width: 40%;
+        margin-top: -28.6%;
+    }
+
+    .phukien-choice .phukien-choice-title {
+        font-size: 18px;
+        display:block;
+    }
+    .phukien-choice .phukien-choice-title::before ,
+    .phukien-choice .phukien-choice-title::after {
+        width:10%;
+    }
+    .phukien-choice .phukien-choice-title::before {
+        left: 0px;
+    }
+
+    .phukien-choice .phukien-choice-title::after {
+        right: 0px;
+    }
+    .phukien-brands a img:last-child {
+        width: 50%;
+    }
+    .phukien-header .phukien-header_title {
+        font-size: 27px;
+    }
+}

@@ -1,0 +1,229 @@
+﻿.row {
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+a:hover {
+    color: #fff;
+    text-decoration: none;
+}
+.masonry-slider {
+    width: 100%;
+    position: relative;
+}
+
+
+.masonry-box{
+    max-width:1550px;
+    width: calc(100% - 40px);
+    margin: 40px auto 0px;
+    display:flex;
+    justify-content:space-between;
+
+}
+.masonry-link{
+    display:block;
+    width:150px;
+    height:30px;
+    line-height:30px;
+    background:#000;
+    color:#fff;
+    text-align:center;
+    font-size:14px;
+    font-weight:300;
+}
+.masonry-title{
+    font-size:38px;
+    font-weight:700;
+}
+.masonry-date{
+    font-size:13px;
+    color:#ccc;
+
+}
+.horizal-rule{
+    height:1px;
+    width:100%;
+    background:#808080;
+    margin-bottom:50px;
+    margin-top:0px;
+   
+}
+.masonry-box .masonry-content { 
+    width: 67%;
+    
+}
+.masonry-box .masonry-ads{
+    width:27%;
+}
+.masonry-box .masonry-ads a{
+    padding:10px;
+    display:block;
+    border:1px solid #000;
+}
+.masonry-box .masonry-ads a img{
+    width:100%;
+}
+.masonry-ads .instagram-feed{
+    display:flex;
+    justify-content:space-between;
+    margin-top:30px;
+    padding:10px;
+    border:1px solid #000;
+}
+.masonry-ads .instagram-feed a:first-child{
+    width:50px;
+    height:50px;
+    border:none;
+    padding:0;
+}
+.masonry-ads .instagram-feed a:last-child {
+    width: 120px;
+    height: 50px;
+    padding: 0;
+    border: none;
+    background: #5e47ff;
+    line-height: 50px;
+    text-align: center;
+    color: #fff;
+    font-weight:700;
+}
+.masonry-news-slider {
+    margin: 0 auto 65px;
+    max-width: 1550px;
+    width: calc(100% - 40px);
+
+}
+
+.masonry-news-slider a {
+    position: relative;
+}
+
+.masonry-news-slider a:hover{
+    color:#000;
+    text-decoration:none;
+    opacity:.5;
+}
+    .masonry-news-slider .item-text {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        padding: 0 15px 15px;
+        color: #fff;
+        width: 100%;
+       
+    }
+.masonry-news-slider .item-text h2{
+    font-size: 18px;
+    margin: 0 0 20px;
+    font-weight: 300;
+}
+.masonry-news-slider a .item-text .info{
+    font-size: 12px;
+    margin: 0;
+}
+.masonry-news-slider a .item-text .info span{
+    font-weight: 400;
+    opacity: .7;
+}
+.htmlEditorImg-1 {
+    width: 100%;
+    margin-block: 10px;
+}
+.htmlEditorImg {
+    width: calc((100% / 2) - 15px);
+    margin-block: 10px;
+}
+.htmlEditorImg:before{
+    display: block;
+    clear: both;
+    height: 0;
+    visibility: hidden;
+    content: ".";
+    zoom: 1;
+}
+.masonry-news-slider .slick-dots {
+    bottom:25px;
+}
+.masonry-news-slider .slick-dots li button::before {
+    font-size:30px;
+}
+.comment-fb{
+   
+    background:#ccc;
+    padding-bottom:100px;
+}
+.comment-fb .comment-wrap{
+    max-width:1550px;
+    width:calc(100% - 40px);
+    margin:0 auto;
+   
+}
+@media only screen and (max-width:1000px) {
+    .masonry-box {
+        flex-direction:column;
+        align-items:center;
+    }
+    .masonry-box .masonry-content {
+        width:100%;
+    }
+    .masonry-title {
+        font-size: 5vw;
+    }
+    .masonry-box .masonry-ads{
+        width:100%;
+        margin-bottom:30px;
+    }
+    .masonry-box .masonry-ads a{
+        width:50%;
+        margin:0 auto;
+    }
+    .masonry-ads .instagram-feed a:first-child{
+        margin:0;
+    }
+    .masonry-ads .instagram-feed a:last-child{
+        margin:0;
+    }
+}
+@media only screen and (max-width:480px){
+    .masonry-slider .slick-prev, .masonry-slider .slick-next {
+        width: 50px;
+        height: 30px;
+    }
+    .masonry-slider .slick-prev {
+        right:51px;
+    }
+    .masonry-slider .slick-next:before,
+    .masonry-slider .slick-prev:before{
+        width: 10px;
+        height: 10px;
+        border-top: solid 2px #fff;
+        border-right: solid 2px #fff;
+    }
+
+    .masonry-box {
+        margin:25px auto 0;
+    }
+    .masonry-box .masonry-ads{
+        width:100%;
+       
+    }
+    .masonry-box .masonry-ads a {
+        width:100%;
+    }
+    .masonry-title {
+        font-size: 6vw;
+    }
+    .masonry-link {
+        margin-bottom:10px;
+        font-size:12px;
+        font-weight:700;
+        width:125px;
+    }
+    .horizal-rule {
+        margin-bottom:25px;
+    }
+    .htmlEditorImg {
+        width: calc((100% / 2) - 5px);
+    }
+}

@@ -1,0 +1,368 @@
+.boots-catalog {
+    max-width: 1800px;
+    width: calc(100% - 40px);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.boots-catalog a {
+    width: 49%;
+}
+
+.boots-catalog .boots-title {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -0.5px;
+    padding-top: 15px;
+    text-align: center;
+}
+
+.boots-choice {
+    max-width: 1800px;
+    width: calc(100% - 40px);
+    margin: 40px auto 30px;
+    text-align: center;
+}
+
+.boots-choice .choice-title {
+
+    font-size: 36px;
+    font-weight: 600;
+    text-align: center;
+    line-height: 1.2;
+    letter-spacing: -0.5px;
+    position: relative;
+    display: inline-block;
+}
+
+.boots-choice .choice-title::before {
+    content: '';
+    width: 30%;
+    height: 1px;
+    position: absolute;
+    top: 50%;
+    left: -200px;
+    transform: translateY(-50%);
+    display: block;
+    background: #000;
+}
+
+.boots-choice .choice-title::after {
+    content: '';
+    width: 30%;
+    height: 1px;
+    position: absolute;
+    top: 50%;
+    right: -200px;
+    transform: translateY(-50%);
+    display: block;
+    background: #000;
+}
+
+.boots-brand {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 40px 0;
+}
+
+.boots-brand:last-child {
+    flex-direction: row;
+}
+
+.boots-brand a {
+    position: relative;
+    width: 49%;
+}
+
+.boots-brand:last-child a {
+    width: 24%;
+}
+
+.boots-brand img:last-child {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+.boots-banner {
+    max-width: 1800px;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.boots-banner .banner-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.banner-text .banner-btn {
+    margin-right: 110px;
+}
+
+.banner-text .banner--content {
+    padding-left: 110px;
+    color: #fff;
+}
+
+.banner--content .banner--content_title {
+    font-size: 33px;
+    font-weight: 600;
+    line-height: 1.5;
+    letter-spacing: -1px;
+}
+
+.boots-box {
+    max-width: 1800px;
+    width: 100%;
+    margin: 40px auto 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.boots-box a {
+    width: 49%;
+    position: relative;
+}
+
+.boots-box .boots-box--title {
+    font-size: 36px;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: 600;
+    width: 100%;
+    text-align: center;
+
+}
+
+.boots-small {
+    max-width: 1800px;
+    width: calc(100% - 40px);
+    margin: 40px auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.boots-small a {
+    width: 32%;
+    position: relative;
+}
+
+.boots-small .boots-small--title {
+    font-size: 36px;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: 600;
+    width: 100%;
+    text-align: center;
+
+}
+
+.boots-header {
+    max-width: 1800px;
+    width: calc(100% - 40px);
+    margin: 50px auto;
+}
+
+.boots-header .boots-header_title {
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 1;
+    margin-bottom: 25px;
+}
+
+.boots-header .boots-header_title .boots-header_text {
+    letter-spacing: .5px;
+}
+
+.boots-header .boots-header_des {
+    letter-spacing: .5px;
+    font-size: 12px;
+}
+
+@media only screen and (max-width:1000px) {
+    .boots-catalog .boots-title {
+        font-size: 27px;
+    }
+
+    .boots-choice .choice-title {
+        font-size: 27px;
+    }
+
+    .boots-brand a {
+        width: 49%;
+    }
+
+    .banner--content .banner--content_title {
+        font-size: 27px;
+    }
+
+    .boots-box .boots-box--title {
+        font-size: 27px;
+    }
+
+    .boots-small .boots-small--title {
+        font-size: 27px;
+    }
+}
+
+@media only screen and (max-width:768px) {
+    .boots-catalog {
+        flex-direction: column;
+    }
+
+    .boots-catalog a {
+        width: 100%;
+        margin-bottom: 25px;
+    }
+
+    .boots-choice .choice-title::before {
+        left: -130px;
+    }
+
+    .boots-choice .choice-title::after {
+        right: -130px;
+    }
+
+    .boots-brand:last-child {
+        flex-flow: row wrap;
+    }
+
+    .boots-brand:last-child a {
+        width: 49%;
+        margin-bottom: 15px;
+    }
+
+    .boots-banner .banner-text {
+        flex-direction: column;
+    }
+
+    .banner-text .banner-btn {
+        margin-right: 0;
+        margin-top: 15px;
+    }
+
+    .banner-text .banner--content {
+        padding-left: 0;
+        text-align: center;
+        text-shadow: 2px 2px 2px #000;
+    }
+
+    .boots-small {
+        justify-content: flex-end;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        align-content: flex-start;
+    }
+
+    .boots-small a:nth-of-type(1) {
+        order: 1;
+        width: 65%;
+
+        margin-right: auto;
+    }
+
+    .boots-small a:nth-of-type(2) {
+        order: 2;
+        width: 30%;
+
+    }
+
+    .boots-small a:nth-of-type(3) {
+        order: 2;
+        width: 30%;
+        margin-top: -22%;
+
+    }
+
+    .boots-small .boots-small--title {
+        font-size: 18px;
+    }
+}
+
+@media only screen and (max-width:480px) {
+    .boots-catalog .boots-title {
+        font-size: 22px;
+    }
+
+    .boots-choice {
+        margin: 5px auto 15px;
+    }
+
+    .boots-brand {
+        margin: 25px 0
+    }
+
+    .boots-choice .choice-title {
+        font-size: 22px;
+        line-height: 2.5;
+    }
+
+    .boots-choice .choice-title::before {
+        top: auto;
+        bottom: 0px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .boots-choice .choice-title::after {
+        display: none;
+    }
+
+    .boots-box {
+        margin: 10px auto 0;
+    }
+
+    .boots-box .boots-box--title {
+        font-size: 14px;
+    }
+
+    .boots-small {
+        width: calc(100% - 15px);
+        margin: 20px auto 25px;
+
+    }
+
+    .boots-small a:nth-of-type(2) {
+        width: 32%;
+    }
+
+    .boots-small a:nth-of-type(3) {
+
+        width: 32%;
+        margin-top: -23.4%;
+
+    }
+
+    .boots-small .boots-small--title {
+        font-size: 14px;
+    }
+
+    .boots-header .boots-header_title {
+        font-size: 27px;
+    }
+}

@@ -1,0 +1,42 @@
+﻿.bg-container{
+  position:relative; 
+}
+.bg-content{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    width:100%;
+    text-align:center;
+}
+.bg-content h1{
+    width:100%;
+    font-size:4vw;
+    font-weight:bold;
+    color:#fff;
+    text-shadow:2px 2px 2px #000;
+    margin-bottom:20px;
+}
+.bg-content a{
+    padding:10px 20px;
+    font-size:14px;
+    color:#000;
+    
+    background:#fff;
+    font-weight:700;
+    box-shadow: 2px 2px 2px #000;
+}
+.bg-content a:hover{
+    background:#bf4040;
+    color:#fff;
+    transition:ease-in .5s;
+}
+@media only screen and (max-width:768px){
+    .bg-content h1 {
+        font-size: 30px;
+    }
+    .bg-content a {
+        font-size: 12px;
+        padding: 7px 15px;
+    }
+}

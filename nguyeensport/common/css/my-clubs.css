@@ -1,0 +1,153 @@
+.my-clubs {
+    padding: 0;
+    margin: 35px 0 35px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.my-clubs .my-clubs__title {
+    text-align: left;
+    margin-bottom: 35px;
+    font-size: 30px;
+    line-height: 1;
+}
+
+.my-clubs .button {
+    width: 175px;
+    height: 40px;
+    line-height:40px;
+}
+
+.clubs-list {
+    margin-bottom: 65px;
+}
+
+.clubs-list__item {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #9b9b9b;
+    flex-direction: row;
+    padding: 20px 0;
+}
+
+.clubs-list__item:last-child {
+    border-bottom: 1px solid #9b9b9b;
+}
+
+.clubs-list__item__description {
+    margin-bottom: 0;
+    display: flex;
+    align-items: center;
+}
+
+.clubs-list__item__description .clubs-list__item__logo {
+    width: 80px;
+}
+
+.clubs-list__item__description .clubs-list__item__text {
+    padding-left: 18px;
+}
+
+.clubs-list__item__description .my-clubs-name {
+    word-break: break-word;
+    font-size: 18px;
+    line-height: 1.33333;
+}
+
+.clubs-list__item__buttons {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+
+.clubs-list .button--club-list {
+    width: 140px;
+    margin-right: 15px;
+    height:40px;
+    line-height:40px;
+}
+
+.clubs-list__item__buttons .button--club-list button {
+    width: 100%;
+    height: 40px;
+}
+
+.clubs-list__cleaner-wrapper {
+    height: 40px;
+    width: 40px;
+    border: 1px solid #000;
+}
+
+.clubs-list__cleaner-wrapper .clubs-list__cleaner-close {
+    height: 100%;
+    width: 100%;
+    color: #000;
+    position: relative;
+    margin-top: 0;
+    margin-left: 0;
+    display: block;
+}
+
+.clubs-list__cleaner-wrapper .clubs-list__cleaner-close::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 21px;
+    height: 1px;
+    background-color: currentColor;
+    -webkit-transform: rotate(-45deg);
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.clubs-list__cleaner-wrapper .clubs-list__cleaner-close::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 21px;
+    height: 1px;
+    background-color: currentColor;
+    -webkit-transform: rotate(45deg);
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+@media only screen and (max-width:1000px) {
+    .my-clubs {
+        margin: 35px 20px;
+    }
+
+    .clubs-list {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+}
+
+@media only screen and (max-width:768px) {
+    .clubs-list__item {
+        flex-direction: column;
+    }
+
+    .clubs-list__item__description {
+        margin-bottom: 25px;
+    }
+
+    .clubs-list__item__buttons {
+        justify-content: flex-start;
+    }
+
+    .clubs-list__item__description .clubs-list__item__text {
+        padding-left: 10px;
+    }
+
+    .clubs-list .button--club-list {
+        margin-right: 5px;
+    }
+
+    .clubs-list__item__description .clubs-list__item__logo {
+        width: 135px;
+    }
+
+}

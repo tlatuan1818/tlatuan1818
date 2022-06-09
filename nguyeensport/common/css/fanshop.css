@@ -1,0 +1,357 @@
+.fanshop-looking {
+    position: relative;
+}
+
+.fanshop-looking .looking-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.looking-box .looking-title {
+    font-weight: 700;
+    letter-spacing: .5px;
+    font-size: 36px;
+    line-height: 1.22222;
+    color: #fff;
+    text-align: center;
+}
+
+.looking-box .looking-btn_box {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 25px;
+}
+
+.looking-btn_box .looking-link {
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+.looking-btn_box .looking-link:hover {
+    background: #ccc;
+    transition: all .5s;
+}
+
+.looking-btn_box .looking-link:last-child {
+    margin-right: 0;
+}
+
+.fanshop-premier-league {
+    width: calc(100% - 20px);
+    max-width: 1800px;
+    margin: 30px auto 30px;
+    overflow:hidden;
+}
+
+.premier-league__title {
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 1.2;
+}
+
+.premier-league_box {
+    margin-top: 25px;
+}
+
+.premier-league_box .premier-league_name {
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+
+
+}
+
+.fanshop-footballs {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.fanshop-footballs .fanshop-footballs-box {
+    position: relative;
+    width: 49%;
+}
+
+.fanshop-footballs-box .footballs-link {
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%, -85%);
+    min-width: 340px;
+}
+
+.footballs-link .footballs-title {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: .5px;
+    color: #fff;
+    padding-bottom: 15px;
+}
+
+.footballs-link .football-btn {
+    font-weight: 600;
+}
+
+.footballs-link .football-btn:hover {
+    background: #ccc;
+    transition: all .5s;
+}
+
+.fanshop-catalog {
+    max-width: 1800px;
+    width: calc(100% - 40px);
+    margin: 40px auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.fanshop-catalog .catalog-box {
+    width: 32%;
+}
+
+.catalog-box .catalog-title {
+    font-size: 27px;
+    font-weight: bold;
+    color: #000;
+    line-height: 1.2;
+    letter-spacing: -0.5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.catalog-box .catalog-des {
+    letter-spacing: -0.5px;
+}
+
+.fanshop-league {
+    max-width: 1800px;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.fanshop-league .league-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.league-box .league-title {
+    font-size: 36px;
+    color: #fff;
+    font-weight: 700;
+    text-align: center;
+}
+
+.league-box .league-team {
+    min-width: 960px;
+    margin: 25px auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-flow: row wrap;
+}
+
+.league-team a {
+    min-width: 235px;
+    margin: 5px 0;
+}
+
+.league-box .league-dropdow-team {
+    display: none;
+}
+
+.fanshop-euroleague {
+    max-width: 1800px;
+    width: 100%;
+    margin: 0 auto 40px;
+    overflow:hidden;
+}
+
+.fanshop-euroleague .euro-league-title {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: .5px;
+    margin: 25px 0;
+    text-align: center;
+}
+
+.fanshop-header {
+    max-width: 1800px;
+    width: calc(100% - 40px);
+    margin: 50px auto;
+}
+
+.fanshop-header .fanshop-header_title {
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 1;
+    margin-bottom: 25px;
+}
+
+.fanshop-header .fanshop-header_title .fanshop-header_text {
+    letter-spacing: .5px;
+}
+
+.fanshop-header .fanshop-header_des {
+    letter-spacing: .5px;
+    font-size: 12px;
+}
+
+@media only screen and (max-width:1000px) {
+
+
+    .fanshop-looking .looking-box {
+        min-width: 380px;
+    }
+
+    .looking-box .looking-title {
+
+        font-size: 4vw;
+
+    }
+
+    .looking-btn_box .looking-link {
+        font-size: 12px;
+        padding: 5px 8px;
+
+    }
+
+    .fanshop-footballs-box .footballs-link {
+        min-width: 255px;
+    }
+
+    .footballs-link .footballs-title {
+        font-size: 27px;
+    }
+
+    .catalog-box .catalog-title {
+        font-size: 20px;
+    }
+
+    .catalog-box .catalog-des {
+        font-size: 12px;
+        line-height: 1.2;
+    }
+
+    .league-box .league-title {
+        font-size: 27px;
+    }
+
+    .league-box .league-team {
+        min-width: 750px;
+    }
+
+    .league-team a {
+        min-width: 183px;
+    }
+
+
+
+}
+
+@media only screen and (max-width:768px) {
+    .fanshop-footballs {
+        flex-direction: column;
+    }
+
+    .fanshop-footballs .fanshop-footballs-box {
+        width: 100%;
+    }
+
+    .catalog-box .catalog-title {
+        font-size: 18px;
+    }
+
+    .fanshop-league .league-box {
+        max-width: 684px;
+        width: 100%;
+    }
+
+    .league-box .league-team {
+        display: none;
+    }
+
+    .league-box .league-dropdow-team {
+        width: calc(100% - 30px);
+        margin: 0 auto;
+        display: block;
+    }
+
+    .league-dropdow-team .form-item {
+        display: block;
+    }
+}
+
+@media only screen and (max-width:670px) {
+    .fanshop-catalog {
+        flex-direction: column;
+    }
+
+    .fanshop-catalog .catalog-box {
+        width: 75%;
+        margin-bottom: 25px;
+    }
+}
+
+@media only screen and (max-width:480px) {
+
+    .premier-league__title {
+        font-size: 27px;
+    }
+    .fanshop-looking .looking-box {
+        min-width: 300px;
+    }
+    .looking-box .looking-btn_box {
+        margin-top: 10px;
+        flex-direction: column;
+    }
+
+    .looking-box .looking-title {
+        font-size: 5vw;
+    }
+
+    .looking-btn_box .looking-link {
+        font-size: 12px;
+        padding: 4px 6px;
+        margin-right: 0;
+        margin-top: 5px;
+        width:125px;
+        text-align:center;
+    }
+
+    .fanshop-footballs-box .footballs-link {
+        top: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+
+    .footballs-link .footballs-title {
+        text-shadow: 2px 2px 2px #ccc;
+    }
+
+    .fanshop-catalog .catalog-box {
+        width: 90%;
+    }
+
+    .league-box .league-title {
+        font-size: 20px;
+    }
+
+    .fanshop-euroleague .euro-league-title {
+        font-size: 27px;
+    }
+
+    .fanshop-header .fanshop-header_title {
+        font-size: 27px;
+    }
+}

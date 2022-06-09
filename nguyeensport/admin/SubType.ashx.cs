@@ -1,0 +1,60 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Configuration;
+using System.Data;
+using System.Data.SqlClient;
+using System.Linq;
+using System.Web;
+using System.Web.Script.Serialization;
+
+namespace nguyeensport.admin
+{
+    /// <summary>
+    /// Summary description for SubType
+    /// </summary>
+    public class SubType : IHttpHandler
+    {
+
+        public void ProcessRequest(HttpContext context)
+        {
+            string term = context.Request["term"] ?? "";
+            DataTable dtBrands = new DataTable();
+            string cs = ConfigurationManager.ConnectionStrings["Connect"].ConnectionString;
+            using (SqlConnection con = new SqlConnection(cs))
+            {
+                SqlCommand cmd = new SqlCommand("spLaySubTypeTheoTen", con);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.Add(new SqlParameter()
+                {
+                    ParameterName = "@tenProductSubType",
+                    Value = term
+                });
+                con.Open();
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(dtBrands);
+
+            }
+            JavaScriptSerializer js = new JavaScriptSerializer();
+            List<Dictionary<string, object>> rows = new List<Dictionary<string, object>>();
+            Dictionary<string, object> row;
+            foreach (DataRow dr in dtBrands.Rows)
+            {
+                row = new Dictionary<string, object>();
+                foreach (DataColumn col in dtBrands.Columns)
+                {
+                    row.Add(col.ColumnName, dr[col]);
+                }
+                rows.Add(row);
+            }
+            context.Response.Write(js.Serialize(rows));
+        }
+
+        public bool IsReusable
+        {
+            get
+            {
+                return false;
+            }
+        }
+    }
+}

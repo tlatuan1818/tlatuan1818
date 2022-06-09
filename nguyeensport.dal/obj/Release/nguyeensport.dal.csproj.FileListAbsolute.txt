@@ -1,0 +1,10 @@
+C:\Users\traml\OneDrive\Documents\nguyeensport\nguyeensport.dal\bin\Release\nguyeensport.dal.dll
+C:\Users\traml\OneDrive\Documents\nguyeensport\nguyeensport.dal\bin\Release\nguyeensport.dal.pdb
+C:\Users\traml\OneDrive\Documents\nguyeensport\nguyeensport.dal\bin\Release\log4net.dll
+C:\Users\traml\OneDrive\Documents\nguyeensport\nguyeensport.dal\bin\Release\SQLDB.dll
+C:\Users\traml\OneDrive\Documents\nguyeensport\nguyeensport.dal\bin\Release\SQLDB.pdb
+C:\Users\traml\OneDrive\Documents\nguyeensport\nguyeensport.dal\obj\Release\nguyeensport.dal.csproj.AssemblyReference.cache
+C:\Users\traml\OneDrive\Documents\nguyeensport\nguyeensport.dal\obj\Release\nguyeensport.dal.csproj.CoreCompileInputs.cache
+C:\Users\traml\OneDrive\Documents\nguyeensport\nguyeensport.dal\obj\Release\nguyeensport.dal.csproj.CopyComplete
+C:\Users\traml\OneDrive\Documents\nguyeensport\nguyeensport.dal\obj\Release\nguyeensport.dal.dll
+C:\Users\traml\OneDrive\Documents\nguyeensport\nguyeensport.dal\obj\Release\nguyeensport.dal.pdb
