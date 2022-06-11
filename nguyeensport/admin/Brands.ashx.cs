@@ -6,6 +6,7 @@ using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using System.Web.Script.Serialization;
+using nguyeensport.dal;
 
 namespace nguyeensport.admin
 {
@@ -19,8 +20,7 @@ namespace nguyeensport.admin
         {
             string term = context.Request["term"] ?? "";
             DataTable dtBrands = new DataTable();
-            string cs = ConfigurationManager.ConnectionStrings[@"DESKTOP-BK7A3DM\SQLEXPRESS"].ConnectionString;
-            using (SqlConnection con = new SqlConnection(cs))
+            using (SqlConnection con = new SqlConnection(clsThuVien.getConnect()))
             {
                 SqlCommand cmd = new SqlCommand("spLayBrandsTheoTen", con);
                 cmd.CommandType = CommandType.StoredProcedure;

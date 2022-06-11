@@ -1,4 +1,5 @@
-﻿using System;
+﻿using nguyeensport.dal;
+using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
@@ -18,9 +19,8 @@ namespace nguyeensport.admin
         public void ProcessRequest(HttpContext context)
         {
             string term = context.Request["term"] ?? "";
-            DataTable dtBrands = new DataTable();
-            string cs = ConfigurationManager.ConnectionStrings[@"DESKTOP-BK7A3DM\SQLEXPRESS"].ConnectionString;
-            using (SqlConnection con = new SqlConnection(cs))
+            DataTable dtBrands = new DataTable();            
+            using (SqlConnection con = new SqlConnection(clsThuVien.getConnect()))
             {
                 SqlCommand cmd = new SqlCommand("spLayCollectionTheoTen", con);
                 cmd.CommandType = CommandType.StoredProcedure;

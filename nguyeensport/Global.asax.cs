@@ -8,7 +8,7 @@ using System.Web.Optimization;
 using System.Web.Routing;
 using System.Web.Security;
 using System.Web.SessionState;
-
+using nguyeensport.dal;
 
 namespace nguyeensport
 {
@@ -49,8 +49,7 @@ namespace nguyeensport
             // Code that runs on application startup
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
-            SQLDB.SQLDB.ConnectionString = System.Configuration.ConfigurationManager.ConnectionStrings[@"DESKTOP-BK7A3DM\SQLEXPRESS"].ConnectionString;
-           
+            SQLDB.SQLDB.ConnectionString = clsThuVien.getConnect();
             DangKyRoutes(RouteTable.Routes);
            
         }

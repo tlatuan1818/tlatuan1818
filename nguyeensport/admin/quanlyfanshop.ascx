@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="quanlyfanshop.ascx.cs" Inherits="nguyeensport.admin.quanlyfanshop" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="quanlyfanshop.ascx.cs" Inherits="nguyeensport.admin.quanlyfanshop"%>
 
 <%@ Register Assembly="DevExpress.Web.ASPxHtmlEditor.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Namespace="DevExpress.Web.ASPxHtmlEditor" TagPrefix="dx" %>
 <%@ Register Assembly="DevExpress.Web.ASPxSpellChecker.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Namespace="DevExpress.Web.ASPxSpellChecker" TagPrefix="dx" %>
@@ -43,7 +43,7 @@
                             <tr>
                                 <td style="width: 120px;">
                                     <figure>
-                                        <img src="<%#: Eval("avatarSanPham") %>" alt="<%#: Eval("tenSanPham") %>" loading="lazy" />
+                                        <img src="<%#: string.Format(nguyeensport.dal.clsThuVien.uploadImagePorcess(HttpContext.Current.Server.MapPath("{0}"),HttpContext.Current.Server.MapPath("{1}")),Eval("avatarSanPham"),Eval("avatarSanPham"))) %>" alt="<%#: Eval("tenSanPham") %>" loading="lazy" />
                                     </figure>
                                 </td>
                                 <td>
