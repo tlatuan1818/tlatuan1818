@@ -11,7 +11,6 @@
     <meta name='viewport' content='width=device-width, initial-scale=1' />
     <asp:Literal ID="ltMetaKeyword" runat="server"></asp:Literal>
     <asp:Literal ID="ltMetaDescription" runat="server"></asp:Literal>
-
     <link rel="shortcut icon" href="/Icon/favicon256x256.png" type="image/x-icon" />
     <link rel='stylesheet' type='text/css' media='screen' href='/common/css/resert.css' />
     <link rel="stylesheet" type="text/css" media="screen" href="/common/css/common.css" />

@@ -11,15 +11,15 @@ namespace nguyeensport.dal
     public class clsquanlyfanshop
     {
         #region Admin Quản lý Fan Shop
-
-        public DataTable layAllFanshop()
+        
+        public static DataTable layAllFanshop()
         {
             SqlCommand cmd = new SqlCommand();
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.CommandText = "spFanshop";
             return SQLDB.SQLDB.GetData(cmd);
         }
-        public DataTable layFanShopTheoID(string maSanPham)
+        public static DataTable layFanShopTheoID(string maSanPham)
         {
             SqlCommand cmd = new SqlCommand();
             cmd.CommandType = CommandType.StoredProcedure;
@@ -27,7 +27,7 @@ namespace nguyeensport.dal
             cmd.Parameters.AddWithValue("@maSanPham", maSanPham);
             return SQLDB.SQLDB.GetData(cmd);
         }
-        public void insertFanShop(string maSanPham,string productType,string subType,string gender, string brands, string league,string team, string range,string version)
+        public static void insertFanShop(string maSanPham,string productType,string subType,string gender, string brands, string league,string team, string range,string version)
         {
             SqlCommand cmd = new SqlCommand();
             cmd.CommandType = CommandType.StoredProcedure;
@@ -43,7 +43,7 @@ namespace nguyeensport.dal
             cmd.Parameters.AddWithValue("@version", version);
             SQLDB.SQLDB.ExecuteNoneQuery(cmd);
         }
-        public void updateFanShop(string maSanPham, string productType, string subType, string gender, string brands, string league, string team, string range, string version)
+        public static void updateFanShop(string maSanPham, string productType, string subType, string gender, string brands, string league, string team, string range, string version)
         {
             SqlCommand cmd = new SqlCommand();
             cmd.CommandType = CommandType.StoredProcedure;
@@ -59,7 +59,7 @@ namespace nguyeensport.dal
             cmd.Parameters.AddWithValue("@version", version);
             SQLDB.SQLDB.ExecuteNoneQuery(cmd);
         }
-        public void deleteFanShop(string maSanPham)
+        public static void deleteFanShop(string maSanPham)
         {
             SqlCommand cmd = new SqlCommand();
             cmd.CommandType = CommandType.StoredProcedure;

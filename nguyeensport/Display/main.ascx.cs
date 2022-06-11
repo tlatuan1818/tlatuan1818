@@ -19,7 +19,7 @@ namespace nguyeensport.Display
         }
         void loadData()
         {
-            rptTop10SanPham.DataSource = _quanlyproduct.layTop15ProductHot();
+            rptTop10SanPham.DataSource = clsquanlyproduct.layTop15ProductHot();
             rptTop10SanPham.DataBind();
             rptSlider.DataSource = _quanlyslider.layTop5Slider();
             rptSlider.DataBind();

@@ -84,7 +84,7 @@ namespace nguyeensport.admin
                 Literal ltTongSoLuong = e.Item.FindControl("ltTongSoLuong") as Literal;
                 Repeater rptProductSize = e.Item.FindControl("rptProductSize") as Repeater;
                 DataTable dtProductSize = new DataTable();
-                dtProductSize = _quanlyproduct.laySizeOfProduct(maSanPham.Value.ToString());
+                dtProductSize = clsquanlyproduct.laySizeOfProduct(maSanPham.Value.ToString());
                 if (dtProductSize.Rows.Count > 0)
                 {
                     int tong = 0;
@@ -120,7 +120,7 @@ namespace nguyeensport.admin
             {
                 if (!string.IsNullOrEmpty(txtSoLuong.Text.Trim()))
                 {
-                    _quanlyproduct.ProductSize_addSize(txtTenSize.Text.Trim(), int.Parse(txtSoLuong.Text.Trim()));
+                    //_quanlyproduct.ProductSize_addSize(txtTenSize.Text.Trim(), int.Parse(txtSoLuong.Text.Trim()));
                     lblThongBao.Text = "Thêm thành công";
                     lblThongBao.CssClass = "valid-feedback mr-3";
                     DataTable dtSize = new DataTable();
@@ -166,7 +166,7 @@ namespace nguyeensport.admin
                         {
                             if (txtTenSize.Text.Trim() == dt.Rows[i]["tenSize"].ToString())
                             {
-                                _quanlyproduct.ProductSize_RemoveSize(txtTenSize.Text.Trim());
+                                //_quanlyproduct.ProductSize_RemoveSize(txtTenSize.Text.Trim());
                                 lblThongBao.Text = "Xóa thành công";
                                 lblThongBao.CssClass = "valid-feedback mr-3";
                                 DataTable dtSize = new DataTable();
@@ -322,11 +322,11 @@ namespace nguyeensport.admin
                         {
                             id = "";
                         }
-                        
-                        _quanlyproduct.insertProduct(id,txtMaSanPham.Text.Trim(), txtTenSanPham.Text.Trim(), htmlEditor.Html.ToString(), float.Parse(txtGia.Text.Trim()), drDiscount.SelectedItem.ToString(), giaOutput, 3, txtTitle.Text.Trim(), txtMetaDescription.Text.Trim(), txtMetaKeywork.Text.Trim(), utf8Convert3(txtTenSanPham.Text.Trim()).ToLower().Replace(" ", "-"), image1, image2, image3, image4, image5, image6, image7, image8, image9, image10, 0, 0, DateTime.Now, hienThi, Active);
+
+                        clsquanlyproduct.insertProduct(id,txtMaSanPham.Text.Trim(), txtTenSanPham.Text.Trim(), htmlEditor.Html.ToString(), float.Parse(txtGia.Text.Trim()), drDiscount.SelectedItem.ToString(), giaOutput, 3, txtTitle.Text.Trim(), txtMetaDescription.Text.Trim(), txtMetaKeywork.Text.Trim(), utf8Convert3(txtTenSanPham.Text.Trim()).ToLower().Replace(" ", "-"), image1, image2, image3, image4, image5, image6, image7, image8, image9, image10, 0, 0, DateTime.Now, hienThi, Active);
                         _quanlyteamwear.insertTeamwear(txtMaSanPham.Text.Trim(), txtProductType.Text.Trim(), txtdrSubType.Text.Trim(), drGender.SelectedItem.ToString(), txtBrands.Text.Trim(), txtCollection.Text.Trim(), txtColor.Text.Trim());
                         DataTable dtSizeOFProduct = new DataTable();
-                        dtSizeOFProduct = _quanlyproduct.laySizeOfProduct(txtMaSanPham.Text.Trim());
+                        dtSizeOFProduct = clsquanlyproduct.laySizeOfProduct(txtMaSanPham.Text.Trim());
                         if (dtSizeOFProduct.Rows.Count <= 0)
                         {
                             if (Session["productsize"] != null)
@@ -337,7 +337,7 @@ namespace nguyeensport.admin
                                 {
                                     for (int i = 0; i < dtSzie.Rows.Count; i++)
                                     {
-                                        _quanlyproduct.insertProductSize(txtMaSanPham.Text.Trim(), dtSzie.Rows[i]["tenSize"].ToString(), int.Parse(dtSzie.Rows[i]["soLuong"].ToString()));
+                                        clsquanlyproduct.insertProductSize(txtMaSanPham.Text.Trim(), dtSzie.Rows[i]["tenSize"].ToString(), int.Parse(dtSzie.Rows[i]["soLuong"].ToString()));
                                     }
                                 }
                                 dtSzie = null;
@@ -377,7 +377,7 @@ namespace nguyeensport.admin
                         {
 
                         }
-                        _quanlyproduct.updateProduct(txtMaSanPham.Text.Trim(), txtTenSanPham.Text.Trim(), htmlEditor.Html.ToString(), float.Parse(txtGia.Text.Trim()), drDiscount.SelectedItem.ToString(), giaOutput, 1, txtTitle.Text.Trim(), txtMetaDescription.Text.Trim(), txtMetaKeywork.Text.Trim(), utf8Convert3(txtTenSanPham.Text.Trim()).ToLower().Replace(" ", "-"), image1, image2, image3, image4, image5, image6, image7, image8, image9, image10, DateTime.Now, hienThi, Active);
+                        clsquanlyproduct.updateProduct(txtMaSanPham.Text.Trim(), txtTenSanPham.Text.Trim(), htmlEditor.Html.ToString(), float.Parse(txtGia.Text.Trim()), drDiscount.SelectedItem.ToString(), giaOutput, 1, txtTitle.Text.Trim(), txtMetaDescription.Text.Trim(), txtMetaKeywork.Text.Trim(), utf8Convert3(txtTenSanPham.Text.Trim()).ToLower().Replace(" ", "-"), image1, image2, image3, image4, image5, image6, image7, image8, image9, image10, DateTime.Now, hienThi, Active);
                         _quanlyteamwear.updateTeamwear(txtMaSanPham.Text.Trim(), txtProductType.Text.Trim(), txtdrSubType.Text.Trim(), drGender.SelectedItem.ToString(), txtBrands.Text.Trim(), txtCollection.Text.Trim(), txtColor.Text.Trim());
 
                         DataTable dtSzie = new DataTable();
@@ -386,7 +386,7 @@ namespace nguyeensport.admin
                         {
                             for (int i = 0; i < dtSzie.Rows.Count; i++)
                             {
-                                _quanlyproduct.updateProductSize(txtMaSanPham.Text.Trim(), dtSzie.Rows[i]["tenSize"].ToString(), int.Parse(dtSzie.Rows[i]["soLuong"].ToString()));
+                                clsquanlyproduct.updateProductSize(txtMaSanPham.Text.Trim(), dtSzie.Rows[i]["tenSize"].ToString(), int.Parse(dtSzie.Rows[i]["soLuong"].ToString()));
                             }
                         }
                         dtSzie = null;
@@ -458,7 +458,7 @@ namespace nguyeensport.admin
                         hdImage9.Value = dtTeamwear.Rows[0]["anh8"].ToString();
                         hdImage10.Value = dtTeamwear.Rows[0]["anh9"].ToString();
                         DataTable dtProductSize = new DataTable();
-                        dtProductSize = _quanlyproduct.layProductSizeTheoMaSanPham(dtTeamwear.Rows[0]["maSanPham"].ToString());
+                        dtProductSize = clsquanlyproduct.layProductSizeTheoMaSanPham(dtTeamwear.Rows[0]["maSanPham"].ToString());
                         Session["productsize"] = dtProductSize;
                         rptListSize.DataSource = dtProductSize;
                         rptListSize.DataBind();
@@ -511,9 +511,9 @@ namespace nguyeensport.admin
                         {
                             clsThuVien.deleteImage(dtTeamwear.Rows[0]["anh9"].ToString().Substring(52).Replace(".jpg", "").Replace(".png", ""));
                         }
-                        _quanlyproduct.deleteProductSize(dtTeamwear.Rows[0]["maSanPham"].ToString());
+                        clsquanlyproduct.deleteProductSize(dtTeamwear.Rows[0]["maSanPham"].ToString());
                         _quanlyteamwear.deleteTeamwear(dtTeamwear.Rows[0]["maSanPham"].ToString());
-                        _quanlyproduct.deleteProduct(dtTeamwear.Rows[0]["maSanPham"].ToString());
+                        clsquanlyproduct.deleteProduct(dtTeamwear.Rows[0]["maSanPham"].ToString());
                         LoadData();
                     }
                     break;

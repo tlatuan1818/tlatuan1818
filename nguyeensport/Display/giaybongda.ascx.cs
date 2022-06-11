@@ -17,7 +17,7 @@ namespace nguyeensport.Display
            rptSlider.DataSource = _quanlyslider.layTop5SliderTheoMaDanhMuc(2);
             rptSlider.DataBind();
 
-            rptSanPham.DataSource = _quanlyproduct.layTop15ProductTheoMaDanhMuc(2);
+            rptSanPham.DataSource = clsquanlyproduct.layTop15ProductTheoMaDanhMuc(2);
             rptSanPham.DataBind();
         }
 

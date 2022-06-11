@@ -18,7 +18,7 @@
     <link href="/admin/css/devexpress-css.css" rel="stylesheet" />
     <asp:Literal ID="cssDataTable" runat="server"></asp:Literal>
     <asp:Literal ID="ltJSHeader" runat="server"></asp:Literal>
-    <script src="/admin/js/jquery-1.11.3.min.js"></script>
+     <script src="/admin/js/jquery-1.11.3.min.js"></script>
     
 </head>
 <body id="page-top">
@@ -429,7 +429,7 @@
  
     <script src="/Scripts/jquery-ui.js"></script>
     <script src="/admin/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
+   
     <!-- Core plugin JavaScript-->
     <script src="/admin/vendor/jquery-easing/jquery.easing.min.js"></script>
     

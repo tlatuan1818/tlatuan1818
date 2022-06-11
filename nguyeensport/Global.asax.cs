@@ -49,7 +49,7 @@ namespace nguyeensport
             // Code that runs on application startup
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
-            SQLDB.SQLDB.ConnectionString = System.Configuration.ConfigurationManager.ConnectionStrings["Connect"].ConnectionString;
+            SQLDB.SQLDB.ConnectionString = System.Configuration.ConfigurationManager.ConnectionStrings[@"DESKTOP-BK7A3DM\SQLEXPRESS"].ConnectionString;
            
             DangKyRoutes(RouteTable.Routes);
            

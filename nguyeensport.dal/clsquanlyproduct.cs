@@ -10,60 +10,8 @@ namespace nguyeensport.dal
 {
     public class clsquanlyproduct
     {
-        static void ProductSize_Create()
-        {
-            DataTable dt = new DataTable();
-            dt.Columns.Add("tenSize", typeof(string));
-            dt.Columns.Add("soLuong", typeof(int));
-            System.Web.HttpContext.Current.Session["productsize"] = dt;
-        }
-        public void ProductSize_addSize(string tenSize, int soLuong)
-        {
-            if (System.Web.HttpContext.Current.Session["productsize"] == null)
-            {
-                ProductSize_Create();
-                ProductSize_addSize(tenSize, soLuong);
-            }
-            else
-            {
-                DataTable dt = new DataTable();
-                dt = (DataTable)System.Web.HttpContext.Current.Session["productsize"];
-                bool hdInsert = false;
-                for (int i = 0; i < dt.Rows.Count; i++)
-                {
-                    if (dt.Rows[i]["tenSize"].ToString() == tenSize)
-                    {
-                        hdInsert = true;
-                        dt.Rows[i]["soLuong"] = soLuong;
-                        System.Web.HttpContext.Current.Session["productsize"] = dt;
-                    }
-                }
-                if (hdInsert == false)
-                {
-                    DataRow dr = dt.NewRow();
-                    dr["tenSize"] = tenSize;
-                    dr["soLuong"] = soLuong;
-                    dt.Rows.Add(dr);
-                    System.Web.HttpContext.Current.Session["productsize"] = dt;
-                }
-            }
-        }
-        public void ProductSize_RemoveSize(string tenSize)
-        {
-            DataTable dt = new DataTable();
-            dt = (DataTable)System.Web.HttpContext.Current.Session["productsize"];
-
-            for (int i = 0; i < dt.Rows.Count; i++)
-            {
-                if (dt.Rows[i]["tenSize"].ToString() == tenSize.ToString())
-                {
-                    dt.Rows.RemoveAt(i);
-                    break;
-                }
-            }
-            System.Web.HttpContext.Current.Session["productsize"] = dt;
-        }
-        public void insertProduct(string id_FB,string maSanPham,string tenSanPham,string motaSanPham,float giaInput, string giaDiscount,float giaOutput, int maDanhMuc, string titleSanPham, string metaDescriptionSanPham,string metaKeywordsSanPham,string linkSanPham,string avatarSanPham,string anh1, string anh2, string anh3, string anh4, string anh5, string anh6, string anh7, string anh8, string anh9,int luotOrder,int luotView,DateTime ngayTao,bool hienThi,bool Active)
+        
+        public static void insertProduct(string id_FB,string maSanPham,string tenSanPham,string motaSanPham,float giaInput, string giaDiscount,float giaOutput, int maDanhMuc, string titleSanPham, string metaDescriptionSanPham,string metaKeywordsSanPham,string linkSanPham,string avatarSanPham,string anh1, string anh2, string anh3, string anh4, string anh5, string anh6, string anh7, string anh8, string anh9,int luotOrder,int luotView,DateTime ngayTao,bool hienThi,bool Active)
         {
             SqlCommand cmd = new SqlCommand();
             cmd.CommandType = CommandType.StoredProcedure;
@@ -97,7 +45,7 @@ namespace nguyeensport.dal
             cmd.Parameters.AddWithValue("@Active", Active);
             SQLDB.SQLDB.ExecuteNoneQuery(cmd);
         }
-        public void insertProductSize(string maSanPham,string tenSize,int soLuong)
+        public static void insertProductSize(string maSanPham,string tenSize,int soLuong)
         {
             SqlCommand cmd = new SqlCommand();
             cmd.CommandType = CommandType.StoredProcedure;
@@ -107,7 +55,7 @@ namespace nguyeensport.dal
             cmd.Parameters.AddWithValue("@soLuong", soLuong);
             SQLDB.SQLDB.ExecuteNoneQuery(cmd);
         }
-        public void updateProduct(string maSanPham, string tenSanPham, string motaSanPham, float giaInput, string giaDiscount, float giaOutput, int maDanhMuc, string titleSanPham, string metaDescriptionSanPham, string metaKeywordsSanPham, string linkSanPham, string avatarSanPham, string anh1, string anh2, string anh3, string anh4, string anh5, string anh6, string anh7, string anh8, string anh9, DateTime ngayTao, bool hienThi,bool Active)
+        public static void updateProduct(string maSanPham, string tenSanPham, string motaSanPham, float giaInput, string giaDiscount, float giaOutput, int maDanhMuc, string titleSanPham, string metaDescriptionSanPham, string metaKeywordsSanPham, string linkSanPham, string avatarSanPham, string anh1, string anh2, string anh3, string anh4, string anh5, string anh6, string anh7, string anh8, string anh9, DateTime ngayTao, bool hienThi,bool Active)
         {
             SqlCommand cmd = new SqlCommand();
             cmd.CommandType = CommandType.StoredProcedure;
@@ -138,7 +86,7 @@ namespace nguyeensport.dal
             cmd.Parameters.AddWithValue("@Active", Active);
             SQLDB.SQLDB.ExecuteNoneQuery(cmd);
         }
-        public void updateProductSize(string maSanPham, string tenSize, int soLuong)
+        public static void updateProductSize(string maSanPham, string tenSize, int soLuong)
         {
             SqlCommand cmd = new SqlCommand();
             cmd.CommandType = CommandType.StoredProcedure;
@@ -148,7 +96,7 @@ namespace nguyeensport.dal
             cmd.Parameters.AddWithValue("@soLuong", soLuong);
             SQLDB.SQLDB.ExecuteNoneQuery(cmd);
         }
-        public void deleteProduct(string maSanPham)
+        public static void deleteProduct(string maSanPham)
         {
             SqlCommand cmd = new SqlCommand();
             cmd.CommandType = CommandType.StoredProcedure;
@@ -156,7 +104,7 @@ namespace nguyeensport.dal
             cmd.Parameters.AddWithValue("@maSanPham", maSanPham);
             SQLDB.SQLDB.ExecuteNoneQuery(cmd);
         }
-        public void deleteProductSize(string maSanPham)
+        public static void deleteProductSize(string maSanPham)
         {
             SqlCommand cmd = new SqlCommand();
             cmd.CommandType = CommandType.StoredProcedure;
@@ -164,7 +112,7 @@ namespace nguyeensport.dal
             cmd.Parameters.AddWithValue("@maSanPham", maSanPham);
             SQLDB.SQLDB.ExecuteNoneQuery(cmd);
         }
-        public void updateHienThiProduct(int id, bool Active)
+        public static void updateHienThiProduct(int id, bool Active)
         {
             SqlCommand cmd = new SqlCommand();
             cmd.CommandType = CommandType.StoredProcedure;
@@ -173,7 +121,7 @@ namespace nguyeensport.dal
             cmd.Parameters.AddWithValue("@Active", Active);
             SQLDB.SQLDB.ExecuteNoneQuery(cmd);
         }
-        public DataTable laySizeOfProduct(string maSanPham)
+        public static DataTable laySizeOfProduct(string maSanPham)
         {
             SqlCommand cmd = new SqlCommand();
             cmd.CommandType = CommandType.StoredProcedure;
@@ -181,7 +129,7 @@ namespace nguyeensport.dal
             cmd.Parameters.AddWithValue("@maSanPham", maSanPham);
             return SQLDB.SQLDB.GetData(cmd);
         }
-        public DataTable layProductSizeTheoMaSanPham(string maSanPham)
+        public static DataTable layProductSizeTheoMaSanPham(string maSanPham)
         {
             SqlCommand cmd = new SqlCommand();
             cmd.CommandType = CommandType.StoredProcedure;
@@ -191,14 +139,14 @@ namespace nguyeensport.dal
         }
 
         #region UserDisplay
-        public DataTable layTop15ProductHot()
+        public static DataTable layTop15ProductHot()
         {
             SqlCommand cmd = new SqlCommand();
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.CommandText = "spLayTop15ProductHot";
             return SQLDB.SQLDB.GetData(cmd);
         }
-        public DataTable layTop15ProductTheoMaDanhMuc(int maDanhMuc)
+        public static DataTable layTop15ProductTheoMaDanhMuc(int maDanhMuc)
         {
             SqlCommand cmd = new SqlCommand();
             cmd.CommandType = CommandType.StoredProcedure;
