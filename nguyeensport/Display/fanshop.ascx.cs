@@ -11,7 +11,6 @@ namespace nguyeensport.Display
     public partial class fanshop : System.Web.UI.UserControl
     {
         clsquanlyslider _quanlyslider = new clsquanlyslider();
-        clsquanlyproduct _quanlyproduct = new clsquanlyproduct();
         protected void Page_Load(object sender, EventArgs e)
         {
             LoadData();

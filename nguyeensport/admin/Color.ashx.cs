@@ -20,7 +20,7 @@ namespace nguyeensport.admin
         {
             string term = context.Request["term"] ?? "";
             DataTable dtBrands = new DataTable();
-            //string cs = System.Configuration.ConfigurationManager.ConnectionStrings[@"DESKTOP-36K6BVB\SQLEXPRESS"].ConnectionString; // ConfigurationManager.ConnectionStrings[@"DESKTOP-BK7A3DM\SQLEXPRESS"].ConnectionString;
+          
             using (SqlConnection con = new SqlConnection(clsThuVien.getConnect()))
             {
                 SqlCommand cmd = new SqlCommand("spLayColorTheoTen", con);

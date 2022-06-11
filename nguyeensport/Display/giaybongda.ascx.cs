@@ -11,7 +11,6 @@ namespace nguyeensport.Display
     public partial class giaybongda : System.Web.UI.UserControl
     {
         clsquanlyslider _quanlyslider = new clsquanlyslider();
-        clsquanlyproduct _quanlyproduct = new clsquanlyproduct();
         protected void Page_Load(object sender, EventArgs e)
         {
            rptSlider.DataSource = _quanlyslider.layTop5SliderTheoMaDanhMuc(2);

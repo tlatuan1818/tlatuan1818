@@ -10,7 +10,7 @@ namespace nguyeensport.Display
 {
     public partial class main : System.Web.UI.UserControl
     {
-        clsquanlyproduct _quanlyproduct = new clsquanlyproduct();
+       
         clsquanlyslider _quanlyslider = new clsquanlyslider();
         clsquanlydanhmuctintuc _quanlytintuc = new clsquanlydanhmuctintuc();
         protected void Page_Load(object sender, EventArgs e)

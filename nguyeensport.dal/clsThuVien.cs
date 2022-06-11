@@ -26,7 +26,7 @@ namespace nguyeensport.dal
         private static Account account = new Account("nguyeensport", "324888837625318", "KvT6W4BgOZo2SfMmTTun9U0vYdc");
         private static Cloudinary cloudinary = new Cloudinary(account);
         public static string getConnect(){
-            string cs = System.Configuration.ConfigurationManager.ConnectionStrings[@"DESKTOP-36K6BVB\SQLEXPRESS"].ConnectionString;//ConfigurationManager.ConnectionStrings[@"DESKTOP-BK7A3DM\SQLEXPRESS"].ConnectionString;
+            string cs = ConfigurationManager.ConnectionStrings[@"DESKTOP-BK7A3DM\SQLEXPRESS"].ConnectionString;  //System.Configuration.ConfigurationManager.ConnectionStrings[@"DESKTOP-36K6BVB\SQLEXPRESS"].ConnectionString;
 
             return cs;
         }
@@ -57,13 +57,13 @@ namespace nguyeensport.dal
             cmd.CommandText = "update " + tenTable + " set Active = '" + hienThi + "' where " + tenField + "= " + ma + "";
             SQLDB.SQLDB.ExecuteNoneQuery(cmd);
         }
-        public static void uploadImagePorcess(string path, string outputPath) 
+        public static object uploadImagePorcess(string path, string outputPath , int width, int height) 
         {
-
-            byte[] photoBytes = File.ReadAllBytes(path);
+            string [] list = outputPath.Split('.');
+            byte[] photoBytes = File.ReadAllBytes(HttpContext.Current.Server.MapPath(path));
             // Format is automatically detected though can be changed.
-            ISupportedImageFormat format = new ImageProcessor.Plugins.WebP.Imaging.Formats.WebPFormat { Quality = 80 };
-            System.Drawing.Size size = new System.Drawing.Size(150, 150);
+            ISupportedImageFormat format = new ImageProcessor.Plugins.WebP.Imaging.Formats.WebPFormat();
+            System.Drawing.Size size = new System.Drawing.Size(width, height);
             using (MemoryStream inStream = new MemoryStream(photoBytes))
             {
               
@@ -72,26 +72,15 @@ namespace nguyeensport.dal
                     {
                         // Load, resize, set the format and quality and save an image.
                         imageFactory.Load(inStream)
-                             .Rotate(90)
-                             .RoundedCorners(new RoundedCornerLayer(190, true, true, true, true))
-                             .Watermark(new TextLayer()
-                             {
-                                DropShadow = true,
-                                FontFamily = FontFamily.GenericSerif,
-                                Text = "Top Nguyen, ahihi",
-                                FontSize = 400,
-                                Style = FontStyle.Bold,
-                                FontColor = Color.BlueViolet
-                             })
+                             .Rotate(0)
+                             .RoundedCorners(new RoundedCornerLayer(10, false, false,false, false))
                              .Resize(size)
                              .Format(format)
-                             .Save(outputPath);
-                    
-                   
-                   
+                             .Save(HttpContext.Current.Server.MapPath(list[0].ToString()+"-"+ width.ToString()+"x"+height.ToString()+"."+list[1].ToString()));
                     }
             }
-          
+            return list[0].ToString() + "-" + width.ToString() + "x" + height.ToString() + "." + list[1].ToString();
+
         }
 
         public static string uploadImage(string path, HttpPostedFile hpf)

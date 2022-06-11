@@ -43,7 +43,7 @@
                             <tr>
                                 <td style="width: 120px;">
                                     <figure>
-                                        <img src="<%#: string.Format(nguyeensport.dal.clsThuVien.uploadImagePorcess(HttpContext.Current.Server.MapPath("{0}"),HttpContext.Current.Server.MapPath("{1}")),Eval("avatarSanPham"),Eval("avatarSanPham"))) %>" alt="<%#: Eval("tenSanPham") %>" loading="lazy" />
+                                        <img src="<%#: nguyeensport.dal.clsThuVien.uploadImagePorcess((Eval("avatarSanPham").ToString()),Eval("avatarSanPham").ToString(),123,123) %>" alt="<%#: Eval("tenSanPham") %>" loading="lazy" />
                                     </figure>
                                 </td>
                                 <td>
