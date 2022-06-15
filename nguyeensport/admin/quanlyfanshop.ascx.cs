@@ -175,7 +175,8 @@ namespace nguyeensport.admin
 
         protected void btnUpdate_Click(object sender, EventArgs e)
         {
-            var strPath = clsThuVien.getImages(hdImage1.Value, hdImage2.Value, hdImage3.Value, hdImage4.Value, hdImage5.Value, hdImage6.Value, hdImage7.Value, hdImage8.Value, hdImage9.Value, hdImage10.Value,txtTenSanPham.Text.Trim());
+            var strPath = clsThuVien.getImages(hdImage1.Value, hdImage2.Value, hdImage3.Value, hdImage4.Value, hdImage5.Value, hdImage6.Value, hdImage7.Value, hdImage8.Value, hdImage9.Value, hdImage10.Value,txtTenSanPham.Text.Trim(),"anh-san-pham");
+            
             if (!string.IsNullOrEmpty(txtMaSanPham.Text.Trim()))
             {
                 try

@@ -43,7 +43,7 @@
                      <tr>
                        <td style="width:120px;">
                            <figure>
-                              <img src="<%#: Eval("avatarSanPham") %>" alt="<%#: Eval("tenSanPham") %>" loading="lazy" />
+                              <img src="<%#: nguyeensport.dal.clsThuVien.uploadImagePorcess((Eval("avatarSanPham").ToString()),Eval("avatarSanPham").ToString(),123,123) %>" alt="<%#: Eval("tenSanPham") %>" loading="lazy" />
                            </figure>
                        </td>
                       <td>
@@ -55,8 +55,6 @@
                                        <div class="text-secondary">Loại sản phẩm: <%#: Eval("productType") %></div>
                                         <div class="text-secondary">Thương hiệu: <%#: Eval("brands") %></div>
                                        <div class="text-secondary">Giá: <strong><i><%#: string.Format("{0:N0}",Eval("giaOutput")) %> </i><small>VNĐ</small></strong> <del><asp:Label ID="lblDiscount" runat="server" Text ='<%#: string.Format("{0:N0}",Eval("giaInput")) + " VNĐ" %>'></asp:Label></del> <asp:Label ID="lblSaving" runat="server" Text ='<%#: "Giảm " + string.Format("{0:N0}",int.Parse(Eval("giaInput").ToString()) - int.Parse(Eval("giaOutput").ToString())) %>'></asp:Label></div>
-                                     
-                                   
                                    </div>
                                    <div class="col-6">
                                         <div class="text-secondary">Size: 
@@ -178,79 +176,50 @@
                                             </div>
                                          </div>
                                     </div>
-                                <div class="col-2">
-                                    <asp:UpdatePanel ID="UploadTxtTenSize" runat="server" UpdateMode="Conditional">
-                                        <ContentTemplate>
-                                            <asp:TextBox ID="txtTenSize" CssClass="form-control form-control-sm" runat="server" placeholder="Nhập size"></asp:TextBox>
-                                        </ContentTemplate>
-                                        <Triggers>
-                                            <asp:AsyncPostBackTrigger ControlID="btnThemSize" EventName="click" />
-                                            <asp:AsyncPostBackTrigger ControlID="btnXoa" EventName="click" />
-                                        </Triggers>
-                                    </asp:UpdatePanel>
-                                    
-                                </div>
-                                <div class="col-2">
-                                     <asp:UpdatePanel ID="UploadTxtSoLuong" runat="server" UpdateMode="Conditional">
-                                        <ContentTemplate>
-                                            <asp:TextBox ID="txtSoLuong" CssClass="form-control form-control-sm" runat="server" placeholder="Nhập số lượng"></asp:TextBox>
-                                        </ContentTemplate>
-                                         <Triggers>
-                                            <asp:AsyncPostBackTrigger ControlID="btnThemSize" EventName="click" />
-                                         </Triggers>
-                                     </asp:UpdatePanel>
-                                 </div>
-                                <div class="col-4">
-                                    <div class="d-flex justify-content-end align-items-center">
-                                        <div class="col-6">
-                                            <asp:UpdatePanel ID="UpdatePanel1" runat="server" UpdateMode="Conditional">
-                                                <ContentTemplate>
-                                                    <asp:Label ID="lblThongBao" runat="server"></asp:Label>
-                                                </ContentTemplate>
-                                                <Triggers>
-                                                    <asp:AsyncPostBackTrigger ControlID="btnThemSize" EventName="click" />
-                                                    <asp:AsyncPostBackTrigger ControlID="btnXoa" EventName="click" />
-                                                </Triggers>
-                                            </asp:UpdatePanel>
-                                        </div>
-                                        <div class="col-3 pl-0">
-                                            <asp:Button ID="btnThemSize" runat="server" CssClass="btn btn-outline-dark mr-2 btn-sm w-100" Text="Thêm" OnClick="btnThemSize_Click" />
-                                        </div>
-                                        <div class="col-3 pr-0">
-                                            <asp:Button ID="btnXoa" runat="server" CssClass="btn btn-outline-danger btn-sm w-100" Text="Xóa" OnClick="btnXoa_Click" />
-                                        </div>
-                                       
-                                    </div>
-                                </div>
-                            </div>
-                            <asp:UpdatePanel ID="UpdatePanel" runat="server" UpdateMode="Conditional">
-                                <ContentTemplate>
-                                    <table class="table">
-                                        <thead>
-                                            <tr>
-                                                <th>Tên size</th>
-                                                <th>Số lượng</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                         <asp:Repeater ID="rptListSize" runat="server">
-                                             <ItemTemplate>
-                                                    <tr class="table-active">
-                                                        <td class="p-2"><%#:Eval("tenSize") %></td>
-                                                        <td class="p-2"><%#:Eval("soLuong") %></td>
-                                                    </tr>
-                                            </ItemTemplate>
-                                         </asp:Repeater>  
-                                         </tbody>
-                                    </table>
-                                </ContentTemplate>
-                                <Triggers>
-                                    <asp:AsyncPostBackTrigger ControlID="btnThemSize" EventName="click" />
-                                    <asp:AsyncPostBackTrigger ControlID="btnXoa" EventName="click" />
-                                </Triggers>
-                            </asp:UpdatePanel>
+                               
+                            </div>                         
                         </div>
                     </div>
+                    <div class="row">
+                    <div class="col-6">
+                        <table class="table text-dark">
+                      <thead>
+                        <tr>
+                          <th scope="col">#</th>
+                          <th scope="col">Tên size</th>
+                          <th scope="col">Số lượng</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <th scope="row">1</th>
+                          <td> <asp:Label ID="lblS" runat="server" Text="S"></asp:Label></td>
+                          <td><asp:TextBox ID="txtS" runat="server" CssClass="form-control form-control-sm"></asp:TextBox></td>
+                        </tr>
+                        <tr>
+                          <th scope="row">2</th>
+                          <td><asp:Label ID="lblM" runat="server" Text="M"></asp:Label></td>
+                          <td><asp:TextBox ID="txtM" runat="server" CssClass="form-control form-control-sm"></asp:TextBox></td>
+                        </tr>
+                        <tr>
+                          <th scope="row">3</th>
+                          <td><asp:Label ID="lblL" runat="server" Text="L"></asp:Label></td>
+                          <td><asp:TextBox ID="txtL" runat="server" CssClass="form-control form-control-sm"></asp:TextBox></td>
+                        </tr>
+                          <tr>
+                          <th scope="row">4</th>
+                          <td><asp:Label ID="lblXL" runat="server" Text="XL"></asp:Label></td>
+                          <td><asp:TextBox ID="txtXL" runat="server" CssClass="form-control form-control-sm"></asp:TextBox></td>
+                        </tr>
+                          <tr>
+                          <th scope="row">5</th>
+                          <td><asp:Label ID="lblXXL" runat="server" Text="XXL"></asp:Label></td>
+                          <td><asp:TextBox ID="txtXXL" runat="server" CssClass="form-control form-control-sm"></asp:TextBox></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    </div>
+                </div>
                     <div class="row">
                           <div class="col">
                               <div class="form-group">

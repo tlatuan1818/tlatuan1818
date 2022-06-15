@@ -294,94 +294,112 @@ namespace nguyeensport.admin
         protected global::System.Web.UI.WebControls.DropDownList drDiscount;
 
         /// <summary>
-        /// UploadTxtTenSize control.
+        /// lbl39 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.UpdatePanel UploadTxtTenSize;
+        protected global::System.Web.UI.WebControls.Label lbl39;
 
         /// <summary>
-        /// txtTenSize control.
+        /// txt39 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtTenSize;
+        protected global::System.Web.UI.WebControls.TextBox txt39;
 
         /// <summary>
-        /// UploadTxtSoLuong control.
+        /// lbl40 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.UpdatePanel UploadTxtSoLuong;
+        protected global::System.Web.UI.WebControls.Label lbl40;
 
         /// <summary>
-        /// txtSoLuong control.
+        /// txt40 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtSoLuong;
+        protected global::System.Web.UI.WebControls.TextBox txt40;
 
         /// <summary>
-        /// UpdatePanel1 control.
+        /// lbl41 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.UpdatePanel UpdatePanel1;
+        protected global::System.Web.UI.WebControls.Label lbl41;
 
         /// <summary>
-        /// lblThongBao control.
+        /// txt41 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblThongBao;
+        protected global::System.Web.UI.WebControls.TextBox txt41;
 
         /// <summary>
-        /// btnThemSize control.
+        /// lbl42 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnThemSize;
+        protected global::System.Web.UI.WebControls.Label lbl42;
 
         /// <summary>
-        /// btnXoa control.
+        /// txt42 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnXoa;
+        protected global::System.Web.UI.WebControls.TextBox txt42;
 
         /// <summary>
-        /// UpdatePanel control.
+        /// lbl43 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.UpdatePanel UpdatePanel;
+        protected global::System.Web.UI.WebControls.Label lbl43;
 
         /// <summary>
-        /// rptListSize control.
+        /// txt43 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater rptListSize;
+        protected global::System.Web.UI.WebControls.TextBox txt43;
+
+        /// <summary>
+        /// lbl44 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbl44;
+
+        /// <summary>
+        /// txt44 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txt44;
 
         /// <summary>
         /// lblBrands control.

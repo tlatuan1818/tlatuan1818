@@ -285,94 +285,94 @@ namespace nguyeensport.admin
         protected global::System.Web.UI.WebControls.DropDownList drDiscount;
 
         /// <summary>
-        /// UploadTxtTenSize control.
+        /// lblS control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.UpdatePanel UploadTxtTenSize;
+        protected global::System.Web.UI.WebControls.Label lblS;
 
         /// <summary>
-        /// txtTenSize control.
+        /// txtS control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtTenSize;
+        protected global::System.Web.UI.WebControls.TextBox txtS;
 
         /// <summary>
-        /// UploadTxtSoLuong control.
+        /// lblM control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.UpdatePanel UploadTxtSoLuong;
+        protected global::System.Web.UI.WebControls.Label lblM;
 
         /// <summary>
-        /// txtSoLuong control.
+        /// txtM control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtSoLuong;
+        protected global::System.Web.UI.WebControls.TextBox txtM;
 
         /// <summary>
-        /// UpdatePanel1 control.
+        /// lblL control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.UpdatePanel UpdatePanel1;
+        protected global::System.Web.UI.WebControls.Label lblL;
 
         /// <summary>
-        /// lblThongBao control.
+        /// txtL control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblThongBao;
+        protected global::System.Web.UI.WebControls.TextBox txtL;
 
         /// <summary>
-        /// btnThemSize control.
+        /// lblXL control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnThemSize;
+        protected global::System.Web.UI.WebControls.Label lblXL;
 
         /// <summary>
-        /// btnXoa control.
+        /// txtXL control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnXoa;
+        protected global::System.Web.UI.WebControls.TextBox txtXL;
 
         /// <summary>
-        /// UpdatePanel control.
+        /// lblXXL control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.UpdatePanel UpdatePanel;
+        protected global::System.Web.UI.WebControls.Label lblXXL;
 
         /// <summary>
-        /// rptListSize control.
+        /// txtXXL control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater rptListSize;
+        protected global::System.Web.UI.WebControls.TextBox txtXXL;
 
         /// <summary>
         /// lblBrands control.

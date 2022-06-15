@@ -116,197 +116,17 @@ namespace nguyeensport.admin
             }
         }
 
-        protected void btnThemSize_Click(object sender, EventArgs e)
-        {
-            if (!string.IsNullOrEmpty(txtTenSize.Text.Trim()))
-            {
-                if (!string.IsNullOrEmpty(txtSoLuong.Text.Trim()))
-                {
-                    //clsquanlyproduct.ProductSize_addSize(txtTenSize.Text.Trim(), int.Parse(txtSoLuong.Text.Trim()));
-                    lblThongBao.Text = "Thêm thành công";
-                    lblThongBao.CssClass = "valid-feedback mr-3";
-                    DataTable dtSize = new DataTable();
-                    dtSize = (DataTable)Session["productsize"];
-                    rptListSize.DataSource = dtSize;
-                    rptListSize.DataBind();
-                    UpdatePanel.Update();
-                    UpdatePanel1.Update();
-                }
-                else
-                {
-                    lblThongBao.Text = "Vui lòng nhập số lượng size";
-                    txtSoLuong.CssClass = "form-control form-control-sm is-invalid";
-                    lblThongBao.CssClass = "invalid-feedback mr-3";
-                    lblThongBao.Visible = true;
-                    UploadTxtSoLuong.Update();
-                    UpdatePanel1.Update();
-                }
-
-            }
-            else
-            {
-                lblThongBao.Text = "Vui lòng nhập tên size";
-                txtTenSize.CssClass = "form-control form-control-sm is-invalid";
-                lblThongBao.CssClass = "invalid-feedback mr-3";
-                lblThongBao.Visible = true;
-                UploadTxtTenSize.Update();
-                UpdatePanel1.Update();
-            }
-        }
-
-
-
-        protected void btnXoa_Click(object sender, EventArgs e)
-        {
-            DataTable dt = new DataTable();
-            dt = (DataTable)Session["productsize"];
-            if (dt != null)
-            {
-                if (dt.Rows.Count > 0)
-                {
-                    if (!string.IsNullOrEmpty(txtTenSize.Text.Trim()))
-                    {
-                        for (int i = 0; i < dt.Rows.Count; i++)
-                        {
-                            if (txtTenSize.Text.Trim() == dt.Rows[i]["tenSize"].ToString())
-                            {
-//_quanlyproduct.ProductSize_RemoveSize(txtTenSize.Text.Trim());
-                                lblThongBao.Text = "Xóa thành công";
-                                lblThongBao.CssClass = "valid-feedback mr-3";
-                                DataTable dtSize = new DataTable();
-                                dtSize = (DataTable)Session["productsize"];
-                                rptListSize.DataSource = dtSize;
-                                rptListSize.DataBind();
-                                UpdatePanel.Update();
-                                UpdatePanel1.Update();
-                            }
-                            else
-                            {
-                                lblThongBao.Text = "Chưa có size trên bảng size";
-                                lblThongBao.CssClass = "invalid-feedback mr-3";
-                                lblThongBao.Visible = true;
-                                DataTable dtSize = new DataTable();
-                                dtSize = (DataTable)Session["productsize"];
-                                rptListSize.DataSource = dtSize;
-                                rptListSize.DataBind();
-                                UpdatePanel.Update();
-                                UpdatePanel1.Update();
-                            }
-
-                        }
-                    }
-                    else
-                    {
-                        lblThongBao.Text = "Vui lòng nhập tên size để xóa";
-                        txtTenSize.CssClass = "form-control form-control-sm is-invalid";
-                        lblThongBao.CssClass = "invalid-feedback mr-3";
-                        lblThongBao.Visible = true;
-                        DataTable dtSize = new DataTable();
-                        dtSize = (DataTable)Session["productsize"];
-                        rptListSize.DataSource = dtSize;
-                        rptListSize.DataBind();
-                        UploadTxtTenSize.Update();
-                        UpdatePanel.Update();
-                        UpdatePanel1.Update();
-                    }
-
-                }
-                else
-                {
-                    lblThongBao.Text = "Bảng size không tìm thấy dòng nào trong bảng";
-                    lblThongBao.CssClass = "invalid-feedback mr-3";
-                    lblThongBao.Visible = true;
-                    UpdatePanel1.Update();
-                }
-            }
-            else
-            {
-                lblThongBao.Text = "Bảng size không tồn tại";
-                lblThongBao.CssClass = "invalid-feedback mr-3";
-                lblThongBao.Visible = true;
-                UpdatePanel1.Update();
-            }
-        }
-
+     
         protected void btnBack_Click(object sender, EventArgs e)
         {
             mlv.ActiveViewIndex = 0;
             LoadData();
         }
-        public static string utf8Convert3(string s)
-        {
-            Regex regex = new Regex("\\p{IsCombiningDiacriticalMarks}+");
-            string temp = s.Normalize(NormalizationForm.FormD);
-            return regex.Replace(temp, string.Empty).Replace('\u0111', 'd').Replace('\u0111', 'D');
-        }
+       
         protected void btnUpdate_Click(object sender, EventArgs e)
         {
+            var strPath = clsThuVien.getImages(hdImage1.Value, hdImage2.Value, hdImage3.Value, hdImage4.Value, hdImage5.Value, hdImage6.Value, hdImage7.Value, hdImage8.Value, hdImage9.Value, hdImage10.Value, txtTenSanPham.Text.Trim(), "anh-san-pham");
 
-            String image1 = hdImage1.Value;
-            String image2 = hdImage2.Value;
-            String image3 = hdImage3.Value;
-            String image4 = hdImage4.Value;
-            String image5 = hdImage5.Value;
-            String image6 = hdImage6.Value;
-            String image7 = hdImage7.Value;
-            String image8 = hdImage8.Value;
-            String image9 = hdImage9.Value;
-            String image10 = hdImage10.Value;
-            String path = "";
-
-            HttpFileCollection hfc = Request.Files;
-            for (int i = 0; i < hfc.Count; i++)
-            {
-                HttpPostedFile hpf = hfc[i];
-                if (hpf.ContentLength > 0)
-                {
-
-                    path = utf8Convert3(txtTenSanPham.Text).ToLower().Replace(" ", "-").Replace("/", "-") + "-" + i;
-                  
-                    if (i == 0)
-                    {
-                        image1 = clsThuVien.uploadImage(path, hpf);
-                    }
-                    if (i == 1)
-                    {
-                        image2 = clsThuVien.uploadImage(path, hpf);
-                    }
-                    if (i == 2)
-                    {
-                        image3 = clsThuVien.uploadImage(path, hpf);
-                    }
-                    if (i == 3)
-                    {
-                        image4 = clsThuVien.uploadImage(path, hpf);
-                    }
-                    if (i == 4)
-                    {
-                        image5 = clsThuVien.uploadImage(path, hpf);
-                    }
-                    if (i == 5)
-                    {
-                        image6 = clsThuVien.uploadImage(path, hpf);
-                    }
-                    if (i == 6)
-                    {
-                        image7 = clsThuVien.uploadImage(path, hpf);
-                    }
-                    if (i == 7)
-                    {
-                        image8 = clsThuVien.uploadImage(path, hpf);
-                    }
-                    if (i == 8)
-                    {
-                        image9 = clsThuVien.uploadImage(path, hpf);
-                    }
-                    if (i == 9)
-                    {
-                        image10 = clsThuVien.uploadImage(path, hpf);
-                    }
-
-                }
-            }
-            
             if (!string.IsNullOrEmpty(txtMaSanPham.Text.Trim()))
             {
                 try
@@ -329,38 +149,18 @@ namespace nguyeensport.admin
                             id = "";
                         }
 
-                        clsquanlyproduct.insertProduct(id,txtMaSanPham.Text.Trim(), txtTenSanPham.Text.Trim(), htmlEditor.Html.ToString(), float.Parse(txtGia.Text.Trim()), drDiscount.SelectedItem.ToString(), giaOutput, 2, txtTitle.Text.Trim(), txtMetaDescription.Text.Trim(), txtMetaKeywork.Text.Trim(), utf8Convert3(txtTenSanPham.Text.Trim()).ToLower().Replace(" ", "-"), image1, image2, image3, image4, image5, image6, image7, image8, image9, image10, 0, 0, DateTime.Now, hienThi, Active);
+                        clsquanlyproduct.insertProduct(id,txtMaSanPham.Text.Trim(), txtTenSanPham.Text.Trim(), htmlEditor.Html.ToString(), float.Parse(txtGia.Text.Trim()), drDiscount.SelectedItem.ToString(), giaOutput, 2, txtTitle.Text.Trim(), txtMetaDescription.Text.Trim(), txtMetaKeywork.Text.Trim(), clsThuVien.utf8Convert3(txtTenSanPham.Text.Trim()).ToLower().Replace(" ", "-"), strPath[0].ToString(), strPath[1].ToString(), strPath[2].ToString(), strPath[3].ToString(), strPath[4].ToString(), strPath[5].ToString(), strPath[6].ToString(), strPath[7].ToString(), strPath[8].ToString(), strPath[9].ToString(), 0, 0, DateTime.Now, hienThi, Active);
                         _quanlyfootballboots.insertFootballBoots(txtMaSanPham.Text.Trim(), txtBrands.Text.Trim(), txtCollection.Text.Trim(), txtModel.Text.Trim(), drAge.SelectedItem.ToString(), txtGroundType.Text.Trim(), txtClass.Text.Trim(), txtColor.Text.Trim());
                         DataTable dtSizeOFProduct = new DataTable();
                         dtSizeOFProduct = clsquanlyproduct.laySizeOfProduct(txtMaSanPham.Text.Trim());
                         if (dtSizeOFProduct.Rows.Count <= 0)
                         {
-                            if (Session["productsize"] != null)
-                            {
-                                DataTable dtSzie = new DataTable();
-                                dtSzie = (DataTable)Session["productsize"];
-                                if (dtSzie.Rows.Count > 0)
-                                {
-                                    for (int i = 0; i < dtSzie.Rows.Count; i++)
-                                    {
-                                        clsquanlyproduct.insertProductSize(txtMaSanPham.Text.Trim(), dtSzie.Rows[i]["tenSize"].ToString(), int.Parse(dtSzie.Rows[i]["soLuong"].ToString()));
-                                    }
-                                }
-                                dtSzie = null;
-                                Session["productsize"] = dtSzie;
-                            }
-                            else
-                            {
-                                lblThongBao.Text = "Bảng size không tồn tại";
-                                lblThongBao.CssClass = "invalid-feedback mr-3";
-                                lblThongBao.Visible = true;
-                            }
-                        }
-                        else
-                        {
-                            lblThongBao.Text = "Size của sản phẩm đã tồn tại";
-                            lblThongBao.CssClass = "invalid-feedback mr-3";
-                            lblThongBao.Visible = true;
+                            clsquanlyproduct.insertProductSize(txtMaSanPham.Text.Trim(), lbl39.Text.Trim(), Convert.ToInt32(txt39.Text.Trim() == "" ? null : txt39.Text.Trim()));
+                            clsquanlyproduct.insertProductSize(txtMaSanPham.Text.Trim(), lbl40.Text.Trim(), Convert.ToInt32(txt40.Text.Trim() == "" ? null : txt40.Text.Trim()));
+                            clsquanlyproduct.insertProductSize(txtMaSanPham.Text.Trim(), lbl41.Text.Trim(), Convert.ToInt32(txt41.Text.Trim() == "" ? null : txt41.Text.Trim()));
+                            clsquanlyproduct.insertProductSize(txtMaSanPham.Text.Trim(), lbl42.Text.Trim(), Convert.ToInt32(txt42.Text.Trim() == "" ? null : txt42.Text.Trim()));
+                            clsquanlyproduct.insertProductSize(txtMaSanPham.Text.Trim(), lbl43.Text.Trim(), Convert.ToInt32(txt43.Text.Trim() == "" ? null : txt43.Text.Trim()));
+                            clsquanlyproduct.insertProductSize(txtMaSanPham.Text.Trim(), lbl43.Text.Trim(), Convert.ToInt32(txt44.Text.Trim() == "" ? null : txt44.Text.Trim()));
                         }
                         lblThongBao2.Text = "<div class='alert alert-success alert-dismissible fade show' role='alert'>" +
                                            "Thêm thành công" +
@@ -383,20 +183,14 @@ namespace nguyeensport.admin
                         {
 
                         }
-                        clsquanlyproduct.updateProduct(txtMaSanPham.Text.Trim(), txtTenSanPham.Text.Trim(), htmlEditor.Html.ToString(), float.Parse(txtGia.Text.Trim()), drDiscount.SelectedItem.Text.Trim(), giaOutput, 1, txtTitle.Text.Trim(), txtMetaDescription.Text.Trim(), txtMetaKeywork.Text.Trim(), utf8Convert3(txtTenSanPham.Text.Trim()).ToLower().Replace(" ", "-"), image1, image2, image3, image4, image5, image6, image7, image8, image9, image10, DateTime.Now, hienThi, Active);
+                        clsquanlyproduct.updateProduct(txtMaSanPham.Text.Trim(), txtTenSanPham.Text.Trim(), htmlEditor.Html.ToString(), float.Parse(txtGia.Text.Trim()), drDiscount.SelectedItem.Text.Trim(), giaOutput, 1, txtTitle.Text.Trim(), txtMetaDescription.Text.Trim(), txtMetaKeywork.Text.Trim(), clsThuVien.utf8Convert3(txtTenSanPham.Text.Trim()).ToLower().Replace(" ", "-"), strPath[0].ToString(), strPath[1].ToString(), strPath[2].ToString(), strPath[3].ToString(), strPath[4].ToString(), strPath[5].ToString(), strPath[6].ToString(), strPath[7].ToString(), strPath[8].ToString(), strPath[9].ToString(), DateTime.Now, hienThi, Active);
                         _quanlyfootballboots.updateFootballBoots(txtMaSanPham.Text.Trim(), txtBrands.Text.Trim(), txtCollection.Text.Trim(), txtModel.Text.Trim(), drAge.SelectedItem.ToString(), txtGroundType.Text.Trim(), txtClass.Text.Trim(), txtColor.Text.Trim());
-
-                        DataTable dtSzie = new DataTable();
-                        dtSzie = (DataTable)Session["productsize"];
-                        if (dtSzie.Rows.Count > 0)
-                        {
-                            for (int i = 0; i < dtSzie.Rows.Count; i++)
-                            {
-                                clsquanlyproduct.updateProductSize(txtMaSanPham.Text.Trim(), dtSzie.Rows[i]["tenSize"].ToString(), int.Parse(dtSzie.Rows[i]["soLuong"].ToString()));
-                            }
-                        }
-                        dtSzie = null;
-                        Session["productsize"] = dtSzie;
+                        clsquanlyproduct.updateProductSize(txtMaSanPham.Text.Trim(), lbl39.Text.Trim(), Convert.ToInt32(txt39.Text.Trim() == "" ? null : txt39.Text.Trim()));
+                        clsquanlyproduct.updateProductSize(txtMaSanPham.Text.Trim(), lbl40.Text.Trim(), Convert.ToInt32(txt40.Text.Trim() == "" ? null : txt40.Text.Trim()));
+                        clsquanlyproduct.updateProductSize(txtMaSanPham.Text.Trim(), lbl41.Text.Trim(), Convert.ToInt32(txt41.Text.Trim() == "" ? null : txt41.Text.Trim()));
+                        clsquanlyproduct.updateProductSize(txtMaSanPham.Text.Trim(), lbl42.Text.Trim(), Convert.ToInt32(txt42.Text.Trim() == "" ? null : txt42.Text.Trim()));
+                        clsquanlyproduct.updateProductSize(txtMaSanPham.Text.Trim(), lbl43.Text.Trim(), Convert.ToInt32(txt43.Text.Trim() == "" ? null : txt43.Text.Trim()));
+                        clsquanlyproduct.updateProductSize(txtMaSanPham.Text.Trim(), lbl43.Text.Trim(), Convert.ToInt32(txt44.Text.Trim() == "" ? null : txt44.Text.Trim()));
                         lblThongBao2.Text = "<div class='alert alert-success alert-dismissible fade show' role='alert'>" +
                                            "Sửa thành công" +
                                "<button type='button' class='close' data-dismiss='alert' aria-label='Close'>" +
@@ -465,9 +259,36 @@ namespace nguyeensport.admin
                         hdImage10.Value = dtFootballBoots.Rows[0]["anh9"].ToString();
                         DataTable dtProductSize = new DataTable();
                         dtProductSize = clsquanlyproduct.layProductSizeTheoMaSanPham(dtFootballBoots.Rows[0]["maSanPham"].ToString());
-                        Session["productsize"] = dtProductSize;
-                        rptListSize.DataSource = dtProductSize;
-                        rptListSize.DataBind();
+                        if (dtProductSize.Rows.Count > 0)
+                        {
+                            for (int i = 0; i < dtProductSize.Rows.Count; i++)
+                            {
+                                if (dtProductSize.Rows[i]["tenSize"].ToString() == "39")
+                                {
+                                    txt39.Text = dtProductSize.Rows[i]["soLuong"].ToString();
+                                }
+                                if (dtProductSize.Rows[i]["tenSize"].ToString() == "40")
+                                {
+                                    txt40.Text = dtProductSize.Rows[i]["soLuong"].ToString();
+                                }
+                                if (dtProductSize.Rows[i]["tenSize"].ToString() == "41")
+                                {
+                                    txt41.Text = dtProductSize.Rows[i]["soLuong"].ToString();
+                                }
+                                if (dtProductSize.Rows[i]["tenSize"].ToString() == "42")
+                                {
+                                    txt42.Text = dtProductSize.Rows[i]["soLuong"].ToString();
+                                }
+                                if (dtProductSize.Rows[i]["tenSize"].ToString() == "43")
+                                {
+                                    txt43.Text = dtProductSize.Rows[i]["soLuong"].ToString();
+                                }
+                                if (dtProductSize.Rows[i]["tenSize"].ToString() == "44")
+                                {
+                                    txt44.Text = dtProductSize.Rows[i]["soLuong"].ToString();
+                                }
+                            }
+                        }
                         hdInsert.Value = "update";
                         hdId_FB.Value = dtFootballBoots.Rows[0]["id_FB"].ToString();
                         mlv.ActiveViewIndex = 1;
