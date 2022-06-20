@@ -177,6 +177,15 @@ namespace nguyeensport.admin
         protected global::System.Web.UI.WebControls.Button btnBack;
 
         /// <summary>
+        /// lblMaSanPham control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblMaSanPham;
+
+        /// <summary>
         /// txtMaSanPham control.
         /// </summary>
         /// <remarks>
@@ -186,13 +195,13 @@ namespace nguyeensport.admin
         protected global::System.Web.UI.WebControls.TextBox txtMaSanPham;
 
         /// <summary>
-        /// lblMaSanPham control.
+        /// lblTenSanPham control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblMaSanPham;
+        protected global::System.Web.UI.WebControls.Label lblTenSanPham;
 
         /// <summary>
         /// txtTenSanPham control.
@@ -204,13 +213,13 @@ namespace nguyeensport.admin
         protected global::System.Web.UI.WebControls.TextBox txtTenSanPham;
 
         /// <summary>
-        /// Label1 control.
+        /// lblAge control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label1;
+        protected global::System.Web.UI.WebControls.Label lblAge;
 
         /// <summary>
         /// drAge control.
@@ -222,6 +231,15 @@ namespace nguyeensport.admin
         protected global::System.Web.UI.WebControls.DropDownList drAge;
 
         /// <summary>
+        /// lblTitte control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblTitte;
+
+        /// <summary>
         /// txtTitle control.
         /// </summary>
         /// <remarks>
@@ -231,13 +249,13 @@ namespace nguyeensport.admin
         protected global::System.Web.UI.WebControls.TextBox txtTitle;
 
         /// <summary>
-        /// Label2 control.
+        /// lblKeywork control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label2;
+        protected global::System.Web.UI.WebControls.Label lblKeywork;
 
         /// <summary>
         /// txtMetaKeywork control.
@@ -246,16 +264,16 @@ namespace nguyeensport.admin
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtMetaKeywork;
+        protected global::DevExpress.Web.ASPxTokenBox txtMetaKeywork;
 
         /// <summary>
-        /// Label3 control.
+        /// lblMetaDescription control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label3;
+        protected global::System.Web.UI.WebControls.Label lblMetaDescription;
 
         /// <summary>
         /// txtMetaDescription control.
@@ -267,13 +285,13 @@ namespace nguyeensport.admin
         protected global::System.Web.UI.WebControls.TextBox txtMetaDescription;
 
         /// <summary>
-        /// Label4 control.
+        /// lblGia control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label4;
+        protected global::System.Web.UI.WebControls.Label lblGia;
 
         /// <summary>
         /// txtGia control.
@@ -285,6 +303,15 @@ namespace nguyeensport.admin
         protected global::System.Web.UI.WebControls.TextBox txtGia;
 
         /// <summary>
+        /// lblTrangThai control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblTrangThai;
+
+        /// <summary>
         /// drDiscount control.
         /// </summary>
         /// <remarks>
@@ -292,6 +319,33 @@ namespace nguyeensport.admin
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList drDiscount;
+
+        /// <summary>
+        /// upBangSize control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.UpdatePanel upBangSize;
+
+        /// <summary>
+        /// viewSize control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.MultiView viewSize;
+
+        /// <summary>
+        /// viewSizeNguoiLon control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.View viewSizeNguoiLon;
 
         /// <summary>
         /// lbl39 control.
@@ -400,6 +454,213 @@ namespace nguyeensport.admin
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txt44;
+
+        /// <summary>
+        /// lbl3913 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbl3913;
+
+        /// <summary>
+        /// txt395 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txt395;
+
+        /// <summary>
+        /// lbl4023 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbl4023;
+
+        /// <summary>
+        /// txt4023 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txt4023;
+
+        /// <summary>
+        /// lbl4113 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbl4113;
+
+        /// <summary>
+        /// txt4113 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txt4113;
+
+        /// <summary>
+        /// lbl4223 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbl4223;
+
+        /// <summary>
+        /// txt4223 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txt4223;
+
+        /// <summary>
+        /// lbl4313 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbl4313;
+
+        /// <summary>
+        /// txt4313 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txt4313;
+
+        /// <summary>
+        /// lbl4423 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbl4423;
+
+        /// <summary>
+        /// txt4423 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txt4423;
+
+        /// <summary>
+        /// viewTreEm control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.View viewTreEm;
+
+        /// <summary>
+        /// lbl36 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbl36;
+
+        /// <summary>
+        /// txt36 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txt36;
+
+        /// <summary>
+        /// lbl3623 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbl3623;
+
+        /// <summary>
+        /// txt3623 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txt3623;
+
+        /// <summary>
+        /// lbl3713 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbl3713;
+
+        /// <summary>
+        /// txt3713 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txt3713;
+
+        /// <summary>
+        /// lbl38 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbl38;
+
+        /// <summary>
+        /// txt38 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txt38;
+
+        /// <summary>
+        /// lbl3823 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbl3823;
+
+        /// <summary>
+        /// txt3823 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txt3823;
 
         /// <summary>
         /// lblBrands control.

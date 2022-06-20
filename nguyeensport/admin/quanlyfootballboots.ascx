@@ -30,7 +30,6 @@
                     <tr>
                         <th style="width:80px;">Hình ảnh</th>
                         <th>Tên sản phẩm</th>
-                      
                         <th style="width:60px;">Hiển thị</th>
                          <th style="width:60px;">Active</th>
                         <th></th>
@@ -119,59 +118,68 @@
                     <div class="row">
                         <div class="col-2">
                              <div class="form-group">
-                                  <asp:TextBox ID="txtMaSanPham" CssClass="form-control" runat="server" placeholder="Mã sản phẩm"></asp:TextBox>
-                                  <asp:Label ID="lblMaSanPham" runat="server"></asp:Label>
+                                 <asp:Label ID="lblMaSanPham" runat="server" Text="Mã sản phẩm"></asp:Label>          
+                                 <asp:TextBox ID="txtMaSanPham" CssClass="form-control" runat="server" placeholder="Mã sản phẩm"></asp:TextBox>
+                                  
                              </div>
                         </div>
                         <div class="col-8">
                              <div class="form-group">
+                                 <asp:Label ID="lblTenSanPham" runat="server" Text="Tên Sản phẩm"></asp:Label>
                                  <asp:TextBox ID="txtTenSanPham" CssClass="form-control" runat="server" placeholder="Tên sản phẩm"></asp:TextBox>
-                                 <asp:Label ID="Label1" runat="server"></asp:Label>
+                                 
                             </div>
                         </div>
                         <div class="col-2">
                             <div class="form-group">
-                                <asp:DropDownList ID="drAge" runat="server" CssClass="form-control"></asp:DropDownList>
+                                <asp:Label ID="lblAge" runat="server" Text="Đối tượng"></asp:Label>
+                                 <div class="ui-dropdownlist">
+                                    <asp:DropDownList ID="drAge" runat="server" CssClass="form-control" AutoPostBack="true" OnSelectedIndexChanged="drAge_SelectedIndexChanged"></asp:DropDownList>
+                                </div>
                             </div>
                         </div>
                         
                     </div>
                     <div class="row">
-                        <div class="col-12">
+                        <div class="col-6">
                              <div class="form-group">
+                                 <asp:Label ID="lblTitte" runat="server" Text="Meta Title"></asp:Label>
                                  <asp:TextBox ID="txtTitle" CssClass="form-control" runat="server" placeholder="Nhập tiêu đề"></asp:TextBox>
-                                 <asp:Label ID="Label2" runat="server"></asp:Label>
-                                
+                                 
+                            </div>
+                        </div>
+                         <div class="col-6">
+                              <div class="form-group">
+                                 <asp:Label ID="lblKeywork" runat="server" Text="Tag"></asp:Label>
+                                 <dx:ASPxTokenBox ID="txtMetaKeywork" runat="server" ItemValueType="System.String"></dx:ASPxTokenBox>
                             </div>
                         </div>
                     </div>
                     <div class="row">
-                          <div class="col-6">
+         
+                         <div class="col-12">
                              <div class="form-group">
-                                 <asp:TextBox ID="txtMetaKeywork" CssClass="form-control" runat="server" placeholder="Nhập keywork" TextMode="MultiLine"></asp:TextBox>
-                                 <asp:Label ID="Label3" runat="server"></asp:Label>
-                            </div>
-                        </div>
-                         <div class="col-6">
-                             <div class="form-group">
+                                 <asp:Label ID="lblMetaDescription" runat="server" Text="Meta Description"></asp:Label>
                                  <asp:TextBox ID="txtMetaDescription" CssClass="form-control" runat="server" placeholder="Nhập description" TextMode="MultiLine"></asp:TextBox>
-                                 <asp:Label ID="Label4" runat="server"></asp:Label>
+                                 
                             </div>
                         </div>
                      </div>
                    <div class="row">
                         <div class="col-12">
                              <div class="row mb-3 d-flex">
-                                <div class="col-2">
+                                <div class="col-3">
                                          <div class="form-group">
+                                             <asp:Label ID="lblGia" runat="server" Text="Giá"></asp:Label>
                                              <asp:TextBox ID="txtGia" runat="server" CssClass="form-control form-control-sm" placeholder="Giá"></asp:TextBox>
                                          </div>
                                     </div>
-                                <div class="col-2">
+                                <div class="col-3">
                                          <div class="form-group">
+                                             <asp:Label ID="lblTrangThai" runat="server" Text="Trạng thái"></asp:Label>
                                             <div class="ui-dropdownlist">
                                             <asp:DropDownList ID="drDiscount" runat="server" CssClass="form-control form-control-sm">
-                                                <asp:ListItem Value="">Chọn discount</asp:ListItem>
+                                                <asp:ListItem Value="">Chọn trạng thái</asp:ListItem>
                                                 <asp:ListItem Value="0">New</asp:ListItem>
                                                 <asp:ListItem Value="00">Pre-Order</asp:ListItem>
                                                 <asp:ListItem Value="000">0%</asp:ListItem>
@@ -190,51 +198,148 @@
                          
                         </div>
                     </div>
-                     <div class="row">
-                    <div class="col-6">
-                        <table class="table text-dark">
-                      <thead>
-                        <tr>
-                          <th scope="col">#</th>
-                          <th scope="col">Tên size</th>
-                          <th scope="col">Số lượng</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <th scope="row">1</th>
-                          <td> <asp:Label ID="lbl39" runat="server" Text="39"></asp:Label></td>
-                          <td><asp:TextBox ID="txt39" runat="server" CssClass="form-control form-control-sm"></asp:TextBox></td>
-                        </tr>
-                        <tr>
-                          <th scope="row">2</th>
-                          <td><asp:Label ID="lbl40" runat="server" Text="40"></asp:Label></td>
-                          <td><asp:TextBox ID="txt40" runat="server" CssClass="form-control form-control-sm"></asp:TextBox></td>
-                        </tr>
-                        <tr>
-                          <th scope="row">3</th>
-                          <td><asp:Label ID="lbl41" runat="server" Text="41"></asp:Label></td>
-                          <td><asp:TextBox ID="txt41" runat="server" CssClass="form-control form-control-sm"></asp:TextBox></td>
-                        </tr>
-                          <tr>
-                          <th scope="row">4</th>
-                          <td><asp:Label ID="lbl42" runat="server" Text="42"></asp:Label></td>
-                          <td><asp:TextBox ID="txt42" runat="server" CssClass="form-control form-control-sm"></asp:TextBox></td>
-                        </tr>
-                          <tr>
-                          <th scope="row">5</th>
-                          <td><asp:Label ID="lbl43" runat="server" Text="43"></asp:Label></td>
-                          <td><asp:TextBox ID="txt43" runat="server" CssClass="form-control form-control-sm"></asp:TextBox></td>
-                        </tr>
-                          <tr>
-                          <th scope="row">6</th>
-                          <td><asp:Label ID="lbl44" runat="server" Text="44"></asp:Label></td>
-                          <td><asp:TextBox ID="txt44" runat="server" CssClass="form-control form-control-sm"></asp:TextBox></td>
-                        </tr>
-                      </tbody>
-                    </table>
-                    </div>
-                </div>
+                    <asp:UpdatePanel ID="upBangSize" runat="server" UpdateMode="Conditional">
+                             <ContentTemplate>
+                                 <asp:MultiView ActiveViewIndex="0" ID="viewSize" runat="server">
+                                     <asp:View ID="viewSizeNguoiLon" runat="server">
+                                         <div class="row">
+                                               <div class="col-6">
+                                            <table class="table text-dark">
+                                          <thead>
+                                            <tr>
+                                              <th scope="col">#</th>
+                                              <th scope="col">Tên size</th>
+                                              <th scope="col">Số lượng</th>
+                                            </tr>
+                                          </thead>
+                                          <tbody>
+                                            <tr>
+                                              <th scope="row">1</th>
+                                              <td> <asp:Label ID="lbl39" runat="server" Text="39"></asp:Label></td>
+                                              <td><asp:TextBox ID="txt39" runat="server" CssClass="form-control form-control-sm"></asp:TextBox></td>
+                                            </tr>
+                                            <tr>
+                                              <th scope="row">2</th>
+                                              <td><asp:Label ID="lbl40" runat="server" Text="40"></asp:Label></td>
+                                              <td><asp:TextBox ID="txt40" runat="server" CssClass="form-control form-control-sm"></asp:TextBox></td>
+                                            </tr>
+                                            <tr>
+                                              <th scope="row">3</th>
+                                              <td><asp:Label ID="lbl41" runat="server" Text="41"></asp:Label></td>
+                                              <td><asp:TextBox ID="txt41" runat="server" CssClass="form-control form-control-sm"></asp:TextBox></td>
+                                            </tr>
+                                              <tr>
+                                              <th scope="row">4</th>
+                                              <td><asp:Label ID="lbl42" runat="server" Text="42"></asp:Label></td>
+                                              <td><asp:TextBox ID="txt42" runat="server" CssClass="form-control form-control-sm"></asp:TextBox></td>
+                                            </tr>
+                                              <tr>
+                                              <th scope="row">5</th>
+                                              <td><asp:Label ID="lbl43" runat="server" Text="43"></asp:Label></td>
+                                              <td><asp:TextBox ID="txt43" runat="server" CssClass="form-control form-control-sm"></asp:TextBox></td>
+                                            </tr>
+                                              <tr>
+                                              <th scope="row">6</th>
+                                              <td><asp:Label ID="lbl44" runat="server" Text="44"></asp:Label></td>
+                                              <td><asp:TextBox ID="txt44" runat="server" CssClass="form-control form-control-sm"></asp:TextBox></td>
+                                            </tr>
+                                          </tbody>
+                                        </table>
+                                        </div>
+                                                       <div class="col-6">
+                                            <table class="table text-dark">
+                                          <thead>
+                                            <tr>
+                                              <th scope="col">#</th>
+                                              <th scope="col">Tên size</th>
+                                              <th scope="col">Số lượng</th>
+                                            </tr>
+                                          </thead>
+                                          <tbody>
+                                            <tr>
+                                              <th scope="row">1</th>
+                                              <td> <asp:Label ID="lbl3913" runat="server" Text="39 1/3"></asp:Label></td>
+                                              <td><asp:TextBox ID="txt395" runat="server" CssClass="form-control form-control-sm"></asp:TextBox></td>
+                                            </tr>
+                                            <tr>
+                                              <th scope="row">2</th>
+                                              <td><asp:Label ID="lbl4023" runat="server" Text="40 2/3"></asp:Label></td>
+                                              <td><asp:TextBox ID="txt4023" runat="server" CssClass="form-control form-control-sm"></asp:TextBox></td>
+                                            </tr>
+                                            <tr>
+                                              <th scope="row">3</th>
+                                              <td><asp:Label ID="lbl4113" runat="server" Text="41 1/3"></asp:Label></td>
+                                              <td><asp:TextBox ID="txt4113" runat="server" CssClass="form-control form-control-sm"></asp:TextBox></td>
+                                            </tr>
+                                              <tr>
+                                              <th scope="row">4</th>
+                                              <td><asp:Label ID="lbl4223" runat="server" Text="42 2/3"></asp:Label></td>
+                                              <td><asp:TextBox ID="txt4223" runat="server" CssClass="form-control form-control-sm"></asp:TextBox></td>
+                                            </tr>
+                                              <tr>
+                                              <th scope="row">5</th>
+                                              <td><asp:Label ID="lbl4313" runat="server" Text="43 1/3"></asp:Label></td>
+                                              <td><asp:TextBox ID="txt4313" runat="server" CssClass="form-control form-control-sm"></asp:TextBox></td>
+                                            </tr>
+                                              <tr>
+                                              <th scope="row">6</th>
+                                              <td><asp:Label ID="lbl4423" runat="server" Text="44 2/3"></asp:Label></td>
+                                              <td><asp:TextBox ID="txt4423" runat="server" CssClass="form-control form-control-sm"></asp:TextBox></td>
+                                            </tr>
+                                          </tbody>
+                                        </table>
+                                        </div>
+                                     </div>
+                                     </asp:View>
+                                     <asp:View ID="viewTreEm" runat="server">
+                                         <div class="row">
+                                            <div class="col-6">
+                            <table class="table text-dark">
+                          <thead>
+                            <tr>
+                              <th scope="col">#</th>
+                              <th scope="col">Tên size</th>
+                              <th scope="col">Số lượng</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <th scope="row">1</th>
+                              <td> <asp:Label ID="lbl36" runat="server" Text="36"></asp:Label></td>
+                              <td><asp:TextBox ID="txt36" runat="server" CssClass="form-control form-control-sm"></asp:TextBox></td>
+                            </tr>
+                            <tr>
+                              <th scope="row">2</th>
+                              <td><asp:Label ID="lbl3623" runat="server" Text="36 2/3"></asp:Label></td>
+                              <td><asp:TextBox ID="txt3623" runat="server" CssClass="form-control form-control-sm"></asp:TextBox></td>
+                            </tr>
+                            <tr>
+                              <th scope="row">3</th>
+                              <td><asp:Label ID="lbl3713" runat="server" Text="37 1/3"></asp:Label></td>
+                              <td><asp:TextBox ID="txt3713" runat="server" CssClass="form-control form-control-sm"></asp:TextBox></td>
+                            </tr>
+                              <tr>
+                              <th scope="row">4</th>
+                              <td><asp:Label ID="lbl38" runat="server" Text="38"></asp:Label></td>
+                              <td><asp:TextBox ID="txt38" runat="server" CssClass="form-control form-control-sm"></asp:TextBox></td>
+                            </tr>
+                              <tr>
+                              <th scope="row">5</th>
+                              <td><asp:Label ID="lbl3823" runat="server" Text="38 2/3"></asp:Label></td>
+                              <td><asp:TextBox ID="txt3823" runat="server" CssClass="form-control form-control-sm"></asp:TextBox></td>
+                            </tr>
+                          </tbody>
+                        </table>
+                        </div>
+                                     
+                                         </div>
+                                     </asp:View>
+                                 </asp:MultiView>
+                             </ContentTemplate>
+                             <Triggers>
+                                    <asp:AsyncPostBackTrigger ControlID="drAge"  EventName="SelectedIndexChanged"/>
+                             </Triggers>
+                     </asp:UpdatePanel>
                     <div class="row">
                         <div class="col">
                               <div class="form-group">

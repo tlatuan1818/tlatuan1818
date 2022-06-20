@@ -155,12 +155,30 @@ namespace nguyeensport.admin
                         dtSizeOFProduct = clsquanlyproduct.laySizeOfProduct(txtMaSanPham.Text.Trim());
                         if (dtSizeOFProduct.Rows.Count <= 0)
                         {
-                            clsquanlyproduct.insertProductSize(txtMaSanPham.Text.Trim(), lbl39.Text.Trim(), Convert.ToInt32(txt39.Text.Trim() == "" ? null : txt39.Text.Trim()));
-                            clsquanlyproduct.insertProductSize(txtMaSanPham.Text.Trim(), lbl40.Text.Trim(), Convert.ToInt32(txt40.Text.Trim() == "" ? null : txt40.Text.Trim()));
-                            clsquanlyproduct.insertProductSize(txtMaSanPham.Text.Trim(), lbl41.Text.Trim(), Convert.ToInt32(txt41.Text.Trim() == "" ? null : txt41.Text.Trim()));
-                            clsquanlyproduct.insertProductSize(txtMaSanPham.Text.Trim(), lbl42.Text.Trim(), Convert.ToInt32(txt42.Text.Trim() == "" ? null : txt42.Text.Trim()));
-                            clsquanlyproduct.insertProductSize(txtMaSanPham.Text.Trim(), lbl43.Text.Trim(), Convert.ToInt32(txt43.Text.Trim() == "" ? null : txt43.Text.Trim()));
-                            clsquanlyproduct.insertProductSize(txtMaSanPham.Text.Trim(), lbl43.Text.Trim(), Convert.ToInt32(txt44.Text.Trim() == "" ? null : txt44.Text.Trim()));
+                            switch (drAge.SelectedItem.Value) 
+                            {
+                                case "1":
+                                    clsquanlyproduct.insertProductSize(txtMaSanPham.Text.Trim(), drAge.SelectedItem.Text.Trim(), lbl39.Text.Trim(), Convert.ToInt32(txt39.Text.Trim() == "" ? null : txt39.Text.Trim()));
+                                    clsquanlyproduct.insertProductSize(txtMaSanPham.Text.Trim(), drAge.SelectedItem.Text.Trim(), lbl40.Text.Trim(), Convert.ToInt32(txt40.Text.Trim() == "" ? null : txt40.Text.Trim()));
+                                    clsquanlyproduct.insertProductSize(txtMaSanPham.Text.Trim(), drAge.SelectedItem.Text.Trim(), lbl41.Text.Trim(), Convert.ToInt32(txt41.Text.Trim() == "" ? null : txt41.Text.Trim()));
+                                    clsquanlyproduct.insertProductSize(txtMaSanPham.Text.Trim(), drAge.SelectedItem.Text.Trim(), lbl42.Text.Trim(), Convert.ToInt32(txt42.Text.Trim() == "" ? null : txt42.Text.Trim()));
+                                    clsquanlyproduct.insertProductSize(txtMaSanPham.Text.Trim(), drAge.SelectedItem.Text.Trim(), lbl43.Text.Trim(), Convert.ToInt32(txt43.Text.Trim() == "" ? null : txt43.Text.Trim()));
+                                    clsquanlyproduct.insertProductSize(txtMaSanPham.Text.Trim(), drAge.SelectedItem.Text.Trim(), lbl44.Text.Trim(), Convert.ToInt32(txt44.Text.Trim() == "" ? null : txt44.Text.Trim()));
+                                    clsquanlyproduct.insertProductSize(txtMaSanPham.Text.Trim(), drAge.SelectedItem.Text.Trim(), lbl3913.Text.Trim(), Convert.ToInt32(txt395.Text.Trim() == "" ? null : txt395.Text.Trim()));
+                                    clsquanlyproduct.insertProductSize(txtMaSanPham.Text.Trim(), drAge.SelectedItem.Text.Trim(), lbl4023.Text.Trim(), Convert.ToInt32(txt4023.Text.Trim() == "" ? null : txt4023.Text.Trim()));
+                                    clsquanlyproduct.insertProductSize(txtMaSanPham.Text.Trim(), drAge.SelectedItem.Text.Trim(), lbl4113.Text.Trim(), Convert.ToInt32(txt4113.Text.Trim() == "" ? null : txt4113.Text.Trim()));
+                                    clsquanlyproduct.insertProductSize(txtMaSanPham.Text.Trim(), drAge.SelectedItem.Text.Trim(), lbl4223.Text.Trim(), Convert.ToInt32(txt4223.Text.Trim() == "" ? null : txt4223.Text.Trim()));
+                                    clsquanlyproduct.insertProductSize(txtMaSanPham.Text.Trim(), drAge.SelectedItem.Text.Trim(), lbl4313.Text.Trim(), Convert.ToInt32(txt4313.Text.Trim() == "" ? null : txt4313.Text.Trim()));
+                                    clsquanlyproduct.insertProductSize(txtMaSanPham.Text.Trim(), drAge.SelectedItem.Text.Trim(), lbl4423.Text.Trim(), Convert.ToInt32(txt4423.Text.Trim() == "" ? null : txt4423.Text.Trim()));
+                                    break;
+                                case "2":
+                                    clsquanlyproduct.insertProductSize(txtMaSanPham.Text.Trim(), drAge.SelectedItem.Text.Trim(), lbl36.Text.Trim(), Convert.ToInt32(txt36.Text.Trim() == "" ? null : txt36.Text.Trim()));
+                                    clsquanlyproduct.insertProductSize(txtMaSanPham.Text.Trim(), drAge.SelectedItem.Text.Trim(), lbl3623.Text.Trim(), Convert.ToInt32(txt3623.Text.Trim() == "" ? null : txt3623.Text.Trim()));
+                                    clsquanlyproduct.insertProductSize(txtMaSanPham.Text.Trim(), drAge.SelectedItem.Text.Trim(), lbl3713.Text.Trim(), Convert.ToInt32(txt3713.Text.Trim() == "" ? null : txt3713.Text.Trim()));
+                                    clsquanlyproduct.insertProductSize(txtMaSanPham.Text.Trim(), drAge.SelectedItem.Text.Trim(), lbl38.Text.Trim(), Convert.ToInt32(txt38.Text.Trim() == "" ? null : txt38.Text.Trim()));
+                                    clsquanlyproduct.insertProductSize(txtMaSanPham.Text.Trim(), drAge.SelectedItem.Text.Trim(), lbl3823.Text.Trim(), Convert.ToInt32(txt3823.Text.Trim() == "" ? null : txt3823.Text.Trim()));
+                                    break;
+                            }
                         }
                         lblThongBao2.Text = "<div class='alert alert-success alert-dismissible fade show' role='alert'>" +
                                            "Thêm thành công" +
@@ -185,12 +203,30 @@ namespace nguyeensport.admin
                         }
                         clsquanlyproduct.updateProduct(txtMaSanPham.Text.Trim(), txtTenSanPham.Text.Trim(), htmlEditor.Html.ToString(), float.Parse(txtGia.Text.Trim()), drDiscount.SelectedItem.Text.Trim(), giaOutput, 1, txtTitle.Text.Trim(), txtMetaDescription.Text.Trim(), txtMetaKeywork.Text.Trim(), clsThuVien.utf8Convert3(txtTenSanPham.Text.Trim()).ToLower().Replace(" ", "-"), strPath[0].ToString(), strPath[1].ToString(), strPath[2].ToString(), strPath[3].ToString(), strPath[4].ToString(), strPath[5].ToString(), strPath[6].ToString(), strPath[7].ToString(), strPath[8].ToString(), strPath[9].ToString(), DateTime.Now, hienThi, Active);
                         _quanlyfootballboots.updateFootballBoots(txtMaSanPham.Text.Trim(), txtBrands.Text.Trim(), txtCollection.Text.Trim(), txtModel.Text.Trim(), drAge.SelectedItem.ToString(), txtGroundType.Text.Trim(), txtClass.Text.Trim(), txtColor.Text.Trim());
-                        clsquanlyproduct.updateProductSize(txtMaSanPham.Text.Trim(), lbl39.Text.Trim(), Convert.ToInt32(txt39.Text.Trim() == "" ? null : txt39.Text.Trim()));
-                        clsquanlyproduct.updateProductSize(txtMaSanPham.Text.Trim(), lbl40.Text.Trim(), Convert.ToInt32(txt40.Text.Trim() == "" ? null : txt40.Text.Trim()));
-                        clsquanlyproduct.updateProductSize(txtMaSanPham.Text.Trim(), lbl41.Text.Trim(), Convert.ToInt32(txt41.Text.Trim() == "" ? null : txt41.Text.Trim()));
-                        clsquanlyproduct.updateProductSize(txtMaSanPham.Text.Trim(), lbl42.Text.Trim(), Convert.ToInt32(txt42.Text.Trim() == "" ? null : txt42.Text.Trim()));
-                        clsquanlyproduct.updateProductSize(txtMaSanPham.Text.Trim(), lbl43.Text.Trim(), Convert.ToInt32(txt43.Text.Trim() == "" ? null : txt43.Text.Trim()));
-                        clsquanlyproduct.updateProductSize(txtMaSanPham.Text.Trim(), lbl43.Text.Trim(), Convert.ToInt32(txt44.Text.Trim() == "" ? null : txt44.Text.Trim()));
+                        switch (drAge.SelectedItem.Value)
+                        {
+                            case "1":
+                                clsquanlyproduct.updateProductSize(txtMaSanPham.Text.Trim(), lbl39.Text.Trim(), drAge.SelectedItem.Text.Trim(), Convert.ToInt32(txt39.Text.Trim() == "" ? null : txt39.Text.Trim()));
+                                clsquanlyproduct.updateProductSize(txtMaSanPham.Text.Trim(), lbl40.Text.Trim(), drAge.SelectedItem.Text.Trim(), Convert.ToInt32(txt40.Text.Trim() == "" ? null : txt40.Text.Trim()));
+                                clsquanlyproduct.updateProductSize(txtMaSanPham.Text.Trim(), lbl41.Text.Trim(), drAge.SelectedItem.Text.Trim(), Convert.ToInt32(txt41.Text.Trim() == "" ? null : txt41.Text.Trim()));
+                                clsquanlyproduct.updateProductSize(txtMaSanPham.Text.Trim(), lbl42.Text.Trim(), drAge.SelectedItem.Text.Trim(), Convert.ToInt32(txt42.Text.Trim() == "" ? null : txt42.Text.Trim()));
+                                clsquanlyproduct.updateProductSize(txtMaSanPham.Text.Trim(), lbl43.Text.Trim(), drAge.SelectedItem.Text.Trim(), Convert.ToInt32(txt43.Text.Trim() == "" ? null : txt43.Text.Trim()));
+                                clsquanlyproduct.updateProductSize(txtMaSanPham.Text.Trim(), lbl44.Text.Trim(), drAge.SelectedItem.Text.Trim(), Convert.ToInt32(txt44.Text.Trim() == "" ? null : txt44.Text.Trim()));
+                                clsquanlyproduct.updateProductSize(txtMaSanPham.Text.Trim(), lbl3913.Text.Trim(), drAge.SelectedItem.Text.Trim(), Convert.ToInt32(txt395.Text.Trim() == "" ? null : txt395.Text.Trim()));
+                                clsquanlyproduct.updateProductSize(txtMaSanPham.Text.Trim(), lbl4023.Text.Trim(), drAge.SelectedItem.Text.Trim(), Convert.ToInt32(txt4023.Text.Trim() == "" ? null : txt4023.Text.Trim()));
+                                clsquanlyproduct.updateProductSize(txtMaSanPham.Text.Trim(), lbl4113.Text.Trim(), drAge.SelectedItem.Text.Trim(), Convert.ToInt32(txt4113.Text.Trim() == "" ? null : txt4113.Text.Trim()));
+                                clsquanlyproduct.updateProductSize(txtMaSanPham.Text.Trim(), lbl4223.Text.Trim(), drAge.SelectedItem.Text.Trim(), Convert.ToInt32(txt4223.Text.Trim() == "" ? null : txt4223.Text.Trim()));
+                                clsquanlyproduct.updateProductSize(txtMaSanPham.Text.Trim(), lbl4313.Text.Trim(), drAge.SelectedItem.Text.Trim(), Convert.ToInt32(txt4313.Text.Trim() == "" ? null : txt4313.Text.Trim()));
+                                clsquanlyproduct.updateProductSize(txtMaSanPham.Text.Trim(), lbl4423.Text.Trim(), drAge.SelectedItem.Text.Trim(), Convert.ToInt32(txt4423.Text.Trim() == "" ? null : txt4423.Text.Trim()));
+                                break;
+                            case "2":
+                                clsquanlyproduct.updateProductSize(txtMaSanPham.Text.Trim(), drAge.SelectedItem.Text.Trim(), lbl36.Text.Trim(), Convert.ToInt32(txt36.Text.Trim() == "" ? null : txt36.Text.Trim()));
+                                clsquanlyproduct.updateProductSize(txtMaSanPham.Text.Trim(), drAge.SelectedItem.Text.Trim(), lbl3623.Text.Trim(), Convert.ToInt32(txt3623.Text.Trim() == "" ? null : txt3623.Text.Trim()));
+                                clsquanlyproduct.updateProductSize(txtMaSanPham.Text.Trim(), drAge.SelectedItem.Text.Trim(), lbl3713.Text.Trim(), Convert.ToInt32(txt3713.Text.Trim() == "" ? null : txt3713.Text.Trim()));
+                                clsquanlyproduct.updateProductSize(txtMaSanPham.Text.Trim(), drAge.SelectedItem.Text.Trim(), lbl38.Text.Trim(), Convert.ToInt32(txt38.Text.Trim() == "" ? null : txt38.Text.Trim()));
+                                clsquanlyproduct.updateProductSize(txtMaSanPham.Text.Trim(), drAge.SelectedItem.Text.Trim(), lbl3823.Text.Trim(), Convert.ToInt32(txt3823.Text.Trim() == "" ? null : txt3823.Text.Trim()));
+                                break;
+                        }
                         lblThongBao2.Text = "<div class='alert alert-success alert-dismissible fade show' role='alert'>" +
                                            "Sửa thành công" +
                                "<button type='button' class='close' data-dismiss='alert' aria-label='Close'>" +
@@ -244,6 +280,12 @@ namespace nguyeensport.admin
                         txtMetaDescription.Text = dtFootballBoots.Rows[0]["metaDescriptionSanPham"].ToString();
                         txtMetaKeywork.Text = dtFootballBoots.Rows[0]["metaKeywordsSanPham"].ToString();
                         htmlEditor.Html = dtFootballBoots.Rows[0]["motaSanPham"].ToString();
+                        txtGroundType.Text = dtFootballBoots.Rows[0]["groundType"].ToString();
+                        txtBrands.Text = dtFootballBoots.Rows[0]["brands"].ToString();
+                        txtCollection.Text = dtFootballBoots.Rows[0]["collection"].ToString();
+                        txtClass.Text = dtFootballBoots.Rows[0]["class"].ToString();
+                        txtColor.Text = dtFootballBoots.Rows[0]["color"].ToString();
+                        txtModel.Text = dtFootballBoots.Rows[0]["model"].ToString();
                         txtGia.Text = dtFootballBoots.Rows[0]["giaInput"].ToString();
                         cbkActive.Checked = ((bool)dtFootballBoots.Rows[0]["Active"]) ? true : false;
                         cbkHienThi.Checked = ((bool)dtFootballBoots.Rows[0]["hienThi"]) ? true : false;
@@ -258,34 +300,90 @@ namespace nguyeensport.admin
                         hdImage9.Value = dtFootballBoots.Rows[0]["anh8"].ToString();
                         hdImage10.Value = dtFootballBoots.Rows[0]["anh9"].ToString();
                         DataTable dtProductSize = new DataTable();
-                        dtProductSize = clsquanlyproduct.layProductSizeTheoMaSanPham(dtFootballBoots.Rows[0]["maSanPham"].ToString());
+                        dtProductSize = clsquanlyproduct.layProductSizeTheoMaSanPhamANDGender(dtFootballBoots.Rows[0]["maSanPham"].ToString(), dtFootballBoots.Rows[0]["age"].ToString());
                         if (dtProductSize.Rows.Count > 0)
                         {
-                            for (int i = 0; i < dtProductSize.Rows.Count; i++)
+                            if (dtProductSize.Rows[0]["doiTuong"].ToString() == "Người lớn")
                             {
-                                if (dtProductSize.Rows[i]["tenSize"].ToString() == "39")
+                                viewSize.ActiveViewIndex = 0;
+                                for (int i = 0; i < dtProductSize.Rows.Count; i++)
                                 {
-                                    txt39.Text = dtProductSize.Rows[i]["soLuong"].ToString();
+                                    if (dtProductSize.Rows[i]["tenSize"].ToString() == "39")
+                                    {
+                                        txt39.Text = dtProductSize.Rows[i]["soLuong"].ToString();
+                                    }
+                                    if (dtProductSize.Rows[i]["tenSize"].ToString() == "40")
+                                    {
+                                        txt40.Text = dtProductSize.Rows[i]["soLuong"].ToString();
+                                    }
+                                    if (dtProductSize.Rows[i]["tenSize"].ToString() == "41")
+                                    {
+                                        txt41.Text = dtProductSize.Rows[i]["soLuong"].ToString();
+                                    }
+                                    if (dtProductSize.Rows[i]["tenSize"].ToString() == "42")
+                                    {
+                                        txt42.Text = dtProductSize.Rows[i]["soLuong"].ToString();
+                                    }
+                                    if (dtProductSize.Rows[i]["tenSize"].ToString() == "43")
+                                    {
+                                        txt43.Text = dtProductSize.Rows[i]["soLuong"].ToString();
+                                    }
+                                    if (dtProductSize.Rows[i]["tenSize"].ToString() == "44")
+                                    {
+                                        txt44.Text = dtProductSize.Rows[i]["soLuong"].ToString();
+                                    }
+                                    if (dtProductSize.Rows[i]["tenSize"].ToString() == "39 1/3")
+                                    {
+                                        txt395.Text = dtProductSize.Rows[i]["soLuong"].ToString();
+                                    }
+                                    if (dtProductSize.Rows[i]["tenSize"].ToString() == "40 2/3")
+                                    {
+                                        txt4023.Text = dtProductSize.Rows[i]["soLuong"].ToString();
+                                    }
+                                    if (dtProductSize.Rows[i]["tenSize"].ToString() == "41 1/3")
+                                    {
+                                        txt4113.Text = dtProductSize.Rows[i]["soLuong"].ToString();
+                                    }
+                                    if (dtProductSize.Rows[i]["tenSize"].ToString() == "42 2/3")
+                                    {
+                                        txt4223.Text = dtProductSize.Rows[i]["soLuong"].ToString();
+                                    }
+                                    if (dtProductSize.Rows[i]["tenSize"].ToString() == "43 1/3")
+                                    {
+                                        txt4313.Text = dtProductSize.Rows[i]["soLuong"].ToString();
+                                    }
+                                    if (dtProductSize.Rows[i]["tenSize"].ToString() == "44 2/3")
+                                    {
+                                        txt4423.Text = dtProductSize.Rows[i]["soLuong"].ToString();
+                                    }
                                 }
-                                if (dtProductSize.Rows[i]["tenSize"].ToString() == "40")
+                            }
+                            if(dtProductSize.Rows[0]["doiTuong"].ToString() ==  "Trẻ em")
+                            {
+                                viewSize.ActiveViewIndex = 1;
+                                for (int i = 0; i < dtProductSize.Rows.Count; i++)
                                 {
-                                    txt40.Text = dtProductSize.Rows[i]["soLuong"].ToString();
-                                }
-                                if (dtProductSize.Rows[i]["tenSize"].ToString() == "41")
-                                {
-                                    txt41.Text = dtProductSize.Rows[i]["soLuong"].ToString();
-                                }
-                                if (dtProductSize.Rows[i]["tenSize"].ToString() == "42")
-                                {
-                                    txt42.Text = dtProductSize.Rows[i]["soLuong"].ToString();
-                                }
-                                if (dtProductSize.Rows[i]["tenSize"].ToString() == "43")
-                                {
-                                    txt43.Text = dtProductSize.Rows[i]["soLuong"].ToString();
-                                }
-                                if (dtProductSize.Rows[i]["tenSize"].ToString() == "44")
-                                {
-                                    txt44.Text = dtProductSize.Rows[i]["soLuong"].ToString();
+                                    if (dtProductSize.Rows[i]["tenSize"].ToString() == "36")
+                                    {
+                                        txt36.Text = dtProductSize.Rows[i]["soLuong"].ToString();
+                                    }
+                                    if (dtProductSize.Rows[i]["tenSize"].ToString() == "36 2/3")
+                                    {
+                                        txt3623.Text = dtProductSize.Rows[i]["soLuong"].ToString();
+                                    }
+                                    if (dtProductSize.Rows[i]["tenSize"].ToString() == "37 1/3")
+                                    {
+                                        txt3713.Text = dtProductSize.Rows[i]["soLuong"].ToString();
+                                    }
+                                    if (dtProductSize.Rows[i]["tenSize"].ToString() == "38")
+                                    {
+                                        txt38.Text = dtProductSize.Rows[i]["soLuong"].ToString();
+                                    }
+                                    if (dtProductSize.Rows[i]["tenSize"].ToString() == "38 2/3")
+                                    {
+                                        txt3823.Text = dtProductSize.Rows[i]["soLuong"].ToString();
+                                    }
+                                    
                                 }
                             }
                         }
@@ -301,43 +399,43 @@ namespace nguyeensport.admin
                         if (dtFootballBoots.Rows[0]["avatarSanPham"].ToString().Length > 0)
                         {
 
-                            clsThuVien.deleteImage(dtFootballBoots.Rows[0]["avatarSanPham"].ToString().Substring(52).Replace(".jpg", "").Replace(".png", ""));
+                            clsThuVien.deleteImage(dtFootballBoots.Rows[0]["avatarSanPham"].ToString());
                         }
                         if (dtFootballBoots.Rows[0]["anh1"].ToString().Length > 0)
                         {
-                            clsThuVien.deleteImage(dtFootballBoots.Rows[0]["anh1"].ToString().Substring(52).Replace(".jpg", "").Replace(".png", ""));
+                            clsThuVien.deleteImage(dtFootballBoots.Rows[0]["anh1"].ToString());
                         }
                         if (dtFootballBoots.Rows[0]["anh2"].ToString().Length > 0)
                         {
-                            clsThuVien.deleteImage(dtFootballBoots.Rows[0]["anh2"].ToString().Substring(52).Replace(".jpg", "").Replace(".png", ""));
+                            clsThuVien.deleteImage(dtFootballBoots.Rows[0]["anh2"].ToString());
                         }
                         if (dtFootballBoots.Rows[0]["anh3"].ToString().Length > 0)
                         {
-                            clsThuVien.deleteImage(dtFootballBoots.Rows[0]["anh3"].ToString().Substring(52).Replace(".jpg", "").Replace(".png", ""));
+                            clsThuVien.deleteImage(dtFootballBoots.Rows[0]["anh3"].ToString());
                         }
                         if (dtFootballBoots.Rows[0]["anh4"].ToString().Length > 0)
                         {
-                            clsThuVien.deleteImage(dtFootballBoots.Rows[0]["anh4"].ToString().Substring(52).Replace(".jpg", "").Replace(".png", ""));
+                            clsThuVien.deleteImage(dtFootballBoots.Rows[0]["anh4"].ToString());
                         }
                         if (dtFootballBoots.Rows[0]["anh5"].ToString().Length > 0)
                         {
-                            clsThuVien.deleteImage(dtFootballBoots.Rows[0]["anh5"].ToString().Substring(52).Replace(".jpg", "").Replace(".png", ""));
+                            clsThuVien.deleteImage(dtFootballBoots.Rows[0]["anh5"].ToString());
                         }
                         if (dtFootballBoots.Rows[0]["anh6"].ToString().Length > 0)
                         {
-                            clsThuVien.deleteImage(dtFootballBoots.Rows[0]["anh6"].ToString().Substring(52).Replace(".jpg", "").Replace(".png", ""));
+                            clsThuVien.deleteImage(dtFootballBoots.Rows[0]["anh6"].ToString());
                         }
                         if (dtFootballBoots.Rows[0]["anh7"].ToString().Length > 0)
                         {
-                            clsThuVien.deleteImage(dtFootballBoots.Rows[0]["anh7"].ToString().Substring(52).Replace(".jpg", "").Replace(".png", ""));
+                            clsThuVien.deleteImage(dtFootballBoots.Rows[0]["anh7"].ToString());
                         }
                         if (dtFootballBoots.Rows[0]["anh8"].ToString().Length > 0)
                         {
-                            clsThuVien.deleteImage(dtFootballBoots.Rows[0]["anh8"].ToString().Substring(52).Replace(".jpg", "").Replace(".png", ""));
+                            clsThuVien.deleteImage(dtFootballBoots.Rows[0]["anh8"].ToString());
                         }
                         if (dtFootballBoots.Rows[0]["anh9"].ToString().Length > 0)
                         {
-                            clsThuVien.deleteImage(dtFootballBoots.Rows[0]["anh9"].ToString().Substring(52).Replace(".jpg", "").Replace(".png", ""));
+                            clsThuVien.deleteImage(dtFootballBoots.Rows[0]["anh9"].ToString());
                         }
                         clsquanlyproduct.deleteProductSize(dtFootballBoots.Rows[0]["maSanPham"].ToString());
                         _quanlyfootballboots.deleteFootballBoots(dtFootballBoots.Rows[0]["maSanPham"].ToString());
@@ -389,6 +487,20 @@ namespace nguyeensport.admin
         protected void cbkActive_Load(object sender, EventArgs e)
         {
             ((CheckBox)sender).Attributes["onclick"] = "javascript:ShowProgressBar()";
+        }
+
+        protected void drAge_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(drAge.SelectedItem.Value == "1")
+            {
+                viewSize.ActiveViewIndex = 0;
+                upBangSize.Update();
+            }
+            else if(drAge.SelectedItem.Value == "2")
+            {
+                viewSize.ActiveViewIndex = 1;
+                upBangSize.Update();
+            }
         }
     }
 }

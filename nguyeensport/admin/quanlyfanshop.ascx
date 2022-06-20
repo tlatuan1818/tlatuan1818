@@ -132,20 +132,23 @@
                 <div class="row">
                     <div class="col-2">
                         <div class="form-group">
-                            <asp:TextBox ID="txtMaSanPham" CssClass="form-control" runat="server" placeholder="Mã sản phẩm"></asp:TextBox>
-                            <asp:Label ID="lblMaSanPham" runat="server"></asp:Label>
+                            <asp:Label ID="lblMaSanPham" runat="server" Text="Mã sản phẩm"></asp:Label>
+                            <asp:TextBox ID="txtMaSanPham" CssClass="form-control" runat="server" placeholder="Nhập mã sản phẩm"></asp:TextBox>
+                            
                         </div>
                     </div>
                     <div class="col-8">
                         <div class="form-group">
-                            <asp:TextBox ID="txtTenSanPham" CssClass="form-control" runat="server" placeholder="Tên sản phẩm"></asp:TextBox>
-                            <asp:Label ID="Label1" runat="server"></asp:Label>
+                            <asp:Label ID="lblTenSanPham" runat="server" Text="Tên sản phẩm"></asp:Label>
+                            <asp:TextBox ID="txtTenSanPham" CssClass="form-control" runat="server" placeholder="Nhập tên sản phẩm"></asp:TextBox>
+                            
                         </div>
                     </div>
                     <div class="col-2">
                         <div class="form-group">
+                            <asp:Label ID="lblGender" runat="server" Text="Giới tính"></asp:Label>
                             <div class="ui-dropdownlist">
-                                <asp:DropDownList ID="drGender" runat="server" CssClass="form-control" AppendDataBoundItems="true"></asp:DropDownList>
+                                <asp:DropDownList ID="drGender" runat="server" CssClass="form-control" AppendDataBoundItems="true" AutoPostBack="true" OnSelectedIndexChanged="drGender_SelectedIndexChanged"></asp:DropDownList>
                             </div>
 
                         </div>
@@ -155,7 +158,7 @@
                 <div class="row">
                     <div class="col-6">
                         <div class="form-group">
-                            <asp:Label ID="lblTitle" runat="server" Text="Tiêu đề"></asp:Label>
+                            <asp:Label ID="lblTitle" runat="server" Text="Meta Title"></asp:Label>
                             <asp:TextBox ID="txtTitle" CssClass="form-control" runat="server"></asp:TextBox>
                         </div>
                     </div>
@@ -170,8 +173,9 @@
 
                     <div class="col-12">
                         <div class="form-group">
+                            <asp:Label ID="lblMetaDescription" runat="server" Text="Meta Description"></asp:Label>
                             <asp:TextBox ID="txtMetaDescription" CssClass="form-control" runat="server" placeholder="Nhập description" TextMode="MultiLine"></asp:TextBox>
-                            <asp:Label ID="Label4" runat="server"></asp:Label>
+                            
                         </div>
                     </div>
                 </div>
@@ -180,11 +184,13 @@
                         <div class="row mb-3 d-flex">
                             <div class="col-3">
                                 <div class="form-group">
+                                    <asp:Label ID="lblGia" runat="server" Text="Giá"></asp:Label>
                                     <asp:TextBox ID="txtGia" runat="server" CssClass="form-control form-control-sm" placeholder="Giá"></asp:TextBox>
                                 </div>
                             </div>
                             <div class="col-3">
                                 <div class="form-group">
+                                    <asp:Label ID="lblTrangThai" runat="server" Text="Trạng thái"></asp:Label>
                                     <div class="ui-dropdownlist">
                                         <asp:DropDownList ID="drDiscount" runat="server" CssClass="form-control form-control-sm">
                                             <asp:ListItem Value="">Chọn discount</asp:ListItem>
@@ -205,7 +211,58 @@
                        
                     </div>
                 </div>
-                <div class="row">
+                <asp:UpdatePanel ID="uploadViewSize" runat="server" UpdateMode="Conditional">
+                    <ContentTemplate>
+                        <asp:MultiView ID="viewSize" ActiveViewIndex="0" runat="server">
+                            <asp:View ID="viewNam" runat="server">
+                                 <div class="row">
+                    <div class="col-6">
+                        <table class="table text-dark">
+                      <thead>
+                        <tr>
+                          <th scope="col">#</th>
+                          <th scope="col">Tên size</th>
+                          <th scope="col">Số lượng</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                           <tr>
+                          <th scope="row">1</th>
+                          <td> <asp:Label ID="lblXS" runat="server" Text="XS"></asp:Label></td>
+                          <td><asp:TextBox ID="txtXS" runat="server" CssClass="form-control form-control-sm"></asp:TextBox></td>
+                        </tr>
+                        <tr>
+                          <th scope="row">2</th>
+                          <td> <asp:Label ID="lblS" runat="server" Text="S"></asp:Label></td>
+                          <td><asp:TextBox ID="txtS" runat="server" CssClass="form-control form-control-sm"></asp:TextBox></td>
+                        </tr>
+                        <tr>
+                          <th scope="row">3</th>
+                          <td><asp:Label ID="lblM" runat="server" Text="M"></asp:Label></td>
+                          <td><asp:TextBox ID="txtM" runat="server" CssClass="form-control form-control-sm"></asp:TextBox></td>
+                        </tr>
+                        <tr>
+                          <th scope="row">4</th>
+                          <td><asp:Label ID="lblL" runat="server" Text="L"></asp:Label></td>
+                          <td><asp:TextBox ID="txtL" runat="server" CssClass="form-control form-control-sm"></asp:TextBox></td>
+                        </tr>
+                          <tr>
+                          <th scope="row">5</th>
+                          <td><asp:Label ID="lblXL" runat="server" Text="XL"></asp:Label></td>
+                          <td><asp:TextBox ID="txtXL" runat="server" CssClass="form-control form-control-sm"></asp:TextBox></td>
+                        </tr>
+                          <tr>
+                          <th scope="row">6</th>
+                          <td><asp:Label ID="lblXXL" runat="server" Text="XXL"></asp:Label></td>
+                          <td><asp:TextBox ID="txtXXL" runat="server" CssClass="form-control form-control-sm"></asp:TextBox></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    </div>
+                </div>
+                            </asp:View>
+                            <asp:View ID="viewNu" runat="server">
+                                 <div class="row">
                     <div class="col-6">
                         <table class="table text-dark">
                       <thead>
@@ -218,33 +275,118 @@
                       <tbody>
                         <tr>
                           <th scope="row">1</th>
-                          <td> <asp:Label ID="lblS" runat="server" Text="S"></asp:Label></td>
-                          <td><asp:TextBox ID="txtS" runat="server" CssClass="form-control form-control-sm"></asp:TextBox></td>
+                          <td> <asp:Label ID="lblNUXXS" runat="server" Text="XXS"></asp:Label></td>
+                          <td><asp:TextBox ID="txtNUXXS" runat="server" CssClass="form-control form-control-sm"></asp:TextBox></td>
                         </tr>
                         <tr>
                           <th scope="row">2</th>
-                          <td><asp:Label ID="lblM" runat="server" Text="M"></asp:Label></td>
-                          <td><asp:TextBox ID="txtM" runat="server" CssClass="form-control form-control-sm"></asp:TextBox></td>
+                          <td><asp:Label ID="lblNUXS" runat="server" Text="XS"></asp:Label></td>
+                          <td><asp:TextBox ID="txtNUXS" runat="server" CssClass="form-control form-control-sm"></asp:TextBox></td>
                         </tr>
                         <tr>
                           <th scope="row">3</th>
-                          <td><asp:Label ID="lblL" runat="server" Text="L"></asp:Label></td>
-                          <td><asp:TextBox ID="txtL" runat="server" CssClass="form-control form-control-sm"></asp:TextBox></td>
+                          <td><asp:Label ID="lblNUS" runat="server" Text="S"></asp:Label></td>
+                          <td><asp:TextBox ID="txtNUS" runat="server" CssClass="form-control form-control-sm"></asp:TextBox></td>
                         </tr>
                           <tr>
                           <th scope="row">4</th>
-                          <td><asp:Label ID="lblXL" runat="server" Text="XL"></asp:Label></td>
-                          <td><asp:TextBox ID="txtXL" runat="server" CssClass="form-control form-control-sm"></asp:TextBox></td>
+                          <td><asp:Label ID="lblNUM" runat="server" Text="M"></asp:Label></td>
+                          <td><asp:TextBox ID="txtNUM" runat="server" CssClass="form-control form-control-sm"></asp:TextBox></td>
                         </tr>
                           <tr>
                           <th scope="row">5</th>
-                          <td><asp:Label ID="lblXXL" runat="server" Text="XXL"></asp:Label></td>
-                          <td><asp:TextBox ID="txtXXL" runat="server" CssClass="form-control form-control-sm"></asp:TextBox></td>
+                          <td><asp:Label ID="lblNUL" runat="server" Text="L"></asp:Label></td>
+                          <td><asp:TextBox ID="txtNUL" runat="server" CssClass="form-control form-control-sm"></asp:TextBox></td>
+                        </tr>
+                           <tr>
+                          <th scope="row">6</th>
+                          <td><asp:Label ID="lblNUXL" runat="server" Text="XL"></asp:Label></td>
+                          <td><asp:TextBox ID="txtNUXL" runat="server" CssClass="form-control form-control-sm"></asp:TextBox></td>
                         </tr>
                       </tbody>
                     </table>
                     </div>
                 </div>
+                            </asp:View>
+                            <asp:View ID="viewTreEm" runat="server">
+                                 <div class="row">
+                    <div class="col-6">
+                        <table class="table text-dark">
+                      <thead>
+                        <tr>
+                          <th scope="col">#</th>
+                          <th scope="col">Tên size</th>
+                          <th scope="col">Số lượng</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <th scope="row">1</th>
+                          <td> <asp:Label ID="lbl116" runat="server" Text="116 (5-6 tuổi)"></asp:Label></td>
+                          <td><asp:TextBox ID="txt116" runat="server" CssClass="form-control form-control-sm"></asp:TextBox></td>
+                        </tr>
+                        <tr>
+                          <th scope="row">2</th>
+                          <td><asp:Label ID="lbl122" runat="server" Text="122 (6-7 tuổi)"></asp:Label></td>
+                          <td><asp:TextBox ID="txt122" runat="server" CssClass="form-control form-control-sm"></asp:TextBox></td>
+                        </tr>
+                        <tr>
+                          <th scope="row">3</th>
+                          <td><asp:Label ID="lbl128" runat="server" Text="128 (7-8 tuổi)"></asp:Label></td>
+                          <td><asp:TextBox ID="txt128" runat="server" CssClass="form-control form-control-sm"></asp:TextBox></td>
+                        </tr>
+                          <tr>
+                          <th scope="row">4</th>
+                          <td><asp:Label ID="lbl134" runat="server" Text="134 (8-9 tuổi)"></asp:Label></td>
+                          <td><asp:TextBox ID="txt134" runat="server" CssClass="form-control form-control-sm"></asp:TextBox></td>
+                        </tr>
+                          <tr>
+                          <th scope="row">5</th>
+                          <td><asp:Label ID="lbl140" runat="server" Text="140 (9-10 tuổi)"></asp:Label></td>
+                          <td><asp:TextBox ID="txt140" runat="server" CssClass="form-control form-control-sm"></asp:TextBox></td>
+                        </tr>
+                           <tr>
+                          <th scope="row">6</th>
+                          <td><asp:Label ID="lbl146" runat="server" Text="146 (10-11 tuổi)"></asp:Label></td>
+                          <td><asp:TextBox ID="txt146" runat="server" CssClass="form-control form-control-sm"></asp:TextBox></td>
+                        </tr>
+                          <tr>
+                          <th scope="row">7</th>
+                          <td><asp:Label ID="lbl152" runat="server" Text="152 (11-12 tuổi)"></asp:Label></td>
+                          <td><asp:TextBox ID="txt152" runat="server" CssClass="form-control form-control-sm"></asp:TextBox></td>
+                        </tr>
+                          <tr>
+                          <th scope="row">8</th>
+                          <td><asp:Label ID="lbl158" runat="server" Text="158 (12-13 tuổi)"></asp:Label></td>
+                          <td><asp:TextBox ID="txt158" runat="server" CssClass="form-control form-control-sm"></asp:TextBox></td>
+                        </tr>
+                          <tr>
+                          <th scope="row">9</th>
+                          <td><asp:Label ID="lbl164" runat="server" Text="164 (13-14 tuổi)"></asp:Label></td>
+                          <td><asp:TextBox ID="txt164" runat="server" CssClass="form-control form-control-sm"></asp:TextBox></td>
+                        </tr>
+                          <tr>
+                          <th scope="row">10</th>
+                          <td><asp:Label ID="lbl170" runat="server" Text="170 (14-15 tuổi)"></asp:Label></td>
+                          <td><asp:TextBox ID="txt170" runat="server" CssClass="form-control form-control-sm"></asp:TextBox></td>
+                        </tr>
+                          <tr>
+                          <th scope="row">11</th>
+                          <td><asp:Label ID="lbl176" runat="server" Text="176 (15-16 tuổi)"></asp:Label></td>
+                          <td><asp:TextBox ID="txt176" runat="server" CssClass="form-control form-control-sm"></asp:TextBox></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    </div>
+                </div>
+                            </asp:View>
+                        </asp:MultiView>
+                    </ContentTemplate>
+                    <Triggers>
+                        <asp:AsyncPostBackTrigger ControlID="drGender" EventName="SelectedIndexChanged" />
+                    </Triggers>
+                </asp:UpdatePanel>
+               
                 <div class="row">
                     <div class="col">
                         <div class="form-group">

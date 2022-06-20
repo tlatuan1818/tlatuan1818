@@ -45,12 +45,13 @@ namespace nguyeensport.dal
             cmd.Parameters.AddWithValue("@Active", Active);
             SQLDB.SQLDB.ExecuteNoneQuery(cmd);
         }
-        public static void insertProductSize(string maSanPham,string tenSize,int soLuong)
+        public static void insertProductSize(string maSanPham,string doiTuong,string tenSize,int soLuong)
         {
             SqlCommand cmd = new SqlCommand();
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.CommandText = "spInsertSize";
             cmd.Parameters.AddWithValue("@maSanPham", maSanPham);
+            cmd.Parameters.AddWithValue("@doiTuong", doiTuong);
             cmd.Parameters.AddWithValue("@tenSize", tenSize);
             cmd.Parameters.AddWithValue("@soLuong", soLuong);
             SQLDB.SQLDB.ExecuteNoneQuery(cmd);
@@ -86,12 +87,13 @@ namespace nguyeensport.dal
             cmd.Parameters.AddWithValue("@Active", Active);
             SQLDB.SQLDB.ExecuteNoneQuery(cmd);
         }
-        public static void updateProductSize(string maSanPham, string tenSize, int soLuong)
+        public static void updateProductSize(string maSanPham,string doiTuong, string tenSize, int soLuong)
         {
             SqlCommand cmd = new SqlCommand();
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.CommandText = "spUpdateProductSize";
             cmd.Parameters.AddWithValue("@maSanPham", maSanPham);
+            cmd.Parameters.AddWithValue("@doiTuong", doiTuong);
             cmd.Parameters.AddWithValue("@tenSize", tenSize);
             cmd.Parameters.AddWithValue("@soLuong", soLuong);
             SQLDB.SQLDB.ExecuteNoneQuery(cmd);
@@ -137,7 +139,15 @@ namespace nguyeensport.dal
             cmd.Parameters.AddWithValue("@maSanPham", maSanPham);
             return SQLDB.SQLDB.GetData(cmd);
         }
-
+        public static DataTable layProductSizeTheoMaSanPhamANDGender(string maSanPham, string doiTuong)
+        {
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.CommandText = "spLayProductSizeTheoMaSanPhamANDGender";
+            cmd.Parameters.AddWithValue("@maSanPham", maSanPham);
+            cmd.Parameters.AddWithValue("@doiTuong", doiTuong);
+            return SQLDB.SQLDB.GetData(cmd);
+        }
         #region UserDisplay
         public static DataTable layTop15ProductHot()
         {

@@ -19,13 +19,15 @@ using ImageProcessor.Imaging;
 using System.Drawing;
 using TextLayer = ImageProcessor.Imaging.TextLayer;
 
+using ImageProcessor.Plugins.WebP.Imaging.Formats;
+
 namespace nguyeensport.dal
 {
     public static class clsThuVien
     {
         private static Account account = new Account("nguyeensport", "324888837625318", "KvT6W4BgOZo2SfMmTTun9U0vYdc");
         private static Cloudinary cloudinary = new Cloudinary(account);
-        public static string getConnect(){
+        public static string getConnect() {
             string cs = System.Configuration.ConfigurationManager.ConnectionStrings[@"DESKTOP-36K6BVB\SQLEXPRESS"].ConnectionString; //ConfigurationManager.ConnectionStrings[@"DESKTOP-BK7A3DM\SQLEXPRESS"].ConnectionString;  //System.Configuration.ConfigurationManager.ConnectionStrings[@"DESKTOP-36K6BVB\SQLEXPRESS"].ConnectionString;
 
             return cs;
@@ -36,11 +38,11 @@ namespace nguyeensport.dal
             string temp = s.Normalize(NormalizationForm.FormD);
             return regex.Replace(temp, string.Empty).Replace('\u0111', 'd').Replace('\u0111', 'D');
         }
-        public static DataTable dLookUp (string tenFiled, string tenTable, string tenBien)
-        {      
+        public static DataTable dLookUp(string tenFiled, string tenTable, string tenBien)
+        {
             SqlCommand cmd = new SqlCommand();
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "select "+tenFiled +" from "+tenTable+" where "+tenFiled+ " = "+tenBien+"";
+            cmd.CommandText = "select " + tenFiled + " from " + tenTable + " where " + tenFiled + " = " + tenBien + "";
             return SQLDB.SQLDB.GetData(cmd);
         }
         public static void updateHienThi(string tenTable, string tenField, int ma, bool hienThi)
@@ -57,37 +59,39 @@ namespace nguyeensport.dal
             cmd.CommandText = "update " + tenTable + " set Active = '" + hienThi + "' where " + tenField + "= " + ma + "";
             SQLDB.SQLDB.ExecuteNoneQuery(cmd);
         }
-        public static object uploadImagePorcess(string path, string outputPath , int width, int height) 
+        public static object uploadImagePorcess(string path, string outputPath, int width, int height)
         {
-            string [] list = outputPath.Split('.');
-            byte[] photoBytes = File.ReadAllBytes(HttpContext.Current.Server.MapPath(path));
+            string[] list = outputPath.Split('.');
+            byte[] photoBytes = File.ReadAllBytes(System.Web.HttpContext.Current.Server.MapPath(path));
             // Format is automatically detected though can be changed.
-            ISupportedImageFormat format = new ImageProcessor.Plugins.WebP.Imaging.Formats.WebPFormat();
+            ISupportedImageFormat format = new WebPFormat();
             System.Drawing.Size size = new System.Drawing.Size(width, height);
             using (MemoryStream inStream = new MemoryStream(photoBytes))
             {
-              
-                    // Initialize the ImageFactory using the overload to preserve EXIF metadata.
-                    using (ImageFactory imageFactory = new ImageFactory(preserveExifData: true))
-                    {
-                        // Load, resize, set the format and quality and save an image.
-                        imageFactory.Load(inStream)
-                             .Rotate(0)
-                             .RoundedCorners(new RoundedCornerLayer(10, false, false,false, false))
-                             .Resize(size)
-                             .Format(format)
-                             .Quality(80)
-                             .Save(HttpContext.Current.Server.MapPath(list[0].ToString()+"-"+ width.ToString()+"x"+height.ToString()+"."+list[1].ToString()));
-                    }
+
+                // Initialize the ImageFactory using the overload to preserve EXIF metadata.
+                using (ImageFactory imageFactory = new ImageFactory(preserveExifData: true))
+                {
+                    // Load, resize, set the format and quality and save an image.
+                    imageFactory.Load(inStream)
+                         .Rotate(0)
+                         .RoundedCorners(new RoundedCornerLayer(10, false, false, false, false))
+                         .Resize(size)
+                         .Format(format)
+                         .Quality(80)
+                         .Save(System.Web.HttpContext.Current.Server.MapPath(list[0].ToString() + "-" + width.ToString() + "x" + height.ToString() + ".webp"));
+                }
             }
-            return list[0].ToString() + "-" + width.ToString() + "x" + height.ToString() + "." + list[1].ToString();
+            return list[0].ToString() + "-" + width.ToString() + "x" + height.ToString() + ".webp";
 
         }
+ 
         public static List<string> getImages(string image1, string image2, string image3, string image4, string image5, string image6, string image7, string image8, string image9, string image10, string TenSanPham, string fordelName)
         {
             String path = "";
+            
             List<string> strPath = new List<string>();
-            HttpFileCollection hfc = HttpContext.Current.Request.Files;
+            HttpFileCollection hfc = System.Web.HttpContext.Current.Request.Files;
             strPath.Insert(0,image1);
             strPath.Insert(1,image2);
             strPath.Insert(2,image3);
@@ -105,11 +109,12 @@ namespace nguyeensport.dal
                 if (hpf.ContentLength > 0)
                 {
                      path = utf8Convert3(TenSanPham).ToLower().Replace(" ", "-").Replace("/", "-").Replace(".","") + "-" + i + Path.GetExtension(hpf.FileName);
-                     hpf.SaveAs(HttpContext.Current.Server.MapPath("/images/"+fordelName+"/") + path);
-                     if (i == 0)
+                     //hpf.SaveAs(System.Web.HttpContext.Current.Server.MapPath("/images/"+fordelName+"/") + path);
+                     
+                    if (i == 0)
                      {
                          strPath.RemoveAt(i);
-                         strPath.Insert(i, "/images/"+fordelName+ "/" + path);
+                         strPath.Insert(i, "/images/" + fordelName + "/" + path);
                      }
                      if (i == 1)
                      {
@@ -163,9 +168,9 @@ namespace nguyeensport.dal
             {
                 if (!image1.Equals(""))
                 {
-                    if (System.IO.File.Exists(HttpContext.Current.Server.MapPath("~/images/"+fordelName+ image1)) == true)
+                    if (System.IO.File.Exists(System.Web.HttpContext.Current.Server.MapPath("~/images/"+fordelName+ image1)) == true)
                     {
-                        System.IO.File.Exists(HttpContext.Current.Server.MapPath("~/images/"+fordelName + image1));
+                        System.IO.File.Exists(System.Web.HttpContext.Current.Server.MapPath("~/images/"+fordelName + image1));
                     }
                 }
             }
@@ -173,9 +178,9 @@ namespace nguyeensport.dal
             {
                 if (!image2.Equals(""))
                 {
-                    if (System.IO.File.Exists(HttpContext.Current.Server.MapPath("~/images/" + fordelName + image2)) == true)
+                    if (System.IO.File.Exists(System.Web.HttpContext.Current.Server.MapPath("~/images/" + fordelName + image2)) == true)
                     {
-                        System.IO.File.Exists(HttpContext.Current.Server.MapPath("~/images/" + fordelName + image2));
+                        System.IO.File.Exists(System.Web.HttpContext.Current.Server.MapPath("~/images/" + fordelName + image2));
                     }
                 }
             }
@@ -183,9 +188,9 @@ namespace nguyeensport.dal
             {
                 if (!image3.Equals(""))
                 {
-                    if (System.IO.File.Exists(HttpContext.Current.Server.MapPath("~/images/" + fordelName + image3)) == true)
+                    if (System.IO.File.Exists(System.Web.HttpContext.Current.Server.MapPath("~/images/" + fordelName + image3)) == true)
                     {
-                        System.IO.File.Exists(HttpContext.Current.Server.MapPath("~/images/" + fordelName + image3));
+                        System.IO.File.Exists(System.Web.HttpContext.Current.Server.MapPath("~/images/" + fordelName + image3));
                     }
                 }
             }
@@ -193,9 +198,9 @@ namespace nguyeensport.dal
             {
                 if (!image4.Equals(""))
                 {
-                    if (System.IO.File.Exists(HttpContext.Current.Server.MapPath("~/images/" + fordelName + image4)) == true)
+                    if (System.IO.File.Exists(System.Web.HttpContext.Current.Server.MapPath("~/images/" + fordelName + image4)) == true)
                     {
-                        System.IO.File.Exists(HttpContext.Current.Server.MapPath("~/images/" + fordelName + image4));
+                        System.IO.File.Exists(System.Web.HttpContext.Current.Server.MapPath("~/images/" + fordelName + image4));
                     }
                 }
             }
@@ -203,9 +208,9 @@ namespace nguyeensport.dal
             {
                 if (!image5.Equals(""))
                 {
-                    if (System.IO.File.Exists(HttpContext.Current.Server.MapPath("~/images/" + fordelName + image5)) == true)
+                    if (System.IO.File.Exists(System.Web.HttpContext.Current.Server.MapPath("~/images/" + fordelName + image5)) == true)
                     {
-                        System.IO.File.Exists(HttpContext.Current.Server.MapPath("~/images/" + fordelName + image5));
+                        System.IO.File.Exists(System.Web.HttpContext.Current.Server.MapPath("~/images/" + fordelName + image5));
                     }
                 }
             }
@@ -213,9 +218,9 @@ namespace nguyeensport.dal
             {
                 if (!image6.Equals(""))
                 {
-                    if (System.IO.File.Exists(HttpContext.Current.Server.MapPath("~/images/" + fordelName + image6)) == true)
+                    if (System.IO.File.Exists(System.Web.HttpContext.Current.Server.MapPath("~/images/" + fordelName + image6)) == true)
                     {
-                        System.IO.File.Exists(HttpContext.Current.Server.MapPath("~/images/" + fordelName + image6));
+                        System.IO.File.Exists(System.Web.HttpContext.Current.Server.MapPath("~/images/" + fordelName + image6));
                     }
                 }
             }
@@ -223,9 +228,9 @@ namespace nguyeensport.dal
             {
                 if (!image7.Equals(""))
                 {
-                    if (System.IO.File.Exists(HttpContext.Current.Server.MapPath("~/images/" + fordelName + image7)) == true)
+                    if (System.IO.File.Exists(System.Web.HttpContext.Current.Server.MapPath("~/images/" + fordelName + image7)) == true)
                     {
-                        System.IO.File.Exists(HttpContext.Current.Server.MapPath("~/images/" + fordelName + image7));
+                        System.IO.File.Exists(System.Web.HttpContext.Current.Server.MapPath("~/images/" + fordelName + image7));
                     }
                 }
             }
@@ -233,9 +238,9 @@ namespace nguyeensport.dal
             {
                 if (!image8.Equals(""))
                 {
-                    if (System.IO.File.Exists(HttpContext.Current.Server.MapPath("~/images/" + fordelName + image8)) == true)
+                    if (System.IO.File.Exists(System.Web.HttpContext.Current.Server.MapPath("~/images/" + fordelName + image8)) == true)
                     {
-                        System.IO.File.Exists(HttpContext.Current.Server.MapPath("~/images/" + fordelName + image8));
+                        System.IO.File.Exists(System.Web.HttpContext.Current.Server.MapPath("~/images/" + fordelName + image8));
                     }
                 }
             }
@@ -243,9 +248,9 @@ namespace nguyeensport.dal
             {
                 if (!image9.Equals(""))
                 {
-                    if (System.IO.File.Exists(HttpContext.Current.Server.MapPath("~/images/" + fordelName + image9)) == true)
+                    if (System.IO.File.Exists(System.Web.HttpContext.Current.Server.MapPath("~/images/" + fordelName + image9)) == true)
                     {
-                        System.IO.File.Exists(HttpContext.Current.Server.MapPath("~/images/" + fordelName + image9));
+                        System.IO.File.Exists(System.Web.HttpContext.Current.Server.MapPath("~/images/" + fordelName + image9));
                     }
                 }
             }
@@ -253,22 +258,26 @@ namespace nguyeensport.dal
             {
                 if (!image10.Equals(""))
                 {
-                    if (System.IO.File.Exists(HttpContext.Current.Server.MapPath("~/images/" + fordelName + image10)) == true)
+                    if (System.IO.File.Exists(System.Web.HttpContext.Current.Server.MapPath("~/images/" + fordelName + image10)) == true)
                     {
-                        System.IO.File.Exists(HttpContext.Current.Server.MapPath("~/images/" + fordelName + image10));
+                        System.IO.File.Exists(System.Web.HttpContext.Current.Server.MapPath("~/images/" + fordelName + image10));
                     }
                 }
             }
             return strPath;
         }
-        public static void deleteImage(string PublicId)
+        public static void deleteImage(string path)
         {
-            cloudinary.Api.Secure = true;
-            DeletionParams deletionParams = new DeletionParams(PublicId)
+
+            if (System.IO.File.Exists(System.Web.HttpContext.Current.Server.MapPath("~/" + path)) == true)
             {
-                ResourceType = ResourceType.Image
-            };
-            var deletionResult = cloudinary.Destroy(deletionParams);
+                System.IO.File.Delete(System.Web.HttpContext.Current.Server.MapPath("~/" + path));
+            }
+            string[] strPath = path.Split('.');
+            if (System.IO.File.Exists(System.Web.HttpContext.Current.Server.MapPath("~/" + strPath[0].ToString() + "-123x123" + strPath[1].ToString())) == true);
+            {
+                System.IO.File.Delete(System.Web.HttpContext.Current.Server.MapPath("~/" + strPath[0].ToString() + "-123x123" + strPath[1].ToString()));
+            }
         }
        
     }

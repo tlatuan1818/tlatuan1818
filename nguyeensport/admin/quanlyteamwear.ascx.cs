@@ -153,11 +153,11 @@ namespace nguyeensport.admin
                         dtSizeOFProduct = clsquanlyproduct.laySizeOfProduct(txtMaSanPham.Text.Trim());
                         if (dtSizeOFProduct.Rows.Count <= 0)
                         {
-                            clsquanlyproduct.insertProductSize(txtMaSanPham.Text.Trim(), lblS.Text.Trim(), Convert.ToInt32(txtS.Text.Trim() == "" ? null : txtS.Text.Trim()));
-                            clsquanlyproduct.insertProductSize(txtMaSanPham.Text.Trim(), lblM.Text.Trim(), Convert.ToInt32(txtM.Text.Trim() == "" ? null : txtM.Text.Trim()));
-                            clsquanlyproduct.insertProductSize(txtMaSanPham.Text.Trim(), lblL.Text.Trim(), Convert.ToInt32(txtL.Text.Trim() == "" ? null : txtL.Text.Trim()));
-                            clsquanlyproduct.insertProductSize(txtMaSanPham.Text.Trim(), lblXL.Text.Trim(), Convert.ToInt32(txtXL.Text.Trim() == "" ? null : txtXL.Text.Trim()));
-                            clsquanlyproduct.insertProductSize(txtMaSanPham.Text.Trim(), lblXXL.Text.Trim(), Convert.ToInt32(txtXXL.Text.Trim() == "" ? null : txtXXL.Text.Trim()));
+                            clsquanlyproduct.insertProductSize(txtMaSanPham.Text.Trim(),drGender.SelectedItem.Text.Trim(), lblS.Text.Trim(), Convert.ToInt32(txtS.Text.Trim() == "" ? null : txtS.Text.Trim()));
+                            clsquanlyproduct.insertProductSize(txtMaSanPham.Text.Trim(), drGender.SelectedItem.Text.Trim(), lblM.Text.Trim(), Convert.ToInt32(txtM.Text.Trim() == "" ? null : txtM.Text.Trim()));
+                            clsquanlyproduct.insertProductSize(txtMaSanPham.Text.Trim(), drGender.SelectedItem.Text.Trim(), lblL.Text.Trim(), Convert.ToInt32(txtL.Text.Trim() == "" ? null : txtL.Text.Trim()));
+                            clsquanlyproduct.insertProductSize(txtMaSanPham.Text.Trim(), drGender.SelectedItem.Text.Trim(), lblXL.Text.Trim(), Convert.ToInt32(txtXL.Text.Trim() == "" ? null : txtXL.Text.Trim()));
+                            clsquanlyproduct.insertProductSize(txtMaSanPham.Text.Trim(), drGender.SelectedItem.Text.Trim(), lblXXL.Text.Trim(), Convert.ToInt32(txtXXL.Text.Trim() == "" ? null : txtXXL.Text.Trim()));
                         }
                         
                         lblThongBao2.Text = "<div class='alert alert-success alert-dismissible fade show' role='alert'>" +
@@ -183,11 +183,11 @@ namespace nguyeensport.admin
                         }
                         clsquanlyproduct.updateProduct(txtMaSanPham.Text.Trim(), txtTenSanPham.Text.Trim(), htmlEditor.Html.ToString(), float.Parse(txtGia.Text.Trim()), drDiscount.SelectedItem.ToString(), giaOutput, 1, txtTitle.Text.Trim(), txtMetaDescription.Text.Trim(), txtMetaKeywork.Text.Trim(), clsThuVien.utf8Convert3(txtTenSanPham.Text.Trim()).ToLower().Replace(" ", "-"), strPath[0].ToString(), strPath[1].ToString(), strPath[2].ToString(), strPath[3].ToString(), strPath[4].ToString(), strPath[5].ToString(), strPath[6].ToString(), strPath[7].ToString(), strPath[8].ToString(), strPath[9].ToString(), DateTime.Now, hienThi, Active);
                         _quanlyteamwear.updateTeamwear(txtMaSanPham.Text.Trim(), txtProductType.Text.Trim(), txtdrSubType.Text.Trim(), drGender.SelectedItem.ToString(), txtBrands.Text.Trim(), txtCollection.Text.Trim(), txtColor.Text.Trim());
-                        clsquanlyproduct.updateProductSize(txtMaSanPham.Text.Trim(), lblS.Text.Trim(), Convert.ToInt32(txtS.Text.Trim() == "" ? null : txtS.Text.Trim()));
-                        clsquanlyproduct.updateProductSize(txtMaSanPham.Text.Trim(), lblM.Text.Trim(), Convert.ToInt32(txtM.Text.Trim() == "" ? null : txtM.Text.Trim()));
-                        clsquanlyproduct.updateProductSize(txtMaSanPham.Text.Trim(), lblL.Text.Trim(), Convert.ToInt32(txtL.Text.Trim() == "" ? null : txtL.Text.Trim()));
-                        clsquanlyproduct.updateProductSize(txtMaSanPham.Text.Trim(), lblXL.Text.Trim(), Convert.ToInt32(txtXL.Text.Trim() == "" ? null : txtXL.Text.Trim()));
-                        clsquanlyproduct.updateProductSize(txtMaSanPham.Text.Trim(), lblXXL.Text.Trim(), Convert.ToInt32(txtXXL.Text.Trim() == "" ? null : txtXXL.Text.Trim()));
+                        clsquanlyproduct.updateProductSize(txtMaSanPham.Text.Trim(), drGender.SelectedItem.Text.Trim(), lblS.Text.Trim(), Convert.ToInt32(txtS.Text.Trim() == "" ? null : txtS.Text.Trim()));
+                        clsquanlyproduct.updateProductSize(txtMaSanPham.Text.Trim(), drGender.SelectedItem.Text.Trim(), lblM.Text.Trim(), Convert.ToInt32(txtM.Text.Trim() == "" ? null : txtM.Text.Trim()));
+                        clsquanlyproduct.updateProductSize(txtMaSanPham.Text.Trim(), drGender.SelectedItem.Text.Trim(), lblL.Text.Trim(), Convert.ToInt32(txtL.Text.Trim() == "" ? null : txtL.Text.Trim()));
+                        clsquanlyproduct.updateProductSize(txtMaSanPham.Text.Trim(), drGender.SelectedItem.Text.Trim(), lblXL.Text.Trim(), Convert.ToInt32(txtXL.Text.Trim() == "" ? null : txtXL.Text.Trim()));
+                        clsquanlyproduct.updateProductSize(txtMaSanPham.Text.Trim(), drGender.SelectedItem.Text.Trim(), lblXXL.Text.Trim(), Convert.ToInt32(txtXXL.Text.Trim() == "" ? null : txtXXL.Text.Trim()));
                         lblThongBao2.Text = "<div class='alert alert-success alert-dismissible fade show' role='alert'>" +
                                            "Sửa thành công" +
                                "<button type='button' class='close' data-dismiss='alert' aria-label='Close'>" +

@@ -14,7 +14,6 @@
 .dxeButtonEditSys td.dxictb, .dxFirefox .dxeButtonEditSys td.dxictb {
     display: block;
     width: 100%;
-    height: calc(1.5em + 0.75rem + 2px);
     padding: 0.375rem 0.75rem;
     font-size: 1rem;
     font-weight: 400;
@@ -31,9 +30,15 @@
 
 
 .dxeToken {
-    border-radius: 5px;
+    border-radius: 0;
+    border:none;
     background: #db1d24;
     color:#fff;
+}
+.dxEditors_edtTokenBoxTokenRemoveButton {
+    background-position: -302px -88px;
+ 
+    height: 24px;
 }
 .scrollable {
     width: 100%;
