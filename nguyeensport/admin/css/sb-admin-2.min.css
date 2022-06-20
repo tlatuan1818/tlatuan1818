@@ -275,11 +275,7 @@ input[type=checkbox]{
 	visibility: hidden;
 }
 input[type=file]{
-    border:1px solid #000;
-    background:#fff;
-    color:#000;
-    margin:5px 0;
-    width:100%;
+   display:none;
 }
 ::-webkit-file-upload-button {
     background: #000;
@@ -2256,7 +2252,31 @@ textarea.form-control {
 .custom-control-input.is-valid:focus:not(:checked) ~ .custom-control-label::before, .was-validated .custom-control-input:valid:focus:not(:checked) ~ .custom-control-label::before {
     border-color: #1cc88a
 }
-
+.custom-file-upload {
+    border: 1px solid #ccc;
+    display: inline-block;
+    padding: 6px 12px;
+    cursor: pointer;
+    width:123px;
+    height:123px;
+    position:relative;
+}
+.custom-file-upload svg{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}
+.wrapper-img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 100%;
+}
+.wrapper-img img{
+    width:100%;
+}
 .custom-file-input.is-valid ~ .custom-file-label, .was-validated .custom-file-input:valid ~ .custom-file-label {
     border-color: #1cc88a
 }
@@ -2910,14 +2930,14 @@ a.btn.disabled, fieldset:disabled a.btn {
         }
 
 .btn-outline-danger {
-    color: #db1d24;
-    border-color: #db1d24;
+    color: #c70101;
+    border-color: #c70101;
 }
 
     .btn-outline-danger:hover {
         color: #fff;
-        background-color: #db1d24;
-        border-color: #db1d24;
+        background-color: #c70101;
+        border-color: #c70101;
     }
 
     .btn-outline-danger.focus, .btn-outline-danger:focus {
@@ -3586,8 +3606,8 @@ input[type=button].btn-block, input[type=reset].btn-block, input[type=submit].bt
 
     .custom-control-input:checked ~ .custom-control-label::before {
         color: #fff;
-        border-color: #db1d24;
-        background-color: #db1d24;
+        border-color: #c70101;
+        background-color: #c70101;
     }
 
     .custom-control-input:focus ~ .custom-control-label::before {
@@ -9851,7 +9871,7 @@ a.text-warning:focus, a.text-warning:hover {
 }
 
 .text-danger {
-    color: #e74a3b !important
+    color: #c70101 !important
 }
 
 a.text-danger:focus, a.text-danger:hover {

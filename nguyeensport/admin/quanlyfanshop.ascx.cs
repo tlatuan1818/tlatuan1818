@@ -41,6 +41,7 @@ namespace nguyeensport.admin
             cbkActive.LabelAttributes.Add("class", "custom-control-label");
             cbkHienThi.InputAttributes.Add("class", "custom-control-input");
             cbkHienThi.LabelAttributes.Add("class", "custom-control-label");
+          
 
         }
         protected void btnAdd_Click(object sender, EventArgs e)

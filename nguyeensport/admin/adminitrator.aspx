@@ -437,14 +437,17 @@
     <script src="/admin/js/sb-admin-2.min.js"></script>
     <asp:Literal ID="ltJSDataTable" runat="server"></asp:Literal>
     <asp:Literal ID="ltJSCustom" runat="server"></asp:Literal>
-        <script type="text/javascript">
+    
+    <script type="text/javascript">
+           
             function ShowProgressBar() {
                 document.querySelector('.dvProgressBar').style.visibility = 'visible';
             }
             function HideProgressBar() {
                 document.querySelector('.dvProgressBar').style.visibility = "hidden";
             }
-        </script>
+
+    </script>
 
 </body>
 </html>
