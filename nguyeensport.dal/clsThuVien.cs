@@ -28,7 +28,7 @@ namespace nguyeensport.dal
         private static Account account = new Account("nguyeensport", "324888837625318", "KvT6W4BgOZo2SfMmTTun9U0vYdc");
         private static Cloudinary cloudinary = new Cloudinary(account);
         public static string getConnect() {
-            string cs = System.Configuration.ConfigurationManager.ConnectionStrings[@"DESKTOP-BK7A3DM\SQLEXPRESS"].ConnectionString; //ConfigurationManager.ConnectionStrings[@"DESKTOP-BK7A3DM\SQLEXPRESS"].ConnectionString;  //System.Configuration.ConfigurationManager.ConnectionStrings[@"DESKTOP-36K6BVB\SQLEXPRESS"].ConnectionString;
+            string cs = System.Configuration.ConfigurationManager.ConnectionStrings[@"DESKTOP-36K6BVB\SQLEXPRESS"].ConnectionString; //"DESKTOP-BK7A3DM\SQLEXPRESS":"DESKTOP-36K6BVB\SQLEXPRESS"
 
             return cs;
         }

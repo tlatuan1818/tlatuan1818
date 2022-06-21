@@ -859,7 +859,14 @@
                              let new_image_url = context.canvas.toDataURL("image/jpeg", 80)
                              let new_image = document.createElement("img")
                              new_image.src = new_image_url
+                             let new_close = document.createElement("span")
+                             new_close.className = "close icon js-cancel-btn";
                              document.getElementById(wrapper).appendChild(new_image)
+                             document.getElementById(wrapper).appendChild(new_close)
+                             new_close.addEventListener("click", function () {
+                                 document.getElementById(wrapper).removeChild(new_image)
+                                 document.getElementById(wrapper).removeChild(new_close)
+                             })
                          }
                      }
                  })

@@ -5652,7 +5652,7 @@ a.badge-dark.focus, a.badge-dark:focus {
     line-height: 1;
     color: #000;
     text-shadow: 0 1px 0 #fff;
-    opacity: .5
+    
 }
 
     .close:hover {
@@ -5673,7 +5673,40 @@ button.close {
 a.close.disabled {
     pointer-events: none
 }
+.close.icon {
+    color: #000;
+    position: absolute;
+    top:4px;
+    right:4px;
+    background:#fff;
+    width: 22px;
+    height: 22px;
+    border-radius:50%;
+}
 
+    .close.icon:before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 15px;
+        height: 1px;
+        background-color: currentColor;
+        -webkit-transform: translate(-50%,-50%) rotate(-45deg);
+        transform: translate(-50%,-50%) rotate(-45deg);
+    }
+
+    .close.icon:after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 15px;
+        height: 1px;
+        background-color: currentColor;
+        -webkit-transform: translate(-50%,-50%) rotate(45deg);
+        transform: translate(-50%,-50%) rotate(45deg);
+    }
 .toast {
     flex-basis: 350px;
     max-width: 350px;
