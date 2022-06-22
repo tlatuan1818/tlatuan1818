@@ -969,6 +969,15 @@ namespace nguyeensport.admin
         protected global::System.Web.UI.WebControls.FileUpload FileUpload5;
 
         /// <summary>
+        /// FileUpload6 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.FileUpload FileUpload6;
+
+        /// <summary>
         /// FileUpload7 control.
         /// </summary>
         /// <remarks>
@@ -1003,15 +1012,6 @@ namespace nguyeensport.admin
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.FileUpload FileUpload10;
-
-        /// <summary>
-        /// FileUpload11 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.FileUpload FileUpload11;
 
         /// <summary>
         /// cbkHienThi control.

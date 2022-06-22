@@ -28,7 +28,7 @@ namespace nguyeensport.dal
         private static Account account = new Account("nguyeensport", "324888837625318", "KvT6W4BgOZo2SfMmTTun9U0vYdc");
         private static Cloudinary cloudinary = new Cloudinary(account);
         public static string getConnect() {
-            string cs = System.Configuration.ConfigurationManager.ConnectionStrings[@"DESKTOP-BK7A3DM\SQLEXPRESS"].ConnectionString; //"DESKTOP-BK7A3DM\SQLEXPRESS":"DESKTOP-36K6BVB\SQLEXPRESS"
+            string cs = System.Configuration.ConfigurationManager.ConnectionStrings[@"DESKTOP-36K6BVB\SQLEXPRESS"].ConnectionString; //"DESKTOP-BK7A3DM\SQLEXPRESS":"DESKTOP-36K6BVB\SQLEXPRESS"
 
             return cs;
         }
@@ -109,7 +109,7 @@ namespace nguyeensport.dal
                 if (hpf.ContentLength > 0)
                 {
                      path = utf8Convert3(TenSanPham).ToLower().Replace(" ", "-").Replace("/", "-").Replace(".","") + "-" + i + Path.GetExtension(hpf.FileName);
-                     //hpf.SaveAs(System.Web.HttpContext.Current.Server.MapPath("/images/"+fordelName+"/") + path);
+                     hpf.SaveAs(System.Web.HttpContext.Current.Server.MapPath("/images/"+fordelName+"/") + path);
                      
                     if (i == 0)
                      {

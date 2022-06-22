@@ -7,11 +7,12 @@
         let reader = new FileReader
         reader.readAsDataURL(image_file)
         reader.onload = (event) => {
+     
             let image_url = event.target.result
             let image = document.createElement("img")
             image.src = image_url
             image.onload = (e) => {
-
+               
                 let canvas = document.createElement("canvas")
                 let ratio = WIDTH / e.target.width
                 canvas.width = WIDTH
@@ -38,6 +39,7 @@
                 spinner_postion.appendChild(spinner_img)
                 spinner_postion.appendChild(spinner_span)
                 document.getElementById(wrapper).appendChild(spinner)
+               
                 setTimeout(() => {
                     document.getElementById(wrapper).removeChild(spinner)
                     document.getElementById(wrapper).appendChild(new_image)
@@ -46,7 +48,7 @@
                         document.getElementById(wrapper).removeChild(new_image)
                         document.getElementById(wrapper).removeChild(new_close)
                     })
-                }, 2000)
+                }, Math.round((event.loaded / event.total) * 100))
 
 
             }

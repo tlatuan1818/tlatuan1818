@@ -50,7 +50,7 @@
                                     <div class="p-2">
                                         <a href="/<%#: Eval("linkSanPham")+"-"+Eval("maSanPham") %>" class="font-weight-bold text-dark text-lg"><%#: Eval("tenSanPham") %></a>
                                         <div class="row">
-                                            <div class="col-6">
+                                            <div class="col-3">
                                                 <div class="text-secondary">ID: <strong><%#: Eval("maSanPham") %></strong></div>
                                                 <div class="text-secondary">Loại sản phẩm: <%#: Eval("productType") %></div>
                                                 <div class="text-secondary">Thương hiệu: <%#: Eval("brands") %></div>
@@ -60,7 +60,7 @@
                                                     <asp:Label ID="lblSaving" runat="server" Text='<%#: "Giảm " + string.Format("{0:N0}",int.Parse(Eval("giaInput").ToString()) - int.Parse(Eval("giaOutput").ToString())) %>'></asp:Label>
                                                 </div>
                                             </div>
-                                            <div class="col-6">
+                                            <div class="col-9">
                                                 <div class="text-secondary">
                                                     Size: 
                                            <asp:Repeater ID="rptProductSize" runat="server">
@@ -775,45 +775,110 @@
                     </div>
                     <div class="col d-flex flex-column mt-2">
                         <span>Ảnh 2</span>
-                        <asp:FileUpload ID="FileUpload3" runat="server" />
-                         <div id="wrapper-img3">
-                         </div>
+                        <div class="position-relative" style="width:123px;height:123px;">
+                             <label for="<%= FileUpload3.ClientID %>" class="custom-file-upload">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-file-earmark-image" viewBox="0 0 16 16">
+                                  <path d="M6.502 7a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"/>
+                                  <path d="M14 14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h5.5L14 4.5V14zM4 1a1 1 0 0 0-1 1v10l2.224-2.224a.5.5 0 0 1 .61-.075L8 11l2.157-3.02a.5.5 0 0 1 .76-.063L13 10V4.5h-2A1.5 1.5 0 0 1 9.5 3V1H4z"/>
+                                </svg>
+                            </label>
+                            <asp:FileUpload ID="FileUpload3" runat="server" />
+                             <div id="wrapper-img3" class="wrapper-img">
+                             </div>
+                        </div>
                     </div>
                     <div class="col d-flex flex-column mt-2">
                         <span>Ảnh 3</span>
-                        <asp:FileUpload ID="FileUpload4" runat="server" />
-                         <div id="wrapper-img4">
-                          </div>
+                        <div class="position-relative" style="width:123px;height:123px;">
+                            <label for="<%= FileUpload4.ClientID %>" class="custom-file-upload">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-file-earmark-image" viewBox="0 0 16 16">
+                                  <path d="M6.502 7a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"/>
+                                  <path d="M14 14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h5.5L14 4.5V14zM4 1a1 1 0 0 0-1 1v10l2.224-2.224a.5.5 0 0 1 .61-.075L8 11l2.157-3.02a.5.5 0 0 1 .76-.063L13 10V4.5h-2A1.5 1.5 0 0 1 9.5 3V1H4z"/>
+                                </svg>
+                            </label>
+                            <asp:FileUpload ID="FileUpload4" runat="server" />
+                             <div id="wrapper-img4" class="wrapper-img"></div>
+                        </div>
                     </div>
                     <div class="col d-flex flex-column mt-2">
                         <span>Ảnh 4</span>
-                        <asp:FileUpload ID="FileUpload5" runat="server"/>
-                         <div id="wrapper-img5">
-                          </div>
+                        <div class="position-relative" style="width:123px;height:123px;">
+                            <label for="<%= FileUpload5.ClientID %>" class="custom-file-upload">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-file-earmark-image" viewBox="0 0 16 16">
+                                  <path d="M6.502 7a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"/>
+                                  <path d="M14 14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h5.5L14 4.5V14zM4 1a1 1 0 0 0-1 1v10l2.224-2.224a.5.5 0 0 1 .61-.075L8 11l2.157-3.02a.5.5 0 0 1 .76-.063L13 10V4.5h-2A1.5 1.5 0 0 1 9.5 3V1H4z"/>
+                                </svg>
+                            </label>
+                            <asp:FileUpload ID="FileUpload5" runat="server" />
+                             <div id="wrapper-img5" class="wrapper-img"></div>
+                        </div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col d-flex flex-column mt-2">
                         <span>Ảnh 5</span>
-                        <asp:FileUpload ID="FileUpload7" runat="server" />
-                         <div id="wrapper-img6">
-                          </div>
+                        <div class="position-relative" style="width:123px;height:123px;">
+                            <label for="<%= FileUpload6.ClientID %>" class="custom-file-upload">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-file-earmark-image" viewBox="0 0 16 16">
+                                  <path d="M6.502 7a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"/>
+                                  <path d="M14 14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h5.5L14 4.5V14zM4 1a1 1 0 0 0-1 1v10l2.224-2.224a.5.5 0 0 1 .61-.075L8 11l2.157-3.02a.5.5 0 0 1 .76-.063L13 10V4.5h-2A1.5 1.5 0 0 1 9.5 3V1H4z"/>
+                                </svg>
+                            </label>
+                            <asp:FileUpload ID="FileUpload6" runat="server" />
+                             <div id="wrapper-img6" class="wrapper-img"></div>
+                        </div>
                     </div>
                     <div class="col d-flex flex-column mt-2">
                         <span>Ảnh 6</span>
-                        <asp:FileUpload ID="FileUpload8" runat="server" />
+                        <div class="position-relative" style="width:123px;height:123px;">
+                            <label for="<%= FileUpload7.ClientID %>" class="custom-file-upload">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-file-earmark-image" viewBox="0 0 16 16">
+                                  <path d="M6.502 7a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"/>
+                                  <path d="M14 14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h5.5L14 4.5V14zM4 1a1 1 0 0 0-1 1v10l2.224-2.224a.5.5 0 0 1 .61-.075L8 11l2.157-3.02a.5.5 0 0 1 .76-.063L13 10V4.5h-2A1.5 1.5 0 0 1 9.5 3V1H4z"/>
+                                </svg>
+                            </label>
+                            <asp:FileUpload ID="FileUpload7" runat="server" />
+                             <div id="wrapper-img7" class="wrapper-img"></div>
+                        </div>
                     </div>
                     <div class="col d-flex flex-column mt-2">
                         <span>Ảnh 7</span>
-                        <asp:FileUpload ID="FileUpload9" runat="server" />
+                        <div class="position-relative" style="width:123px;height:123px;">
+                            <label for="<%= FileUpload8.ClientID %>" class="custom-file-upload">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-file-earmark-image" viewBox="0 0 16 16">
+                                  <path d="M6.502 7a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"/>
+                                  <path d="M14 14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h5.5L14 4.5V14zM4 1a1 1 0 0 0-1 1v10l2.224-2.224a.5.5 0 0 1 .61-.075L8 11l2.157-3.02a.5.5 0 0 1 .76-.063L13 10V4.5h-2A1.5 1.5 0 0 1 9.5 3V1H4z"/>
+                                </svg>
+                            </label>
+                            <asp:FileUpload ID="FileUpload8" runat="server" />
+                             <div id="wrapper-img8" class="wrapper-img"></div>
+                        </div>
                     </div>
                     <div class="col d-flex flex-column mt-2">
                         <span>Ảnh 8</span>
-                        <asp:FileUpload ID="FileUpload10" runat="server" />
+                        <div class="position-relative" style="width:123px;height:123px;">
+                            <label for="<%= FileUpload9.ClientID %>" class="custom-file-upload">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-file-earmark-image" viewBox="0 0 16 16">
+                                  <path d="M6.502 7a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"/>
+                                  <path d="M14 14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h5.5L14 4.5V14zM4 1a1 1 0 0 0-1 1v10l2.224-2.224a.5.5 0 0 1 .61-.075L8 11l2.157-3.02a.5.5 0 0 1 .76-.063L13 10V4.5h-2A1.5 1.5 0 0 1 9.5 3V1H4z"/>
+                                </svg>
+                            </label>
+                            <asp:FileUpload ID="FileUpload9" runat="server" />
+                             <div id="wrapper-img9" class="wrapper-img"></div>
+                        </div>
                     </div>
                     <div class="col d-flex flex-column mt-2">
                         <span>Ảnh 9</span>
-                        <asp:FileUpload ID="FileUpload11" runat="server" />
+                        <div class="position-relative" style="width:123px;height:123px;">
+                            <label for="<%= FileUpload10.ClientID %>" class="custom-file-upload">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-file-earmark-image" viewBox="0 0 16 16">
+                                  <path d="M6.502 7a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"/>
+                                  <path d="M14 14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h5.5L14 4.5V14zM4 1a1 1 0 0 0-1 1v10l2.224-2.224a.5.5 0 0 1 .61-.075L8 11l2.157-3.02a.5.5 0 0 1 .76-.063L13 10V4.5h-2A1.5 1.5 0 0 1 9.5 3V1H4z"/>
+                                </svg>
+                            </label>
+                            <asp:FileUpload ID="FileUpload10" runat="server" />
+                             <div id="wrapper-img10" class="wrapper-img"></div>
+                        </div>
                     </div>
                 </div>
                 <div class="row">
@@ -845,7 +910,15 @@
         <script src="/admin/js/uploadImage.js"></script>
          <script type="text/javascript">
              loadInputImage("<%= FileUpload1.ClientID%>", "wrapper-img1");
-             loadInputImage("<%= FileUpload2.ClientID%>","wrapper-img2")
+             loadInputImage("<%= FileUpload2.ClientID%>", "wrapper-img2");
+             loadInputImage("<%= FileUpload3.ClientID%>", "wrapper-img3");
+             loadInputImage("<%= FileUpload4.ClientID%>", "wrapper-img4");
+             loadInputImage("<%= FileUpload5.ClientID%>", "wrapper-img5");
+             loadInputImage("<%= FileUpload6.ClientID%>", "wrapper-img6");
+             loadInputImage("<%= FileUpload7.ClientID%>", "wrapper-img7");
+             loadInputImage("<%= FileUpload8.ClientID%>", "wrapper-img8");
+             loadInputImage("<%= FileUpload9.ClientID%>", "wrapper-img9");
+             loadInputImage("<%= FileUpload10.ClientID%>", "wrapper-img10");
          </script>
     </asp:View>
 </asp:MultiView>

@@ -373,6 +373,10 @@ namespace nguyeensport.admin
                                 viewSize.ActiveViewIndex = 0;
                                 for (int i = 0; i < dtProductSize.Rows.Count; i++)
                                 {
+                                    if (dtProductSize.Rows[i]["tenSize"].ToString() == "XS")
+                                    {
+                                        txtXS.Text = dtProductSize.Rows[i]["soLuong"].ToString();
+                                    }
                                     if (dtProductSize.Rows[i]["tenSize"].ToString() == "S")
                                     {
                                         txtS.Text = dtProductSize.Rows[i]["soLuong"].ToString();
@@ -400,26 +404,31 @@ namespace nguyeensport.admin
                                 viewSize.ActiveViewIndex = 1;
                                 for (int i = 0; i < dtProductSize.Rows.Count; i++)
                                 {
+                                    if (dtProductSize.Rows[i]["tenSize"].ToString() == "XXS")
+                                    {
+                                        txtNUXXS.Text = dtProductSize.Rows[i]["soLuong"].ToString();
+                                    }
+                                    if (dtProductSize.Rows[i]["tenSize"].ToString() == "XS")
+                                    {
+                                        txtNUXS.Text = dtProductSize.Rows[i]["soLuong"].ToString();
+                                    }
                                     if (dtProductSize.Rows[i]["tenSize"].ToString() == "S")
                                     {
-                                        txtS.Text = dtProductSize.Rows[i]["soLuong"].ToString();
+                                        txtNUS.Text = dtProductSize.Rows[i]["soLuong"].ToString();
                                     }
                                     if (dtProductSize.Rows[i]["tenSize"].ToString() == "M")
                                     {
-                                        txtM.Text = dtProductSize.Rows[i]["soLuong"].ToString();
+                                        txtNUM.Text = dtProductSize.Rows[i]["soLuong"].ToString();
                                     }
                                     if (dtProductSize.Rows[i]["tenSize"].ToString() == "L")
                                     {
-                                        txtL.Text = dtProductSize.Rows[i]["soLuong"].ToString();
+                                        txtNUL.Text = dtProductSize.Rows[i]["soLuong"].ToString();
                                     }
                                     if (dtProductSize.Rows[i]["tenSize"].ToString() == "XL")
                                     {
-                                        txtXL.Text = dtProductSize.Rows[i]["soLuong"].ToString();
+                                        txtNUXL.Text = dtProductSize.Rows[i]["soLuong"].ToString();
                                     }
-                                    if (dtProductSize.Rows[i]["tenSize"].ToString() == "XXL")
-                                    {
-                                        txtXXL.Text = dtProductSize.Rows[i]["soLuong"].ToString();
-                                    }
+                                   
                                 }
                             }
                             if(dtProductSize.Rows[0]["doiTuong"].ToString() == "Trẻ em")
@@ -427,25 +436,49 @@ namespace nguyeensport.admin
                                 viewSize.ActiveViewIndex = 2;
                                 for (int i = 0; i < dtProductSize.Rows.Count; i++)
                                 {
-                                    if (dtProductSize.Rows[i]["tenSize"].ToString() == "S")
+                                    if (dtProductSize.Rows[i]["tenSize"].ToString() == "116 (5-6 tuổi)")
                                     {
-                                        txtS.Text = dtProductSize.Rows[i]["soLuong"].ToString();
+                                        txt116.Text = dtProductSize.Rows[i]["soLuong"].ToString();
                                     }
-                                    if (dtProductSize.Rows[i]["tenSize"].ToString() == "M")
+                                    if (dtProductSize.Rows[i]["tenSize"].ToString() == "122 (6-7 tuổi)")
                                     {
-                                        txtM.Text = dtProductSize.Rows[i]["soLuong"].ToString();
+                                        txt122.Text = dtProductSize.Rows[i]["soLuong"].ToString();
                                     }
-                                    if (dtProductSize.Rows[i]["tenSize"].ToString() == "L")
+                                    if (dtProductSize.Rows[i]["tenSize"].ToString() == "128 (7-8 tuổi)")
                                     {
-                                        txtL.Text = dtProductSize.Rows[i]["soLuong"].ToString();
+                                        txt128.Text = dtProductSize.Rows[i]["soLuong"].ToString();
                                     }
-                                    if (dtProductSize.Rows[i]["tenSize"].ToString() == "XL")
+                                    if (dtProductSize.Rows[i]["tenSize"].ToString() == "134 (8-9 tuổi)")
                                     {
-                                        txtXL.Text = dtProductSize.Rows[i]["soLuong"].ToString();
+                                        txt134.Text = dtProductSize.Rows[i]["soLuong"].ToString();
                                     }
-                                    if (dtProductSize.Rows[i]["tenSize"].ToString() == "XXL")
+                                    if (dtProductSize.Rows[i]["tenSize"].ToString() == "140 (9-10 tuổi)")
                                     {
-                                        txtXXL.Text = dtProductSize.Rows[i]["soLuong"].ToString();
+                                        txt140.Text = dtProductSize.Rows[i]["soLuong"].ToString();
+                                    }
+                                    if (dtProductSize.Rows[i]["tenSize"].ToString() == "146 (10-11 tuổi)")
+                                    {
+                                        txt146.Text = dtProductSize.Rows[i]["soLuong"].ToString();
+                                    }
+                                    if (dtProductSize.Rows[i]["tenSize"].ToString() == "152 (11-12 tuổi)")
+                                    {
+                                        txt152.Text = dtProductSize.Rows[i]["soLuong"].ToString();
+                                    }
+                                    if (dtProductSize.Rows[i]["tenSize"].ToString() == "158 (12-13 tuổi)")
+                                    {
+                                        txt158.Text = dtProductSize.Rows[i]["soLuong"].ToString();
+                                    }
+                                    if (dtProductSize.Rows[i]["tenSize"].ToString() == "164 (13-14 tuổi)")
+                                    {
+                                        txt164.Text = dtProductSize.Rows[i]["soLuong"].ToString();
+                                    }
+                                    if (dtProductSize.Rows[i]["tenSize"].ToString() == "170 (14-15 tuổi)")
+                                    {
+                                        txt170.Text = dtProductSize.Rows[i]["soLuong"].ToString();
+                                    }
+                                    if (dtProductSize.Rows[i]["tenSize"].ToString() == "176 (15-16 tuổi)")
+                                    {
+                                        txt176.Text = dtProductSize.Rows[i]["soLuong"].ToString();
                                     }
                                 }
                             }
