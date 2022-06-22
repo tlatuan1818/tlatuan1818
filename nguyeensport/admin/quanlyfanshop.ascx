@@ -761,9 +761,17 @@
                     </div>
                     <div class="col d-flex flex-column mt-2">
                         <span>Ảnh 1</span>
-                        <asp:FileUpload ID="FileUpload2" runat="server" />
-                         <div id="wrapper-img2">
-                          </div>
+                         <div class="position-relative" style="width:123px;height:123px;">
+                             <label for="<%= FileUpload2.ClientID %>" class="custom-file-upload">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-file-earmark-image" viewBox="0 0 16 16">
+                                  <path d="M6.502 7a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"/>
+                                  <path d="M14 14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h5.5L14 4.5V14zM4 1a1 1 0 0 0-1 1v10l2.224-2.224a.5.5 0 0 1 .61-.075L8 11l2.157-3.02a.5.5 0 0 1 .76-.063L13 10V4.5h-2A1.5 1.5 0 0 1 9.5 3V1H4z"/>
+                                </svg>
+                            </label>
+                             <asp:FileUpload ID="FileUpload2" runat="server" />
+                             <div id="wrapper-img2" class="wrapper-img">
+                             </div>
+                        </div>
                     </div>
                     <div class="col d-flex flex-column mt-2">
                         <span>Ảnh 2</span>
@@ -834,43 +842,10 @@
 
             </div>
         </div>
+        <script src="/admin/js/uploadImage.js"></script>
          <script type="text/javascript">
-             loadInputImage("<%= FileUpload1.ClientID%>", "wrapper-img1")
-             function loadInputImage(inputimg, wrapper) {
-
-                 const WIDTH = 300
-                 let input = document.getElementById(inputimg)
-                 input.addEventListener("change", (event) => {
-                     let image_file = event.target.files[0]
-                     let reader = new FileReader
-                     reader.readAsDataURL(image_file)
-                     reader.onload = (event) => {
-                         let image_url = event.target.result
-                         let image = document.createElement("img")
-                         image.src = image_url
-                         image.onload = (e) => {
-
-                             let canvas = document.createElement("canvas")
-                             let ratio = WIDTH / e.target.width
-                             canvas.width = WIDTH
-                             canvas.height = e.target.height * ratio
-                             const context = canvas.getContext("2d")
-                             context.drawImage(image, 0, 0, canvas.width, canvas.height)
-                             let new_image_url = context.canvas.toDataURL("image/jpeg", 80)
-                             let new_image = document.createElement("img")
-                             new_image.src = new_image_url
-                             let new_close = document.createElement("span")
-                             new_close.className = "close icon js-cancel-btn";
-                             document.getElementById(wrapper).appendChild(new_image)
-                             document.getElementById(wrapper).appendChild(new_close)
-                             new_close.addEventListener("click", function () {
-                                 document.getElementById(wrapper).removeChild(new_image)
-                                 document.getElementById(wrapper).removeChild(new_close)
-                             })
-                         }
-                     }
-                 })
-             }
+             loadInputImage("<%= FileUpload1.ClientID%>", "wrapper-img1");
+             loadInputImage("<%= FileUpload2.ClientID%>","wrapper-img2")
          </script>
     </asp:View>
 </asp:MultiView>

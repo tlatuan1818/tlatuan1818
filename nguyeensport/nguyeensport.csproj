@@ -254,6 +254,7 @@
     <Content Include="admin\js\sb-admin-2.js" />
     <Content Include="admin\js\sb-admin-2.min.js" />
     <Content Include="admin\js\tree-list.js" />
+    <Content Include="admin\js\uploadImage.js" />
     <Content Include="admin\ortherpage\age.ascx" />
     <Content Include="admin\ortherpage\brands.ascx" />
     <Content Include="admin\ortherpage\category.ascx" />
