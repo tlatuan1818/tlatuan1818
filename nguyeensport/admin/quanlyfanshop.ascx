@@ -120,11 +120,14 @@
         <asp:HiddenField ID="hdImage9" runat="server" />
         <asp:HiddenField ID="hdImage10" runat="server" />
         <div class="card shadow mb-4">
-            <div class="row position-fixed fixed-bottom w-25" style="right: 25px; left: auto">
-                <div class="col mt-2">
-                    <asp:Literal ID="lblThongBao2" runat="server"></asp:Literal>
-                </div>
-            </div>
+            
+                     <div class="row position-fixed fixed-bottom w-25" style="right: 25px; left: auto">
+                        <div class="col mt-2">
+                            <asp:Literal ID="lblThongBao2" runat="server"></asp:Literal>
+                        </div>
+                    </div>
+               
+           
             <div class="card-header py-3">
                 <asp:Button ID="btnBack" CssClass="btn btn-outline-dark btn-sm" Text="Quay lại" runat="server" OnClick="btnBack_Click" />
             </div>
@@ -753,7 +756,7 @@
                                   <path d="M14 14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h5.5L14 4.5V14zM4 1a1 1 0 0 0-1 1v10l2.224-2.224a.5.5 0 0 1 .61-.075L8 11l2.157-3.02a.5.5 0 0 1 .76-.063L13 10V4.5h-2A1.5 1.5 0 0 1 9.5 3V1H4z"/>
                                 </svg>
                             </label>
-                            <asp:FileUpload ID="FileUpload1" runat="server" />
+                              <asp:FileUpload ID="FileUpload1" runat="server" />
                               <div id="wrapper-img1" class="wrapper-img">
                               </div>
                         </div>
@@ -891,15 +894,14 @@
                         <asp:CheckBox ID="cbkActive" runat="server" Text="Active" CssClass="custom-control custom-switch mt-3" />
                     </div>
                     <div class="col mt-2 d-flex justify-content-end">
-                        <asp:LinkButton ID="btnUpdate" runat="server" CssClass="btn btn-danger mt-4  position-relative" OnClick="btnUpdate_Click" OnClientClick="javascript:ShowProgressBar()">
-                                Update
+                        <asp:Button ID="btnAddProduct" CssClass="btn btn-danger rounded-0" runat="server" Text="Submit" />
+                        <asp:LinkButton ID="btnUpdate" runat="server" CssClass="btn btn-danger mt-4 position-relative"  OnClientClick="javascript:ShowProgressBar()">
+                                  <asp:Literal ID="ltUpdate" runat="server"></asp:Literal>                               
                                   <div class="dvProgressBar" style="position:absolute;top:0;left:0px;background:#db1d24;display:block;width: 100%;height: 100%; visibility:hidden;">
                                     <div class="position-relative"  style="width: 100%;height: 100%;">
                                         <img src="/images/common/NGUYEEN-White.svg" style="width: 34px; height: 34px;margin:1px 0 0 2px;"/>      
-                                        <div class="spinner-border" style="width: 35px; height: 35px; position:absolute;top:0.5px;left:22.5px;" role="status">
+                                        <div class="spinner-border" style="width: 35px; height: 35px; position:absolute;top:0.5px;left:22.5px;" role="status"></div>
                                     </div>
-                                  
-                                </div>
                                 </div>
                         </asp:LinkButton>
                     </div>
@@ -908,6 +910,7 @@
             </div>
         </div>
         <script src="/admin/js/uploadImage.js"></script>
+        <script src="/admin/js/Ajax/Product.js"></script>
          <script type="text/javascript">
              loadInputImage("<%= FileUpload1.ClientID%>", "wrapper-img1");
              loadInputImage("<%= FileUpload2.ClientID%>", "wrapper-img2");
@@ -919,6 +922,10 @@
              loadInputImage("<%= FileUpload8.ClientID%>", "wrapper-img8");
              loadInputImage("<%= FileUpload9.ClientID%>", "wrapper-img9");
              loadInputImage("<%= FileUpload10.ClientID%>", "wrapper-img10");
+             $("#<%= btnAddProduct.ClientID%>").click(function () {
+                 InsertProduct($('#<%= txtMaSanPham.ClientID%>').val(), $('#<%= txtTenSanPham.ClientID%>').val(), $('#<%= htmlEditor.ClientID%>').val(), "", $('#<%= txtGia.ClientID%>').val(), $('#<%= drDiscount.ClientID%>').val(), 1, 1, 1, "2022-06-23", true, true)
+             });
+             
          </script>
     </asp:View>
 </asp:MultiView>
